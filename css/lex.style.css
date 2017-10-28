@@ -1,0 +1,26 @@
+#header .header-city .city {
+    text-transform: capitalize;
+}
+.has-error.form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+#header .certificate .txt {
+    margin-top: 0;
+}
+#header .authorization {
+    background-color: #b63434;
+    padding: 0 5px;
+}
+#header .authorization .link:hover {
+    color: #ffffff
+}
+@media (min-width: 1024px) {
+    body.modal-open {
+        overflow: auto;
+    }
+}
+.main-trend {
+    background-color: #ded1ca;
+}
