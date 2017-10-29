@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/component.css">
 <body class="flex-container">
 
 <?
-echo implode(", ", mb_detect_order());
+
 if (in_array($type = key($_FILES), array('products', 'items'))) {
 
     @set_time_limit(0);
@@ -15,8 +16,13 @@ if (in_array($type = key($_FILES), array('products', 'items'))) {
         echo 'Не удалось загрузить файл';
     }
 
+    $charsets = array('ASCII', 'windows-1251', 'utf-8');
+    $charset = array_reduce($charsets, function($charset, $item) use ($data) {
+        return $charset = strcmp(@iconv($item, $item, $data[1]), $data[1]) == 0 ? $item : $charset;
+    }) or exit('Не неизвестная кодировка');
+
     try {
-        $mysqli = new PDO('mysql:dbname=fiora;host=127.0.0.1', 'root', '');
+        $mysqli = new PDO('mysql:dbname=fiora;host=127.0.0.1;charset=UTF8', 'root', '');
         $mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo 'Подключение не удалось: ' . $e->getMessage();
@@ -37,7 +43,7 @@ if (in_array($type = key($_FILES), array('products', 'items'))) {
             {
                 ++$str;
 
-                $values = mb_convert_encoding($values, "utf-8", "windows-1251");
+                $values = mb_convert_encoding($values, "utf-8", $charset);
                 $values = str_replace('"', '', $values);
                 $values = str_replace(';', '","', $values);
 
@@ -65,7 +71,7 @@ if (in_array($type = key($_FILES), array('products', 'items'))) {
             {
                 ++$str;
 
-                $values = mb_convert_encoding($values, "utf-8", "windows-1251");
+                $values = mb_convert_encoding($values, "utf-8", $charset);
                 list($artikul, $price, $art_new, $art_action, $rest) = explode(';', $values);
 
                 //$values = htmlspecialchars($values, ENT_COMPAT);
