@@ -4,20 +4,22 @@
 <body class="flex-container">
 
 <?
-
-if (in_array($type = key($_FILES), ['products', 'items']) && $file = array_column($_FILES, 'tmp_name')[0]) {
+echo implode(", ", mb_detect_order());
+if (in_array($type = key($_FILES), array('products', 'items'))) {
 
     @set_time_limit(0);
 
-    $data = file($file);
+    try {
+        $data = file($_FILES[$type]['tmp_name']);
+    } catch (PDOException $e) {
+        echo 'Не удалось загрузить файл';
+    }
 
-    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-    $mysqli = new mysqli("127.0.0.1", "root", "", "fiora");
-
-    if ($mysqli->connect_errno) {
-        printf("Connect failed: %s\n", $mysqli->connect_error);
-        exit();
+    try {
+        $mysqli = new PDO('mysql:dbname=fiora;host=127.0.0.1', 'root', '');
+        $mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo 'Подключение не удалось: ' . $e->getMessage();
     }
 
     if ($type == "products") {
@@ -25,9 +27,9 @@ if (in_array($type = key($_FILES), ['products', 'items']) && $file = array_colum
         try {
             $str = 1;
 
-            $mysqli->begin_transaction(MYSQLI_TRANS_START_READ_WRITE);
+            $mysqli->beginTransaction();
 
-            $mysqli->query('DELETE from `db_rest`');
+            $mysqli->exec('DELETE from `db_rest`');
 
             $fields = str_replace(';', ',', trim(array_shift($data)));
 
@@ -35,21 +37,18 @@ if (in_array($type = key($_FILES), ['products', 'items']) && $file = array_colum
             {
                 ++$str;
 
-                //$fields = explode(';', array_shift($lines));
-
                 $values = mb_convert_encoding($values, "utf-8", "windows-1251");
-                //$values = htmlspecialchars($values, ENT_COMPAT);
                 $values = str_replace('"', '', $values);
                 $values = str_replace(';', '","', $values);
 
-                $mysqli->query('INSERT INTO db_rest (' . $fields. ') VALUES ("' . $values . '")');
+                $mysqli->exec('INSERT INTO db_rest (' . $fields. ') VALUES ("' . $values . '")');
             }
 
             $mysqli->commit();
             echo 'Данные успешно обновлены.';
 
         } catch (Exception $e) {
-            $mysqli->rollback();
+            $mysqli->rollBack();
             echo 'Призошла ошибка (строка ' . $str . '): ',  $e->getMessage(), "\n";
         }
 
@@ -58,7 +57,7 @@ if (in_array($type = key($_FILES), ['products', 'items']) && $file = array_colum
         try {
             $str = 1;
 
-            $mysqli->begin_transaction(MYSQLI_TRANS_START_READ_WRITE);
+            $mysqli->beginTransaction();
 
             $fields = explode(';', trim(array_shift($data)));
 
@@ -73,19 +72,19 @@ if (in_array($type = key($_FILES), ['products', 'items']) && $file = array_colum
                 $values = str_replace('"', '', $values);
                 $values = str_replace(';', '","', $values);
 
-                $mysqli->query('UPDATE db_rest SET price='.(int)$price.', art_new='.(int)$art_new.', art_action='.(int)$art_action.', rest='.(int)$rest.' WHERE artikul='.(int)$artikul);
+                $mysqli->exec('UPDATE db_rest SET price='.(int)$price.', art_new='.(int)$art_new.', art_action='.(int)$art_action.', rest='.(int)$rest.' WHERE artikul='.(int)$artikul);
             }
 
             $mysqli->commit();
             echo 'Данные успешно обновлены.';
 
         } catch (Exception $e) {
-            $mysqli->rollback();
+            $mysqli->rollBack();
             echo 'Призошла ошибка (строка ' . $str . '): ',  $e->getMessage(), "\n";
         }
     }
 
-    $mysqli->close();
+    $mysqli = null;
 
 } else {
 ?>
