@@ -32,8 +32,12 @@ function get_product($artikul,$country_uid) {
 			r.ext_glass,
 			r.art_flowers,
 			r.art_flowers_add,
-			r.art_desc
+			r.art_desc,
+			a.name
 		FROM db_rest as r
+		LEFT JOIN db_action as a
+			ON r.art_action=a.uid
+
 		LEFT JOIN db_collection as c
 			ON r.col_uid=c.col_uid
 

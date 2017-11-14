@@ -71,9 +71,12 @@ $product=get_product($_GET['art'],$geo_country_id);
 		<div class="marb_20 row row_40">
 			<div class="col-sm-7">
 				<div class="marb_20 product_gallery">
-					<div class="tmark" <? if ($product[2]==0) { echo "style='display:none;'"; } ?> >
-						<span class="mark_price">Специальная <br />цена</span>
+
+                    <? if ($product[26]): ?>
+					<div class="tmark"  >
+						<span class="mark_price"><? echo $product[26] ?></span>
 					</div>
+                    <? endif; ?>
 
 					<!-- интерьерные фото -->
 						<ul class="preview">
@@ -382,14 +385,7 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
 						<div class="m-b-2 hidden-lg"></div>
 					</div>
 
-                    <?
-//                    if ($status == 0) {
-//                        echo '
-//                        <div class="col-xs-6 col-lg-4 mart_7">
-//                            <span style="font-size: 18px">Нет в наличии</span>
-//                        </div>';
-//                    } else {
-                        echo '
+                    <? if ($status == 2 || $product[3]): ?>
                         <div class="col-xs-3 col-lg-2 mart_7">
                             <div class="counter counter_v2">
                                 <a class="minus fa fa-angle-down" href="#"></a>
@@ -399,9 +395,13 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
                         </div>
                         <div class="col-xs-6 col-lg-4 mart_7">
                             <a href="javascript:recycled_add(' . $product[0] . ')" class="btn btn-block btn-default"><span class="type-link">В корзину</span></a>
-                        </div>';
-//                    }
-                    ?>
+                        </div>
+                    <? else: ?>
+                        <div class="col-xs-6 col-lg-4 mart_7">
+                            <span style="font-size: 18px">Нет в наличии</span>
+                        </div>
+                    <? endif; ?>
+
 
 				</div>
 

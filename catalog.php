@@ -217,6 +217,11 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
                                 // подгружаем остатки по городам
                                 //===================================================================
 
+                                //Временное решение (только по центральному складу)
+                                if ($rest[$rest_i][3])
+                                    $status = 2;
+
+
 //                                if ($status == 2) {
 //									echo "<p style='margin-top:-18px;'>в наличии</p>";
 //								} elseif ($rest[$rest_i][3]) {
@@ -226,10 +231,17 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 //                                    echo "<p style='margin-top:-18px;'>нет в наличии</p>";
 //                                }
 
-								echo "
-														</div>
-													<div class='mark_top_right'>
-								";
+								echo "</div>";
+
+								if ($rest[$rest_i][20]) {
+                                    echo "
+                                        <div class='mark_top_left'>
+                                            <span class='mark_price'>".$rest[$rest_i][20]."</span>
+                                        </div>";
+                                }
+
+                                echo "<div class='mark_top_right'>";
+
 								if ($rest[$rest_i][14]==1) {
 									echo "					<span class='mark_bg_red'>новинка</span>";
 								}
@@ -263,11 +275,11 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 								echo "					</div>
 													<div class='add'>";
 
-//                                if ($status == 0) {
-//                                    echo "<a class='btn btn-danger btn-block'>Нет в наличии</a>";
-//                                } else {
+                                if ($status == 0) {
+                                    echo "<a class='btn btn-danger btn-block'>Нет в наличии</a>";
+                                } else {
                                     echo "<a href='javascript:recycled_add(".$rest[$rest_i][0].");' class='btn btn-danger btn-block'>Добавить в корзину</a>";
-//                                }
+                                }
 
 								echo "					</div>
 												</div>
