@@ -109,6 +109,7 @@ echo "</font><hr>";
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all" />
     <!--project files-->
+    <link rel="stylesheet" href="css/form.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/lex.style.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>

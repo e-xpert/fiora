@@ -241,7 +241,7 @@
 										<dd><a href="stock.php">Акции</a></dd>
 										<dd>
 											<span class="with-fiora">
-												<a *href="http://land.fiora-rf.ru" href="404.php" class="type-link">Бизнес с Fi’ora</a>
+                                                <a id="formfeedbackopen" href="javascript:void(0)" data-toggle="modal" data-target="#formfeedback" rel="nofollow" class="type-link">Бизнес с Fi’ora</a>
 											</span>
 										</dd>
 									</dl>
@@ -261,6 +261,73 @@
 			</div>
 		</div>
 	</div><!--#header-->
+
+    <div class="modal modal-main fade" id="formfeedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div role="document" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title brown">Ваши данные</h5><img src="/images/modal-header.png" alt="">
+                </div>
+                <div class="modal-body">
+                    <form id="send_order" action="/php/send_order.php" method="post">
+                        <input type="hidden" name="form" value="Заказать звонок">
+                        <div class="form-group">
+                            <input type="text" name="city" placeholder="Укажите ваш город" class="form-control required" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Как к вам обращатся" class="form-control required" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" placeholder="+7 (___) ___-__-__" class="form-control input-phone required" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="Укажите e-mail" class="form-control required" required>
+                        </div>
+                        <div class="form-group last">
+                            <textarea type="text" name="comment" placeholder="Дополнительные комментарии" class="form-control"></textarea>
+                        </div>
+                        <div class="container-form-error">
+                            <div class="form-group form-error-msg" style="display: none;"><span>Заполните выделенные поля</span></div>
+                        </div>
+                        <div class="form-group text-center form-submit">
+                            <input type="submit" name="submit" value="Отправить заявку" class="btn btn-danger">
+                        </div>
+                    </form>
+                    <div id="success_order" style="display: none">
+                        <p>Ваша заявка отправлена.<br> Наш консультант по ТМ Fi’ora<br> свяжется с вами сегодня или завтра<br> (кроме выходных дней).</p>
+                        <button type="button" data-dismiss="modal" class="btn btn-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $("#formfeedbackopen").click(function() {
+            $('#send_order').show();
+            $('#success_order').hide();
+        });
+
+        $("#send_order").submit(function() {
+            $.ajax({
+                type: 'POST',
+                url: $("#send_order").attr('action'),
+                data: $("#send_order").serialize(),
+                success: function(response) {
+                    $('#send_order')[0].reset();
+                    $('#send_order').hide();
+                    $('#success_order').show();
+                },
+                error: function() {
+                    alert('Ошибка');
+                }
+            });
+            return false;
+        });
+    </script>
+
     <div class="modal fade" id="modal_hook" tabindex="-1" role="dialog" aria-labelledby="modal_hook">
     	<div class="modal-dialog modal-md" role="document">
     		<div class="modal-content">

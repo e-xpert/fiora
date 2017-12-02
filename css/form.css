@@ -1,0 +1,318 @@
+body {
+    padding-right: 0 !important;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5
+}
+
+.close:focus,.close:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: .75
+}
+button.close {
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none
+}
+
+.modal-open {
+    overflow: hidden
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0
+}
+
+.modal.fade .modal-dialog {
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    transform: translate(0,-25%)
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000
+}
+
+.modal-backdrop.fade {
+    opacity: 0
+}
+
+.modal-backdrop.in {
+    opacity: .5
+}
+
+.modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5
+}
+
+.modal-title.brown {
+    color: #5c3c17 !important;
+    text-align: left !important;
+}
+
+.modal-dialog .modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 35px 60px 15px;
+}
+
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 15px;
+    border-top: 1px solid #e9ecef
+}
+
+.modal-footer>:not(:first-child) {
+    margin-left: .25rem
+}
+
+.modal-footer>:not(:last-child) {
+    margin-right: .25rem
+}
+
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width:500px;
+        margin: 30px auto
+    }
+
+    .modal-sm {
+        max-width: 300px
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        max-width:800px
+    }
+}
+
+.form-group {
+    margin-bottom: 31px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    height: 48px;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #000;
+    line-height: 30px;
+    padding: 0px 0px 0px 28px;
+}
+.form-group input[type="text"].error,
+.form-group input[type="email"].error,
+.form-phone input[type="text"].error {
+    border: 1px solid #f00;
+}
+.form-group textarea {
+    height: 113px;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #000;
+    padding: 13px 28px 6px 28px;
+}
+@media only screen and (max-width: 749px) {
+    .form-group textarea {
+        height: 200px;
+    }
+}
+.form-group input[type="submit"] {
+    margin: auto;
+    width: 251px;
+    margin-left: 1px;
+    cursor: pointer;
+
+}
+
+.form-group input[type="submit"] {
+    border-radius: 50px;
+    height: 44px;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 749px) {
+    .form-group input[type="submit"] {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+.form-group.form-error-msg {
+    color: #f00;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 12px;
+    display: none;
+}
+.bx-mac .form-group.form-error-msg {
+
+}
+@media only screen and (max-width: 749px) {
+    .form-group.form-error-msg {
+        margin-bottom: 25px;
+    }
+}
+.form-group.form-textarea {
+    margin-bottom: 18px;
+}
+@media only screen and (max-width: 749px) {
+    .form-group.form-textarea {
+        margin-bottom: 26px;
+    }
+}
+.modal-main .modal-dialog {
+    max-width: 470px;
+    width: 100%;
+}
+@media only screen and (max-width: 749px) {
+    .modal-main .modal-dialog {
+        margin: 0px;
+    }
+}
+.modal-main .modal-dialog .modal-content {
+    border-radius: 0px;
+}
+.modal-main .modal-dialog .modal-header {
+    height: 131px;
+    padding: 0px;
+    position: relative;
+    padding: 0px 64px;
+}
+.modal-main .modal-dialog .modal-header img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+.modal-main .modal-dialog .modal-header h5 {
+    font-size: 28px;
+
+    font-weight: 300;
+    width: 100%;
+    position: relative;
+    z-index: 200;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 7px;
+}
+.modal-main .modal-dialog .modal-header .close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    width: 16px;
+    height: 17px;
+    background: url('/images/close-modal-header.png') no-repeat;
+    z-index: 200;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: content-box;
+    background-position: 5px;
+    outline: none;
+}
+
+.modal-main #success_order {
+    text-align: center;
+}
+.modal-main #success_order p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.modal-main .btn-close {
+    padding: 0px;
+    width: 34px;
+    height: 31px;
+    background: url(/images/btn-close.png) no-repeat;
+    margin: auto;
+    position: relative;
+    left: -7px;
+    cursor: pointer;
+}
+.modal-main #success_order .btn-close {
+    margin: 30px 0 10px 0;
+}
