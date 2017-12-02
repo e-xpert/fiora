@@ -578,7 +578,7 @@
 		    });
         });
     </script>
-    <?php /*
+
     <div class="modal fade" id="modal_sale" tabindex="-1" role="dialog" aria-labelledby="modal_sale">
     	<div class="modal-dialog" role="document">
     		<div class="modal-content">
@@ -621,7 +621,7 @@
     		</div>
     	</div>
     </div>
-    */?>
+
 	<?php if (isset($_GET['share']) && $_GET['share'] == '123'): ?>
 		<script type="text/javascript">
 			$(function() {
