@@ -33,49 +33,46 @@ require_once ( "html_header.php");
 	<div class="header-sep"></div>
 
 	<div class="mainpage-slider">
+        <div class="main-uniq container">
+            <button type="button" class="open-uniq button" style="display: none">
+                Видео о ценностях Fi’ora
+            </button>
+        </div>
+
 		<div class="owl-carousel">
 			<div class="owl-carousel-item">
 				<div class="mps-item">
 					<div class="img">
 						<span><img src="images/banner/banner_1.png" alt="" /></span>
 					</div>
-					<div class="txt half">
+                    <div class="txt half">
 						<div class="container">
-							<div class="title"><font color='white'>ВЕЧНАЯ ЭНЕРГИЯ <br />ЖИВЫХ ЦВЕТОВ</font></div>
+							<div class="title">
+                                <font color='white'>ДЕКОР ИЗ ЖИВЫХ ЦВЕТОВ<br />В СТЕКЛЯННЫХ ВАЗАХ</font>
+                            </div>
 							<div class="description">
 								<font color='white'>
-    								Станьте и вы обладателем уникальной <br />
-    								композиции Fi’ora.<br />
-    								Прикоснитесь к модной тенденции.<br />
-    								<!-- <br />
-    								<span style="background-color: #78e7e3; padding: 5px; color: black;">Доставим к 8 марта</span>
-                                    <br><br>
-                                    Сделайте заказ до 17:00 (Москва) -->
+                                    Сохраняются без ухода > 5 лет
 								</font>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <div class="owl-carousel-item">
+			<div class="owl-carousel-item">
 				<div class="mps-item">
 					<div class="img">
-						<span><img src="images/banner/banner_2.png" alt="" /></span>
-					</div>
-					<div class="txt half">
-						<div class="container">
-							<div class="title">ВЕСЕННЕЕ НАСТРОЕНИЕ<br>
-								ДЛЯ ВАШИХ БЛИЗКИХ</div>
-							<div class="description">
-								Подарил себе – подари другому!<br>
-								О вас будут вспоминать практически всегда,<br><br>
-								Fi'ora будет на видном месте у неё<br>
-								дома.<br>
-							</div>
-						</div>
+						<span><img src="images/banner/banner_2.jpg" alt="" /></span>
 					</div>
 				</div>
-			</div> -->
+			</div>
+            <div class="owl-carousel-item">
+                <div class="mps-item">
+                    <div class="img">
+                        <span><img src="images/banner/banner_3.png" alt="" /></span>
+                    </div>
+                </div>
+            </div>
 		</div>
 		<!--
 		<div class="mps-links">
@@ -103,87 +100,86 @@ require_once ( "html_header.php");
 		</script>
 		<div class="uniq s1x2">
 			<div class="main-uniq">
+                <button type="button" class="close open-uniq" title="Закрыть"></button>
 				<div class="main-uniq-box">
-					<div class="text">Живые цветы <br />с флористикой</div>
-					<div class="sepline m-c-a"></div>
-					<div class="text">сохраняются более 5 лет</div>
-					<!--
-					<div class="img">
-						<img src="images/examples/img057.jpg" alt="" />
-					</div>
-					-->
-					<div class="more" style='margin-top:290px;'>
-						<a href="#" class="open-uniq h-a color_blue">Всё об уникальности</a>
-						<a href="#" class="open-uniq h-b color_blue">Закрыть</a>
+					<div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
+                    <div class="sepline m-c-a"></div>
+                    <div class="text">ОЦЕНИТСЯ<br />С ДОСТОИНСТВОМ<br />КАК ПОДАРОК</div>
+                    <div class="more" style='margin-top:250px;'>
+						<a href="#" class="open-uniq h-a">Узнать об уникальности</a>
+						<a href="#" class="open-uniq h-b">Закрыть</a>
 					</div>
 				</div>
                 <div class="main-uniq-drop">
-                    <div class="separate-item">
-                        <div class="headline">Уникальность продукции</div>
-                        <div class="text n1 open">
-                            <div class="title">
-                                Герметичность внутреннего пространства
-                                <i class="fa fa-angle-up"></i>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="description">
-                                Наличие чистой среды внутри ваз ограничивает доступ вредных воздействий окружающей
-                                среды. Это ещё один фактор увеличивающий срок жизни цветов.
-                            </div>
-                        </div>
-                        <div class="text n2">
-                            <div class="title">
-                                Долговечность на срок от 5-ти лет
-                                <i class="fa fa-angle-up"></i>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="description">
-                                Специальная техника удаления влаги позволяет остановить время для их естественной красоты.
-                            </div>
-                        </div>
-                        <div class="text n3">
-                            <div class="title">
-                                Живые цветы в первозданном виде
-                                <i class="fa fa-angle-up"></i>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="description">
-                                Пристальное отношение уделяется качеству природной фактуры и пигменту цветов.
-                                Поэтому вы видите их как-будто они только только-что произросли.
-                            </div>
-                        </div>
-                        <div class="text n4">
-                            <div class="title">
-                                Детальная флористика в дизайне Fi’ora
-                                <i class="fa fa-angle-up"></i>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="description">
-                                Более 80 дополнительных растений используются при составлении коллекций.
-                                Основная миссия дизайна – наполнение композиций природным многообразием
-                                как в естественной природе (различные цветы и растения живут рядом если это
-                                не конвейерное производство.
-                            </div>
-                        </div>
-                        <div class="text n5">
-                            <div class="title">
-                                Качество прозрачности в стекле Fi’ora
-                                <i class="fa fa-angle-up"></i>
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="description">
-                                Максимальное внимание уделяется свойствам прозрачности стекла для более лучшей передачи цвета.
-                            </div>
-                        </div>
-                        <div class="image n1"><img src="images/separate-item-img01.png" alt="" /></div>
-                        <div class="image n2"><img src="images/separate-item-img02.png" alt="" /></div>
-                        <div class="image n3"><img src="images/separate-item-img03.png" alt="" /></div>
-                        <div class="image n4"><img src="images/separate-item-img04.png" alt="" /></div>
-                        <div class="image n5"><img src="images/separate-item-img05.png" alt="" /></div>
-                    </div>
-                    <div class="bosign">
-                        Гермитичные свойства продукции помогают удовлетворить ряд потребностей: простой уход, можно мыть в воде, отсутствие аллергических реакций.
-                    </div>
+
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n7Yat1wjiac?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<!--                    <div class="separate-item">-->
+<!--                        <div class="headline">Уникальность продукции</div>-->
+<!--                        <div class="text n1 open">-->
+<!--                            <div class="title">-->
+<!--                                Герметичность внутреннего пространства-->
+<!--                                <i class="fa fa-angle-up"></i>-->
+<!--                                <i class="fa fa-angle-down"></i>-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                Наличие чистой среды внутри ваз ограничивает доступ вредных воздействий окружающей-->
+<!--                                среды. Это ещё один фактор увеличивающий срок жизни цветов.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text n2">-->
+<!--                            <div class="title">-->
+<!--                                Долговечность на срок от 5-ти лет-->
+<!--                                <i class="fa fa-angle-up"></i>-->
+<!--                                <i class="fa fa-angle-down"></i>-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                Специальная техника удаления влаги позволяет остановить время для их естественной красоты.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text n3">-->
+<!--                            <div class="title">-->
+<!--                                Живые цветы в первозданном виде-->
+<!--                                <i class="fa fa-angle-up"></i>-->
+<!--                                <i class="fa fa-angle-down"></i>-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                Пристальное отношение уделяется качеству природной фактуры и пигменту цветов.-->
+<!--                                Поэтому вы видите их как-будто они только только-что произросли.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text n4">-->
+<!--                            <div class="title">-->
+<!--                                Детальная флористика в дизайне Fi’ora-->
+<!--                                <i class="fa fa-angle-up"></i>-->
+<!--                                <i class="fa fa-angle-down"></i>-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                Более 80 дополнительных растений используются при составлении коллекций.-->
+<!--                                Основная миссия дизайна – наполнение композиций природным многообразием-->
+<!--                                как в естественной природе (различные цветы и растения живут рядом если это-->
+<!--                                не конвейерное производство.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="text n5">-->
+<!--                            <div class="title">-->
+<!--                                Качество прозрачности в стекле Fi’ora-->
+<!--                                <i class="fa fa-angle-up"></i>-->
+<!--                                <i class="fa fa-angle-down"></i>-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                Максимальное внимание уделяется свойствам прозрачности стекла для более лучшей передачи цвета.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="image n1"><img src="images/separate-item-img01.png" alt="" /></div>-->
+<!--                        <div class="image n2"><img src="images/separate-item-img02.png" alt="" /></div>-->
+<!--                        <div class="image n3"><img src="images/separate-item-img03.png" alt="" /></div>-->
+<!--                        <div class="image n4"><img src="images/separate-item-img04.png" alt="" /></div>-->
+<!--                        <div class="image n5"><img src="images/separate-item-img05.png" alt="" /></div>-->
+<!--                    </div>-->
+<!--                    <div class="bosign">-->
+<!--                        Гермитичные свойства продукции помогают удовлетворить ряд потребностей: простой уход, можно мыть в воде, отсутствие аллергических реакций.-->
+<!--                    </div>-->
                 </div>
 <!--				<div class="main-uniq-drop">-->
 <!--					<div class="dashtitle"><span>Уникальность продукции:</span></div>-->
@@ -213,19 +209,19 @@ require_once ( "html_header.php");
 				$(function(){
 					$('.main-uniq').each(function(){
 						var $p = $(this);
-						var $drop = $('.main-uniq-drop', $p);
+						var $drop = $('.main-uniq-drop');
 						var $speed = 500;
 						var $opt1 = {};
 						var $opt2 = {};
-						$('.open-uniq', $p).click(function(){
-							if( $p.is('.main-uniq-open') ){
+						$('.open-uniq').click(function(){
+							if( $p.is('.main-uniq-open1') ){
 								$drop.hide('slide', { direction: "right" }, function(){
 									$('.image.n1').stop().animate({ top : 119 }, $speed);
 									$('.image.n2').stop().animate({ top : 150 }, $speed);
 									$('.image.n3').stop().animate({ top : 170 }, $speed);
 									$('.image.n4').stop().animate({ top : 185 }, $speed);
 									$('.image.n5').stop().animate({ top : 120 }, $speed);
-									$p.removeClass('main-uniq-open');
+									$p.removeClass('main-uniq-open1');
 								});
 							} else {
 								$drop.show('slide', { direction: "right" }, function(){
@@ -234,7 +230,7 @@ require_once ( "html_header.php");
 									$('.image.n3').stop().animate({ top : 120 }, $speed);
 									$('.image.n4').stop().animate({ top : 185 }, $speed);
 									$('.image.n5').stop().animate({ top : 260 }, $speed);
-									$p.addClass('main-uniq-open');
+									$p.addClass('main-uniq-open1');
 								});
 							}
 							return false;
@@ -253,9 +249,9 @@ require_once ( "html_header.php");
 			<div class="body">
 				<div class="media">
 					<div class="media-body media-middle">
-						<div class="text">Живые цветы <br />с флористикой</div>
+						<div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
 						<div class="sepline m-c-a"></div>
-						<div class="text">сохраняются <br />более 5 лет</div>
+						<div class="text">ОЦЕНИТСЯ<br />С ДОСТОИНСТВОМ<br />КАК ПОДАРОК</div>
 					</div>
 					<div class="media-right media-bottom">
 						<img src="images/index/rose.png" alt="" />
@@ -271,72 +267,75 @@ require_once ( "html_header.php");
 <!--				<div class="disimg visible-xs"><img src="images/examples/img096.jpg" alt="" /></div>-->
 <!--			</div>-->
             <div class="drop">
-                <div class="fs_18 text-center text-uppercase">Уникальность продукции</div>
-                <div class="uniq-collapse open">
-                    <div class="title">
-                        Герметичность внутреннего пространства
-                        <i class="fa fa-angle-up"></i>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="description">
-                        Наличие чистой среды внутри ваз ограничивает доступ вредных воздействий окружающей
-                        среды. Это ещё один фактор увеличивающий срок жизни цветов.
-                    </div>
-                </div>
-                <div class="uniq-collapse">
-                    <div class="title">
-                        Долговечность на срок от 5-ти лет
-                        <i class="fa fa-angle-up"></i>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="description">
-                        Специальная техника удаления влаги позволяет остановить время для их естественной красоты.
-                    </div>
-                </div>
-                <div class="uniq-collapse">
-                    <div class="title">
-                        Живые цветы в первозданном виде
-                        <i class="fa fa-angle-up"></i>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="description">
-                        Пристальное отношение уделяется качеству природной фактуры и пигменту цветов.
-                        Поэтому вы видите их как-будто они только только-что произросли.
-                    </div>
-                </div>
-                <div class="uniq-collapse">
-                    <div class="title">
-                        Детальная флористика в дизайне Fi’ora
-                        <i class="fa fa-angle-up"></i>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="description">
-                        Более 80 дополнительных растений используются при составлении коллекций.
-                        Основная миссия дизайна – наполнение композиций природным многообразием
-                        как в естественной природе (различные цветы и растения живут рядом если это
-                        не конвейерное производство.
-                    </div>
-                </div>
-                <div class="uniq-collapse">
-                    <div class="title">
-                        Качество прозрачности в стекле Fi’ora
-                        <i class="fa fa-angle-up"></i>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="description">
-                        Максимальное внимание уделяется свойствам прозрачности стекла для более лучшей передачи цвета.
-                    </div>
-                </div>
-                <div class="m-b-2"></div>
-                <div class="fs_13 text-center color_gray">
-                    Гермитичные свойства продукции помогают удовлетворить ряд потребностей: простой уход, можно мыть в воде, отсутствие аллергических реакций.
-                </div>
+
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n7Yat1wjiac?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<!--                <div class="fs_18 text-center text-uppercase">Уникальность продукции</div>-->
+<!--                <div class="uniq-collapse open">-->
+<!--                    <div class="title">-->
+<!--                        Герметичность внутреннего пространства-->
+<!--                        <i class="fa fa-angle-up"></i>-->
+<!--                        <i class="fa fa-angle-down"></i>-->
+<!--                    </div>-->
+<!--                    <div class="description">-->
+<!--                        Наличие чистой среды внутри ваз ограничивает доступ вредных воздействий окружающей-->
+<!--                        среды. Это ещё один фактор увеличивающий срок жизни цветов.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="uniq-collapse">-->
+<!--                    <div class="title">-->
+<!--                        Долговечность на срок от 5-ти лет-->
+<!--                        <i class="fa fa-angle-up"></i>-->
+<!--                        <i class="fa fa-angle-down"></i>-->
+<!--                    </div>-->
+<!--                    <div class="description">-->
+<!--                        Специальная техника удаления влаги позволяет остановить время для их естественной красоты.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="uniq-collapse">-->
+<!--                    <div class="title">-->
+<!--                        Живые цветы в первозданном виде-->
+<!--                        <i class="fa fa-angle-up"></i>-->
+<!--                        <i class="fa fa-angle-down"></i>-->
+<!--                    </div>-->
+<!--                    <div class="description">-->
+<!--                        Пристальное отношение уделяется качеству природной фактуры и пигменту цветов.-->
+<!--                        Поэтому вы видите их как-будто они только только-что произросли.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="uniq-collapse">-->
+<!--                    <div class="title">-->
+<!--                        Детальная флористика в дизайне Fi’ora-->
+<!--                        <i class="fa fa-angle-up"></i>-->
+<!--                        <i class="fa fa-angle-down"></i>-->
+<!--                    </div>-->
+<!--                    <div class="description">-->
+<!--                        Более 80 дополнительных растений используются при составлении коллекций.-->
+<!--                        Основная миссия дизайна – наполнение композиций природным многообразием-->
+<!--                        как в естественной природе (различные цветы и растения живут рядом если это-->
+<!--                        не конвейерное производство.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="uniq-collapse">-->
+<!--                    <div class="title">-->
+<!--                        Качество прозрачности в стекле Fi’ora-->
+<!--                        <i class="fa fa-angle-up"></i>-->
+<!--                        <i class="fa fa-angle-down"></i>-->
+<!--                    </div>-->
+<!--                    <div class="description">-->
+<!--                        Максимальное внимание уделяется свойствам прозрачности стекла для более лучшей передачи цвета.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="m-b-2"></div>-->
+<!--                <div class="fs_13 text-center color_gray">-->
+<!--                    Гермитичные свойства продукции помогают удовлетворить ряд потребностей: простой уход, можно мыть в воде, отсутствие аллергических реакций.-->
+<!--                </div>-->
             </div>
 		</div>
 
 		<div class="row">
 			<div class="m-b-2 col-xs-12 col-sm-6 col-md-3">
-				<div class="s1x1 pos">
+				<div class="s1x1 fix pos">
 					<a href="catalog.php" class="overlink"></a>
 					<div class="half text-center">
 						<div class="padd10">
@@ -349,7 +348,7 @@ require_once ( "html_header.php");
 				</div>
 			</div>
 			<div class="m-b-2 col-xs-12 col-sm-6 col-md-3">
-				<div class="s1x1 main-fiora-ideas main-box-bg">
+				<div class="s1x1 fix main-fiora-ideas main-box-bg">
 					<a href="idea.php" class="overlink"></a>
 					<div class="bg">
 						<img class="hidden-xs" src="images/index/idea.png" alt="" />
@@ -364,12 +363,8 @@ require_once ( "html_header.php");
 				</div>
 			</div>
 			<div class="m-b-2 col-xs-12 col-md-6">
-				<div class="s2x1 main-video">
-					<a href="https://www.youtube.com/embed/nGnVFYOvj3o?autoplay=1" class="overlink fancyvideo fancybox.iframe"></a>
-					<!-- <a href="https://www.youtube.com/embed/X7nKUnART-g?autoplay=1" class="overlink fancyvideo fancybox.iframe"></a> -->
-					<div class="img"><span><img src="images/main/main__video.gif" alt="" /></span></div>
-					<!-- <div class="img"><span><img src="images/index/video.png" alt="" /></span></div> -->
-					<!-- <div class="half text-center"><img src="images/icons/yt.png" alt="" /></div> -->
+				<div class="s2x1 fix main-video">
+                    <iframe width="100%" class="s2x1 fix" src="https://www.youtube.com/embed/X7nKUnART-g?rel=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -550,14 +545,14 @@ require_once ( "html_header.php");
 							<div class="main-news-item">
 								<a href="#" class="overlink"></a>
 								<div class="txt">
-									<div class="date"><span>21</span> марта</div>
+									<div class="date"><span>26</span> ноября</div>
 									<div class="sepline"></div>
 									<div class="m-b-1">
-										Всемирный День Земли – повод преподнести сохранненую частичку природы в наших вазах
+                                        День матери  — это радостное и очень торжественное событие. Скажите об вашем бережном отношение своей Маме. А в знак благодарности и бесконечной любви можете подарить ей одну из композиций Fi’ora.
 									</div>
 									<!-- <a href="#">Купить</a> -->
 								</div>
-								<div class="img"><img src="images/index/21mart.png" alt="" /></div>
+								<div class="img"><img src="images/index/mom.png" alt="" /></div>
 							</div>
 						</div>
 					</div>
@@ -780,20 +775,22 @@ require_once ( "html_header.php");
 
 		<div class="m-b-5 bg_gray">
 			<div class="media media-responsive text-xs-center">
-				<div style='background:#f2f2f2;' class="media-left media-bottom hidden-xs"><img src="images/examples/img084.png" alt="" /></div>
+				<div style='background:#f2f2f2;' class="media-left media-bottom hidden-xs"><img src="images/index/granity.png" alt="" /></div>
 				<div class="media-body media-middle">
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="padd20">
-						<div class="m-b-2 fs_24">УНИКАЛЬНАЯ НОВИНКА ОТ FI'ORA,<br>ВПЕРВЫЕ ТОЛЬКО В FI'ORA</div>
+						<div class="m-b-2 fs_24" style="text-transform: uppercase">Коллекция в трендах уходящего года,<br>последние остатки коллекции которой больше не будет</div>
 						<div class="m-b-2 color_dark_gray">
-							Цветочная композиция в эксклюзивной вазе в форме сердца была разработана нашими специалистами и явилась первой в своем роде. <br><br>
-							Она как нельзя лучше поможет выразить ваши чувства. Новинка создана для того, чтобы ваш подарок говорил за вас.
+                            В 2017 году ТМ Fi`ora разработала цветочную коллекцию Granity 591,
+                            которая учитывает все модные тенденции уходящего года. Насыщенная во всех смыслах композиция не требует никаких дополнений.
+                            Обеспечьте ей небольшую цветовую поддержку в интерьере – и он заиграет новыми красками.
+                            А главное – обретет собственный, неповторимый стиль.
 						</div>
-						<a href="product.php?art=46964" class="btn btn-default"><span class="type-link">Купить</span></a>
+						<a href="/catalog.php#Granity591" class="btn btn-default"><span class="type-link">Купить</span></a>
 					</div>
 					<div class="m-b-5 hidden-xs"></div>
 				</div>
-				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/examples/img084.png" alt="" /></div>
+				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/index/granity.png" alt="" /></div>
 			</div>
 		</div>
 
@@ -1012,7 +1009,7 @@ require_once ( "html_header.php");
 					<img class="img-responsive" src="images/examples/img049.jpg" alt="" />
 				</div>
 				<div class="col-md-8">
-					<div class="m-b-5 fs_18">Ограниченная серия Fi'ora Lavander Limited Series <br />совместно с L’Occitane</div>
+					<div class="m-b-5 fs_18">В составе набора лежит принцип долговечности, где каждая<br> составляющая  набора многие годы не изменит внешнего вида и<br> сохранит свою яркость и красоту.</div>
 					<img class="img-responsive img-center" src="images/examples/img050.jpg" alt="" />
 				</div>
 			</div>
