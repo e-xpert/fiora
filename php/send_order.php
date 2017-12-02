@@ -10,7 +10,7 @@ $message="
 	<html><head><meta charset='utf-8'></head>
 		<body>
 		
-		" . $subject . "
+		" . $subject . "</b><br><br>
 		Город: <b>".$_POST['city']."</b><br><br>
 		Имя: <b>".$_POST['name']."</b><br><br>
 		Телефон: <b>".$_POST['phone']."</b><br><br>

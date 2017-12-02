@@ -5,7 +5,7 @@
     $text_type = htmlspecialchars($_POST['text_type']);
 
     if ($_POST['subscribe']) {
-        require_once("/php/mysql.php");
+        require_once("php/mysql.php");
 
         $db=db_connect();
 
@@ -15,7 +15,7 @@
             mysql_query("insert into db_subscribe (email)values ('".$to."')");
         }
 
-		mysql_close($db);
+        mysql_close($db);
     }
 
     switch ($text_type) {
@@ -129,7 +129,7 @@
         <html><head><meta charset='utf-8'></head>
             <body>
             
-            " . $subject . "
+            " . $subject . "<br><br>
             Имя: <b>".$_POST['name']."</b><br><br>
             e-mail: <b>".$_POST['email']."</b><br><br>
         
