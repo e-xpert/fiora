@@ -606,7 +606,7 @@
                                 <div class="m-b-3 text-center">
                                     <span class="checkbox">
                                         <label>
-                                            <input type="checkbox" checked="true" value="" />
+                                            <input type="checkbox" name="subscribe" checked="true" value="true" />
                                             Подпистаться на новости и выгодные предложения
                                         </label>
                                     </span>

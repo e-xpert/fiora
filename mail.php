@@ -4,6 +4,19 @@
     $name = htmlspecialchars($_POST['name']);
     $text_type = htmlspecialchars($_POST['text_type']);
 
+    if ($_POST['subscribe']) {
+        require_once("/php/mysql.php");
+
+        $db=db_connect();
+
+        $res = mysql_query("select * from db_subscribe where email = '".$to."'");
+
+        if (mysql_num_rows($res) == 0) {
+            mysql_query("insert into db_subscribe (email)values ('".$to."')");
+        }
+
+		mysql_close($db);
+    }
 
     switch ($text_type) {
         case 'main':
