@@ -25,7 +25,6 @@ $to  = 'myfiora@yandex.ru ';
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-$headers .= 'From: ТМ Fi’ora <no_reply@myfiora.com>' . "\r\n";
 
 mail($to, $subject, $message, $headers);
 ?>
