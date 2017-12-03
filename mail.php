@@ -104,7 +104,7 @@
 
                     <a href="https://myfiora.com/legend.php" style="color: #0078ff;">Легенда о бренде Fi`ora</a>
                     <br /><br />
-                    &copy; 2016 «Fi`ora». Все права защищены
+                    &copy; 2017 «Fi`ora». Все права защищены
                 </td>
                 </tr>
                 </table>
