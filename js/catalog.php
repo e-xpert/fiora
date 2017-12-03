@@ -12,8 +12,12 @@
                     alert('Ошибка')
                 } else {
                     $('#basket_count').text(data);
-                    $('#basket_add').show();
-                    setTimeout("$('#basket_add').hide()",1500);
+
+                    $('.basket_add_' + artikul).show();
+                    setTimeout("$('.basket_add_" + artikul + "').hide()",1500);
+
+                    // $('#basket_add').show();
+                    // setTimeout("$('#basket_add').hide()",1500);
                 }
             }
         );

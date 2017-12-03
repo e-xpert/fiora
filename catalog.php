@@ -273,7 +273,21 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 
 
 								echo "					</div>
-													<div class='add'>";
+													<div class='add'>
+													
+													<!-- add basket box -->
+                                                    <div style='margin-left: 35px'>
+                                                        <div class=\"tooltips top left\">
+                                                            <div class='tooltips_box basket_add_".$rest[$rest_i][0]."' style='display:none; width: calc(100% + 37px)'>
+                                                                <div class=\"tooltips_box_arr\"></div>
+                                                                <div class=\"tooltips_box_body fs_12 text-left\" style='width: 100%;'>
+                                                                    Товар добавлен в корзину.<br><br>
+                                                                    <a href='basket.php'>Перейти в корзину</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- add basket box -->";
 
                                 if ($status == 0) {
                                     echo "<a class='btn btn-danger btn-block'>Нет в наличии</a>";

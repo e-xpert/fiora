@@ -231,6 +231,19 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
 								</div>
 							</li>
 							<li>
+                                <!-- add basket box -->
+                                <div style='margin-left: 35px'>
+                                    <div class="tooltips top left">
+                                        <div class='tooltips_box basket_add_<?=$product[0]?>' style='display:none; width: calc(100% + 37px)'>
+                                            <div class="tooltips_box_arr"></div>
+                                            <div class="tooltips_box_body fs_12 text-left" style='width: 100%;'>
+                                                Товар добавлен в корзину.<br><br>
+                                                <a href='basket.php'>Перейти в корзину</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- add basket box -->
 								<a href="javascript:recycled_add(<?=$product[0]?>)" class="btn btn-default"><span class="type-link">В корзину</span></a>
 							</li>
 						</ul>
@@ -394,7 +407,20 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
                             </div>
                         </div>
                         <div class="col-xs-6 col-lg-4 mart_7">
-                            <a href="javascript:recycled_add(' . $product[0] . ')" class="btn btn-block btn-default"><span class="type-link">В корзину</span></a>
+                            <!-- add basket box -->
+                            <div style='margin-left: 35px'>
+                                <div class="tooltips top left">
+                                    <div class='tooltips_box basket_add_<?=$product[0]?>' style='display:none; width: calc(100% + 37px)'>
+                                        <div class="tooltips_box_arr"></div>
+                                        <div class="tooltips_box_body fs_12 text-left" style='width: 100%;'>
+                                            Товар добавлен в корзину.<br><br>
+                                            <a href='basket.php'>Перейти в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- add basket box -->
+                            <a href="javascript:recycled_add(<?=$product[0]?>)" class="btn btn-block btn-default"><span class="type-link">В корзину</span></a>
                         </div>
                     <? else: ?>
                         <div class="col-xs-6 col-lg-4 mart_7">
