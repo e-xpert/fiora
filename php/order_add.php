@@ -26,13 +26,22 @@ mail($email, $subject, $body, $headers);
 
 mysql_error($db);
 
-echo '1';
+echo 1;
 
 //---------------------------------------------------------------------------------
 
 function do_order($db)
 {
-	$query = "select * from db_basket where user_hash='" . $_POST['key'] . "'";
+	$query = "select * 
+              from db_basket as b
+              left join db_rest as r
+                on b.artikul=r.artikul 
+              LEFT JOIN db_collection as c
+			    ON r.col_uid=c.col_uid
+              LEFT JOIN db_form as f
+                ON r.form_uid=f.form_uid
+              where user_hash='" . $_POST['key'] . "'";
+
 	$res=mysql_query($query);
 	$res_count=mysql_num_rows($res);
 
@@ -141,24 +150,52 @@ function get_order_message($filename, $order = array())
 	$body = fread($f_body, filesize($filename));
 	fclose($f_body);
 
-	$pay[1] = 'Оплата курьеру наличными';
-	$pay[2] = 'Онлайн оплата';
-
 	$body = str_replace('[*order_number*]', $order[0], $body);
 	$body = str_replace('[*order_date*]', date('d.m.Y'), $body);
-	$body = str_replace('[*order_summa*]', $_POST['summa'], $body);
-	$body = str_replace('[*order_delivery*]',$_POST['delivery'],$body);
-	$body = str_replace('[*order_discount*]', $_POST['promo_discount'], $body);
-	$body = str_replace('[*order_discount_code*]',$_POST['promo_code'],$body);
-	$body = str_replace('[*order_pay*]',$pay[$_POST['pay_type']],$body);
 
-
-	$product_list = '';
+    $product_list = '';
+    $order_list = '';
+    $product_sum = 0;
 	foreach ($order[1] as $product) {
-		$product_list .= $product[2] . ' - ' . $product[3] . '<br />';
+
+        $product_list .= '<tr>
+            <td style="padding: 15px 30px;">
+                <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                <td><a href="https://myfiora.com/product.php?art=' . $product[2] . '"><img src="https://myfiora.com/art_70/' . $product[2] . '.jpg" alt="" width="70px" /></a></td>
+                <td style="padding-left: 10px; font-size: 12px;">
+                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">' . $product[33] . '</div>
+                    ' . $product[44] . '
+                    <div style="padding-top: 5px; color: #aeaeae;">Артикул: ' . $product[2] . '</div>
+                </td>
+                </tr>
+                </table>
+            </td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[20] . ' Р</td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center;">' . $product[3] . '</td>
+            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[20] * $product[3]  . ' Р</td>
+        </tr>';
+
+        $product_sum += $product[20] * $product[3];
+
+		$order_list .= $product[2] . ' - ' . $product[3] . '<br />';
 	}
 
 	$body = str_replace('[*order_products*]', $product_list, $body);
+    $body = str_replace('[*order_list*]', $order_list, $body);
+
+    $pay[1] = 'Оплата курьеру наличными';
+    $pay[2] = 'Онлайн оплата';
+
+    $product_sum += $_POST['delivery'];
+    $discount_sum = $_POST['promo_discount'] / 100 * $product_sum;
+    $total_sum = $product_sum - $discount_sum;
+
+    $body = str_replace('[*order_summa*]', $total_sum, $body);
+    $body = str_replace('[*order_delivery*]', $_POST['delivery'] ? $_POST['delivery'] . ' Р' : '-', $body);
+    $body = str_replace('[*order_discount*]', $discount_sum ? $discount_sum . ' Р' : '-', $body);
+    $body = str_replace('[*order_discount_code*]', $_POST['promo_code'], $body);
+    $body = str_replace('[*order_pay*]', $pay[$_POST['pay_type']], $body);
 
 	if ($_POST['send_to']==2) {
 		$body = str_replace('[*order_name*]', $_POST['name_3'], $body);
