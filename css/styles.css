@@ -563,7 +563,7 @@ padding: 11px 0px 0px 110px;*/ font-size: 12px; color: #ffffff; line-height: 14p
 .sidemenu .single a:hover, .sidemenu .single a.active { background: #c53b3b; color: #ffffff; }
 .sidemenu .sep { background: #bdbdbd; position: relative; overflow: hidden; height: 1px; margin: 0px 30px 7px; }
 .sidemenu ul { margin: 0px 0px 10px 0px; padding: 0px; list-style: none; }
-.sidemenu ul li { padding: 7px 30px 8px; }
+.sidemenu ul li { padding: 7px 28px 8px; }
 .sidemenu ul li a { text-decoration: none; }
 .sidemenu ul li label { background: #cccccc; position: relative; overflow: hidden; display: inline-block; width: 12px; height: 12px; margin-right: 4px; font-weight: normal; }
 .sidemenu ul li label:hover { cursor: pointer; }
