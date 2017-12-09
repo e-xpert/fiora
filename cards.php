@@ -169,7 +169,7 @@ foreach ($collection as $cnt => $item) {
 
             echo $card[5] == 0 ?
                 "<a class='btn btn-danger btn-block'>Нет в наличии</a>" :
-                "<a href='javascript:recycled_add(".$card[0].");' class='btn btn-danger btn-block'>Добавить в корзину</a>";
+                "<a href='javascript:recycled_add(\"".$card[2]."\", \"card\");' class='btn btn-danger btn-block'>Добавить в корзину</a>";
 
             echo "				</div>
                             </div>
