@@ -4,6 +4,8 @@
         $('#filter_input_root_41').click();
     }
 
+    var basket_tooltips_timeout;
+
     function recycled_add(artikul) {
         var key=<? echo "'".$session_name."'"; ?>;
         $.post('https://<? echo $_SERVER['HTTP_HOST']; ?>/php/recycled_add_from_catalog.php', {'artikul': artikul,'key':key},
@@ -14,13 +16,21 @@
                     $('#basket_count').text(data);
 
                     $('.basket_add_' + artikul).show();
-                    setTimeout("$('.basket_add_" + artikul + "').hide()",1500);
+                    $('.hov').css('z-index', '20');
+
+                    clearTimeout(basket_tooltips_timeout);
+                    basket_tooltips_timeout = setTimeout("hide_basket_tooltips()",1500);
 
                     // $('#basket_add').show();
                     // setTimeout("$('#basket_add').hide()",1500);
                 }
             }
         );
+    }
+
+    function hide_basket_tooltips() {
+        $('.hov').css('z-index', '10');
+        $('.tooltips_box').hide();
     }
 
     function filter_clear() {

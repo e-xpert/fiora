@@ -207,7 +207,7 @@
 									<dl class="list-unstyled">
 										<dt>Каталог</dt>
 										<dd><a href="catalog.php">Композиции Фиора</a></dd>
-										<!-- <dd><a href="#">Фирменные открытки</a></dd> -->
+										 <dd><a href="cards.php">Фирменные открытки</a></dd>
 									</dl>
 									<dl class="list-unstyled">
 										<dt>Мода</dt>

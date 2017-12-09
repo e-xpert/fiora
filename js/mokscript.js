@@ -140,6 +140,7 @@ $(function(){
 		$('.hov', $catalog_temp).html( $('.box', $catalog_temp).html()).show();
 	}).mouseleave(function(){
 		$('.hov', $catalog_temp).html('').hide();
+        hide_basket_tooltips();
 	});
 
 	$('.radio label, .checkbox label').each(function(){

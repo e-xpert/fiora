@@ -94,7 +94,7 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 
 					</ul>
 					<div class="sep"></div>
-					<div class="single"><a href="#">Открытки</a></div>
+					<div class="single"><a href="/cards.php">Фирменные открытки</a></div>
 				</div>
 				<script>
 					$(function(){

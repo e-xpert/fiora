@@ -9,5 +9,7 @@ require_once ( "php/recycled.php"       			);
 require_once ( "api/seo/seo_last_update.php"       	);
 require_once ( "api/location/SxGeo.php" 			);
 
+require_once ( "php/card.php"     			);
+
 $VAR_image_path='/images/';
 $VAR_icons_path='/icons/';
