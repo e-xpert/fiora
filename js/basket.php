@@ -62,7 +62,7 @@
             $('#delivery_summa').text('0 ₽');
             $('#delivery_summa').data('delivery_summa', 0);
             $('#delivery_summa').data('delivery_summa')
-        } else {
+        } else if ($('#delivery_summa').data('delivery_default_summa') != undefined) {
             $('#delivery_summa').text($('#delivery_summa').data('delivery_default_summa').toLocaleString()+' ₽');
             $('#delivery_summa').data('delivery_summa', $('#delivery_summa').data('delivery_default_summa'));
         }

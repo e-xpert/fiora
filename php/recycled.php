@@ -15,7 +15,7 @@ function get_basket_count($user_hash) {
 
 function get_basket($user_hash) {
 	$db=db_connect();
-	$query="select * from db_basket where user_hash='".$user_hash."'";
+	$query="select * from db_basket where user_hash='".$user_hash."' order by `from` desc";
 	$res=mysql_query($query);
 	$res_count=mysql_num_rows($res);
 	for ($i=0;$i<$res_count;$i++) {

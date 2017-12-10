@@ -57,7 +57,7 @@ require_once ( "html_header.php"     );
 
 					<? if ($time = get_reserve_time($session_name)): ?>
 					<font color="grey" style="font-size: 15px;">
-						(Зарезервировано до <?= date('H:i d.m.Y', strtotime($time)) ?> (мск))
+						(Зарезервировано до <?= date('H:i d.m.Y', strtotime($time) + 7200) ?> (мск))
 					</font>
 					<? endif; ?>
 
@@ -76,234 +76,28 @@ require_once ( "html_header.php"     );
 			</div>
 		</div>
 <?
-$total =0;
-$basket=get_basket($session_name);
+global $total; $total = 0;
+
+$basket=get_basket($session_name) ?: array();
 $basket_size=count($basket);
-for ($basket_i=0;$basket_i<$basket_size;$basket_i++) {
-	$product_artikul=$basket[$basket_i][2];
-	$product_count=$basket[$basket_i][3];
-	$product=get_product($product_artikul,$geo_country_id);
 
+$temp = compact(
+    'temp_box_price',
+    'temp_lavanda_price',
+    'temp_box_name',
+    'temp_lavanda_name',
+    'temp_box_size',
+    'temp_lavanda_size'
+);
 
-	//===================================================================
-	// подгружаем остатки по городам
-	//===================================================================
-	$city_price=get_city_price($geo_city_id,$product[0]);
-	$city_rest_rest=$city_price[0];
-	$city_rest_price=$city_price[1];
-	$city_rest_price_new=$city_price[2];
-	if ($city_rest_rest>0)  {
-		if ($city_rest_price_new>0) {
-			$product[2]=$city_rest_price;
-			$product[1]=$city_rest_price_new;
-		} else {
-			$product[2]=0;
-			if ($city_rest_price>0) {
-				$product[1]=$city_rest_price;
-			}										
-		}
-	}
-	//-------------------------------------------------------------------
-	// подгружаем остатки по городам
-	//===================================================================
+foreach ($basket as $item) {
 
-
-	// специальная цена
-	if ($product[2]>0) {
-		$product_price=$product[1];
-		$product_price_special='';
-	} else {
-		$product_price=$product[1];
-		$product_price_special='display:none;';
-	}
-	// упаковка
-	if ($product[18]==1) {
-		$product_upak='';
-	} else { $product_upak='display:none;'; }
-	// лаванда
-	if ($product[19]==1) {
-		$product_lavanda='';
-	} else { $product_lavanda='display:none;'; }
-
-
-$photo="art_120/".$product[0].".jpg";
-if (!file_exists($photo)) {
-	$photo="art_120/none.jpg";
+	if ($item[7] == 'card_rest') {
+	    view_card($item);
+    } else {
+        view_product($item, $geo_country_id, $geo_city_id, $temp);
+    }
 }
-
-echo "
-
-<div class='cart-item'>
-			<div class='cart-box'>
-				<div class='media cart-line'>
-					<div class='media-left media-middle'>
-						<div class='media cart-catitem'>
-							<div class='media-left'>
-								<img width='120' src='".$photo."' alt=''>
-							</div>
-							<div class='media-body media-middle'>
-								<a href='product.php?art=".$product[0]."'>".$product[6]."<br><font color='grey'>".$product[11]."</font></a>
-								<div class='mart_10 color_gray'>Размеры: ".$product[15]." x ".$product[16]." x ".$product[17]." см.</div>
-							</div>
-						</div>
-					</div>
-					<div class='media-body media-middle'>
-						<div class='xs-scroll'>
-						<table class='basket-table'>
-							<tbody><tr>
-								<td class='color_gray'>стоимость</td>
-								<td class='color_gray'>количество</td>
-								<td class='color_gray'>сумма</td>
-								<td rowspan='2'><a href='javascript:recycled_del(".$product[0].");' class='closes'></a></td>
-							</tr>
-							<tr>
-								<td width='30%'>
-									<div class='fs_20 nowrap' id='product_price_".$product[0]."' data-price='".$product_price."'>".$product_price." ₽</div>
-									<br>
-									<span style='".$product_price_special."' class='mark_price'>специальная цена</span>
-								</td>
-								<td width='30%'>
-									<div class='counter counter_v1 img-center'>
-										<a onclick='artikul_minus(".$product[0].");' href='' class='minus' data-artikul='".$product[0]."'></a>
-										<a onclick='artikul_plus(".$product[0].");' href='' class='plus' data-artikul='".$product[0]."'></a>
-										<input type='text' id='product_count_".$product[0]."' value='".$product_count."'>
-									</div>
-								</td>
-								<td width='30%'>
-									<div class='fs_20 nowrap allsumm' data-artikul='".$product[0]."' data-prodsum='".($product_price*$product_count)."' id='product_summa_".$product[0]."'>".number_format($product_price*$product_count,0,'',' ')." ₽</div>
-									<div class='mart_5 fs_12 color_gray' id='delivery_free'></div>
-								</td>
-							</tr>
-						</tbody></table>
-						</div>
-					</div>
-				</div>
-				";
-
-	$total += $product_price*$product_count;
-//-------------------------------------------------------------------
-// Упаковка
-
-$temp_box_style="display:none;";
-
-if ($basket[$basket_i][4]>0) {
-	$temp_box_style="";
-	$temp_box_name=$temp_box_name;
-	$temp_box_size=$temp_box_size;
-	$temp_box_price=$temp_box_price;
-	$temp_box_count=$basket[$basket_i][4];
-	$temp_box_summa=$temp_box_count*$temp_box_price;
-	// тип упаковки 1-бокс, 2-лаванда
-	$temp_box_type=1;
-}
-
-if ($basket[$basket_i][5]>0) {
-	$temp_box_style="";
-	$temp_box_name=$temp_lavanda_name;
-	$temp_box_size=$temp_lavanda_size;
-	$temp_box_price=$temp_lavanda_price;
-	$temp_box_count=$basket[$basket_i][5];
-	$temp_box_summa=$temp_box_count*$temp_box_price;
-	$temp_box_type=2;
-}
-
-		echo "
-				<div style='display:none;' id='box_type_".$product[0]."' data-type='".$temp_box_type."'></div>
-
-				<div class='mart_15 hr' id='box_hr_".$product[0]."' style='".$temp_box_style."'></div>
-				<div class='media cart-line' id='box_data_".$product[0]."' style='".$temp_box_style."'>
-					<div class='media-left media-middle'>
-						<div class='media cart-catitem'>
-							<div class='media-left'>
-								<img width='120' src='images/examples/img027.png' alt='' />
-							</div>
-							<div class='media-body media-middle'>
-								<span id='box_name_".$product[0]."'>".$temp_box_name."</span>
-								<div id='box_size_".$product[0]."' class='mart_10 color_gray'>".$temp_box_size."</div>
-							</div>
-						</div>
-					</div>
-					<div class='media-body media-middle'>
-						<div class='xs-scroll'>
-						<table class='basket-table basket-table-td'>
-							<tr>
-								<td width='30%'>
-									<div class='fs_20 nowrap' id='box_price_".$product[0]."' data-price='".$temp_box_price."'>".$temp_box_price." ₽</div>
-								</td>
-								<td width='30%'>
-									<div class='counter counter_v1 img-center'>
-										<a onclick='box_minus(".$product[0].");' href='' class='minus' data-artikul='".$product[0]."'></a>
-										<a onclick='box_plus(".$product[0].");' href='' class='plus' data-artikul='".$product[0]."'></a>
-										<!--
-										<a href='#' class='minus'></a>
-										<a href='#' class='plus'></a>
-										-->
-										<input type='text' id='box_count_".$product[0]."' value='".$temp_box_count."'>
-									</div>
-								</td>
-								<td width='30%'><div class='fs_20 nowrap allsumm' data-artikul='".$product[0]."' data-boxsum='".$temp_box_summa."' id='box_summa_".$product[0]."'>".number_format($temp_box_summa,0,'',' ')." ₽</div>
-								<div class='mart_10 color_gray' style='font size=12px;' id='box_delivery_summa_".$product[0]."' data-delivery='0'></div>
-								</td>
-								<td><a class='closes' onclick='del_box(".$product[0].");'></a></td>
-							</tr>
-						</table>
-						</div>
-					</div>
-				</div>
-";
-
-// упаковка
-//==============================================================================
-echo "
-			</div>
-
-			<div class='cart-line-bottom'>
-				<ul class='list-inline'>
-					<li style='".$product_upak."'>
-						<div class='tooltips top right' style=''>
-							<!-- <div class='icon ico_24' onclick='add_box(".$product[0].");'> -->
-							<div class='icon ico_24'>
-								<div class='ico'><img src='images/icons/add_24.png' alt=''></div>
-								Добавить подарочную коробку
-							</div>
-							<div class='tooltips_box'>
-								<div class='tooltips_box_arr'></div>
-								<div class='tooltips_box_body'>
-									К сожалению в вашем городе<br>
-									коробки в наличии временно нет
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style='".$product_lavanda."'>";
-
-//						<a href='javascript:false' class='icon ico_24'  onclick='add_lavanda(".$product[0].");'><i class='ico'><img src='images/icons/add_24.png' alt=''></i>Добавить лимитированнную упаковку с подарочным комплектом <span class='color_orange'>L'Occitane</span></a>
-//						&nbsp;
-//						<a href='#' class='infomodal-button' data-target='#loccitane'><img src='images/icons/qwes.png' alt=''></a>
-echo "
-						<!-- Временно убирается отображение коробки -->
-						<div class='tooltips top right' style=''>
-							<div class='icon ico_24'>
-
-								<i class='ico'><img src='images/icons/add_24.png' alt=''></i>Добавить лимитированнную упаковку с подарочным комплектом <span class='color_orange'>L'Occitane</span>
-							</div>
-							<div class='tooltips_box'>
-								<div class='tooltips_box_arr'></div>
-								<div class='tooltips_box_body'>
-									К сожалению в вашем городе<br>
-									коробки в наличии временно нет
-								</div>
-							</div>
-						</div>
-						<!-- // -->
-
-					</li>
-				</ul>
-			</div>
-</div>
-";
-}
-
 ?>
 		<div class="media">
 			<div class="media-left media-left-lg media-middle"><img src="images/examples/img028.png" alt="" /></div>
@@ -525,24 +319,11 @@ echo "
 
 		<div class="m-b-2 fs_16"><strong>Способ оплаты</strong></div>
 
-
-
-
-
-
-
-
-
-
-
 				<div class='m-b-1' id='pay_type' data-pay_type='1'>
 					<div class='radio'>
 						<label><input id='pay_type_1' type='radio' name='pay' value='1' checked /> Оплата курьеру наличными</label>
 					</div>
 				</div>
-
-
-
 <?
 /*
 
@@ -718,9 +499,6 @@ echo "
 	</div>
 </div>
 
-
-
-
 <div style='display:none;'>
 	<form id='fmain' method='post' action='robo_form.php'>
 		<input id='robo_order' type='hidden' name='InvId' 		value=''>
@@ -734,4 +512,293 @@ echo "
 	// ----------   META  ------------------------
 	require_once ( "html_footer.php"     );
 	// ===========================================
+
+
+function view_product($item, $geo_country_id, $geo_city_id, $temp)
+{
+    extract($temp);
+
+    $product_count=$item[3];
+    $product=get_product($item[2],$geo_country_id);
+
+    //===================================================================
+    // подгружаем остатки по городам
+    //===================================================================
+    $city_price=get_city_price($geo_city_id,$product[0]);
+    $city_rest_rest=$city_price[0];
+    $city_rest_price=$city_price[1];
+    $city_rest_price_new=$city_price[2];
+    if ($city_rest_rest>0)  {
+        if ($city_rest_price_new>0) {
+            $product[2]=$city_rest_price;
+            $product[1]=$city_rest_price_new;
+        } else {
+            $product[2]=0;
+            if ($city_rest_price>0) {
+                $product[1]=$city_rest_price;
+            }
+        }
+    }
+    //-------------------------------------------------------------------
+    // подгружаем остатки по городам
+    //===================================================================
+
+
+    // специальная цена
+    if ($product[2]>0) {
+        $product_price=$product[1];
+        $product_price_special='';
+    } else {
+        $product_price=$product[1];
+        $product_price_special='display:none;';
+    }
+    // упаковка
+    if ($product[18]==1) {
+        $product_upak='';
+    } else { $product_upak='display:none;'; }
+    // лаванда
+    if ($product[19]==1) {
+        $product_lavanda='';
+    } else { $product_lavanda='display:none;'; }
+
+
+    $photo="art_120/".$product[0].".jpg";
+    if (!file_exists($photo)) {
+        $photo="art_120/none.jpg";
+    }
+
+    echo "
+
+<div class='cart-item'>
+			<div class='cart-box'>
+				<div class='media cart-line'>
+					<div class='media-left media-middle'>
+						<div class='media cart-catitem'>
+							<div class='media-left'>
+								<img width='120' src='".$photo."' alt=''>
+							</div>
+							<div class='media-body media-middle'>
+								<a href='product.php?art=".$product[0]."'>".$product[6]."<br><font color='grey'>".$product[11]."</font></a>
+								<div class='mart_10 color_gray'>Размеры: ".$product[15]." x ".$product[16]." x ".$product[17]." см.</div>
+							</div>
+						</div>
+					</div>
+					<div class='media-body media-middle'>
+						<div class='xs-scroll'>
+						<table class='basket-table'>
+							<tbody><tr>
+								<td class='color_gray'>стоимость</td>
+								<td class='color_gray'>количество</td>
+								<td class='color_gray'>сумма</td>
+								<td rowspan='2'><a href='javascript:recycled_del(".$product[0].");' class='closes'></a></td>
+							</tr>
+							<tr>
+								<td width='30%'>
+									<div class='fs_20 nowrap' id='product_price_".$product[0]."' data-price='".$product_price."'>".$product_price." ₽</div>
+									<br>
+									<span style='".$product_price_special."' class='mark_price'>специальная цена</span>
+								</td>
+								<td width='30%'>
+									<div class='counter counter_v1 img-center'>
+										<a onclick='artikul_minus(".$product[0].");' href='' class='minus' data-artikul='".$product[0]."'></a>
+										<a onclick='artikul_plus(".$product[0].");' href='' class='plus' data-artikul='".$product[0]."'></a>
+										<input type='text' id='product_count_".$product[0]."' value='".$product_count."'>
+									</div>
+								</td>
+								<td width='30%'>
+									<div class='fs_20 nowrap allsumm' data-artikul='".$product[0]."' data-prodsum='".($product_price*$product_count)."' id='product_summa_".$product[0]."'>".number_format($product_price*$product_count,0,'',' ')." ₽</div>
+									<div class='mart_5 fs_12 color_gray' id='delivery_free'></div>
+								</td>
+							</tr>
+						</tbody></table>
+						</div>
+					</div>
+				</div>
+				";
+
+    $total += $product_price*$product_count;
+//-------------------------------------------------------------------
+// Упаковка
+
+    $temp_box_style="display:none;";
+
+    if ($item[4]>0) {
+        $temp_box_style="";
+        $temp_box_name=$temp_box_name;
+        $temp_box_size=$temp_box_size;
+        $temp_box_price=$temp_box_price;
+        $temp_box_count=$item[4];
+        $temp_box_summa=$temp_box_count*$temp_box_price;
+        // тип упаковки 1-бокс, 2-лаванда
+        $temp_box_type=1;
+    }
+
+    if ($item[5]>0) {
+        $temp_box_style="";
+        $temp_box_name=$temp_lavanda_name;
+        $temp_box_size=$temp_lavanda_size;
+        $temp_box_price=$temp_lavanda_price;
+        $temp_box_count=$item[5];
+        $temp_box_summa=$temp_box_count*$temp_box_price;
+        $temp_box_type=2;
+    }
+
+    echo "
+				<div style='display:none;' id='box_type_".$product[0]."' data-type='".$temp_box_type."'></div>
+
+				<div class='mart_15 hr' id='box_hr_".$product[0]."' style='".$temp_box_style."'></div>
+				<div class='media cart-line' id='box_data_".$product[0]."' style='".$temp_box_style."'>
+					<div class='media-left media-middle'>
+						<div class='media cart-catitem'>
+							<div class='media-left'>
+								<img width='120' src='images/examples/img027.png' alt='' />
+							</div>
+							<div class='media-body media-middle'>
+								<span id='box_name_".$product[0]."'>".$temp_box_name."</span>
+								<div id='box_size_".$product[0]."' class='mart_10 color_gray'>".$temp_box_size."</div>
+							</div>
+						</div>
+					</div>
+					<div class='media-body media-middle'>
+						<div class='xs-scroll'>
+						<table class='basket-table basket-table-td'>
+							<tr>
+								<td width='30%'>
+									<div class='fs_20 nowrap' id='box_price_".$product[0]."' data-price='".$temp_box_price."'>".$temp_box_price." ₽</div>
+								</td>
+								<td width='30%'>
+									<div class='counter counter_v1 img-center'>
+										<a onclick='box_minus(".$product[0].");' href='' class='minus' data-artikul='".$product[0]."'></a>
+										<a onclick='box_plus(".$product[0].");' href='' class='plus' data-artikul='".$product[0]."'></a>
+										<!--
+										<a href='#' class='minus'></a>
+										<a href='#' class='plus'></a>
+										-->
+										<input type='text' id='box_count_".$product[0]."' value='".$temp_box_count."'>
+									</div>
+								</td>
+								<td width='30%'><div class='fs_20 nowrap allsumm' data-artikul='".$product[0]."' data-boxsum='".$temp_box_summa."' id='box_summa_".$product[0]."'>".number_format($temp_box_summa,0,'',' ')." ₽</div>
+								<div class='mart_10 color_gray' style='font size=12px;' id='box_delivery_summa_".$product[0]."' data-delivery='0'></div>
+								</td>
+								<td><a class='closes' onclick='del_box(".$product[0].");'></a></td>
+							</tr>
+						</table>
+						</div>
+					</div>
+				</div>
+";
+
+// упаковка
+//==============================================================================
+    echo "
+			</div>
+
+			<div class='cart-line-bottom'>
+				<ul class='list-inline'>
+					<li style='".$product_upak."'>
+						<div class='tooltips top right' style=''>
+							<!-- <div class='icon ico_24' onclick='add_box(".$product[0].");'> -->
+							<div class='icon ico_24'>
+								<div class='ico'><img src='images/icons/add_24.png' alt=''></div>
+								Добавить подарочную коробку
+							</div>
+							<div class='tooltips_box'>
+								<div class='tooltips_box_arr'></div>
+								<div class='tooltips_box_body'>
+									К сожалению в вашем городе<br>
+									коробки в наличии временно нет
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style='".$product_lavanda."'>";
+
+//						<a href='javascript:false' class='icon ico_24'  onclick='add_lavanda(".$product[0].");'><i class='ico'><img src='images/icons/add_24.png' alt=''></i>Добавить лимитированнную упаковку с подарочным комплектом <span class='color_orange'>L'Occitane</span></a>
+//						&nbsp;
+//						<a href='#' class='infomodal-button' data-target='#loccitane'><img src='images/icons/qwes.png' alt=''></a>
+    echo "
+						<!-- Временно убирается отображение коробки -->
+						<div class='tooltips top right' style=''>
+							<div class='icon ico_24'>
+
+								<i class='ico'><img src='images/icons/add_24.png' alt=''></i>Добавить лимитированнную упаковку с подарочным комплектом <span class='color_orange'>L'Occitane</span>
+							</div>
+							<div class='tooltips_box'>
+								<div class='tooltips_box_arr'></div>
+								<div class='tooltips_box_body'>
+									К сожалению в вашем городе<br>
+									коробки в наличии временно нет
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+
+					</li>
+				</ul>
+			</div>
+</div>";
+}
+
+function view_card($item)
+{
+    $product_count=$item[3];
+    $product=get_card($item[2]);
+
+    $photo = file_exists("art_cards/".$product[2] . ".jpg") ?
+        "art_cards/".$product[2] . ".jpg" :
+        "art_120/none.jpg";
+
+    echo "
+        <div class='cart-item'>
+            <div class='cart-box'>
+                <div class='media cart-line'>
+                    <div class='media-left media-middle'>
+                        <div class='media cart-catitem'>
+                            <div class='media-left'>
+                                <img width='120' height='120' src='".$photo."' alt=''>
+                            </div>
+                            <div class='media-body media-middle'>
+                                Фирменная открытка с подставкой в конверте<br><font color='grey'>".$product[3]."</font>
+                                <div class='mart_10 color_gray'>Размеры: 9 x 9 см.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='media-body media-middle'>
+                        <div class='xs-scroll'>
+                        <table class='basket-table'>
+                            <tbody><tr>
+                                <td class='color_gray'>стоимость</td>
+                                <td class='color_gray'>количество</td>
+                                <td class='color_gray'>сумма</td>
+                                <td rowspan='2'><a href='javascript:recycled_del(\"".$product[2]."\");' class='closes'></a></td>
+                            </tr>
+                            <tr>
+                                <td width='30%'>
+                                    <div class='fs_20 nowrap' id='product_price_".$product[2]."' data-price='".$product[4]."'>".$product[4]." ₽</div>
+                                </td>
+                                <td width='30%'>
+                                    <div class='counter counter_v1 img-center'>
+                                        <a onclick='artikul_minus(\"".$product[2]."\");' href='' class='minus' data-artikul='".$product[2]."'></a>
+                                        <a onclick='artikul_plus(\"".$product[2]."\");' href='' class='plus' data-artikul='".$product[2]."'></a>
+                                        <input type='text' id='product_count_".$product[2]."' value='".$product_count."'>
+                                    </div>
+                                </td>
+                                <td width='30%'>
+                                    <div class='fs_20 nowrap allsumm' data-artikul='".$product[2]."' data-prodsum='".($product[4]*$product_count)."' id='product_summa_".$product[2]."'>".number_format($product[4]*$product_count,0,'',' ')." ₽</div>
+                                    <div class='mart_5 fs_12 color_gray' id='delivery_free'></div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='cart-line-bottom'>
+                <ul class='list-inline'></ul>
+            </div>
+        </div>";
+
+    $total += $product[4]*$product_count;
+}
+
 ?>

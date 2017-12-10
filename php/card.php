@@ -34,4 +34,19 @@ function get_card_rest($col_id) {
     mysql_close($db);
 }
 
+function get_card($artikul) {
+    $db=db_connect();
+
+    $query="SELECT * FROM card_rest where artikul=" . (int) $artikul;
+    $res=mysql_query($query);
+    $res_num=mysql_num_rows($res);
+    if ($res_num==1) {
+        $data=mysql_fetch_row($res);
+        return($data);
+    }
+    else return(0);
+
+    mysql_close($db);
+}
+
 ?>
