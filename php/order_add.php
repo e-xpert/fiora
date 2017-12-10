@@ -32,6 +32,11 @@ echo 1;
 
 function do_order($db)
 {
+    $data = array(
+        'products' => array(),
+        'cards' => array()
+    );
+
 	$query = "select * 
               from db_basket as b
               left join db_rest as r
@@ -40,27 +45,43 @@ function do_order($db)
 			    ON r.col_uid=c.col_uid
               LEFT JOIN db_form as f
                 ON r.form_uid=f.form_uid
-              where user_hash='" . $_POST['key'] . "'";
+              where b.`from` = 'db_rest' and 
+                user_hash='" . $_POST['key'] . "'";
 
 	$res=mysql_query($query);
 	$res_count=mysql_num_rows($res);
 
 	for ($i=0;$i<$res_count;$i++) {
-		$data[$i]=mysql_fetch_row($res);
+		$data['products'][]=mysql_fetch_row($res);
 	}
 
-	if (mysql_query(get_order_query())) {
+    $query = "select * 
+              from db_basket as b
+              left join card_rest as r
+                on b.artikul=r.artikul
+              where b.`from` = 'card_rest' and
+                user_hash='" . $_POST['key'] . "'";
+
+    $res=mysql_query($query);
+    $res_count=mysql_num_rows($res);
+
+    for ($i=0;$i<$res_count;$i++) {
+        $data['cards'][]=mysql_fetch_row($res);
+    }
+
+    if (mysql_query(get_order_query())) {
 
 		$order_id = mysql_insert_id($db);
+        $data['order_id'] = $order_id+171300;
 
-		$query = "insert into db_order_list (order_id, user_hash, artikul, `count`, box_count, lavanda_count) select " . $order_id . ", db_basket.user_hash, db_basket.artikul, db_basket.`count`, db_basket.box_count, db_basket.lavanda_count from db_basket where db_basket.user_hash='" . $_POST['key'] . "'";
+		$query = "insert into db_order_list (order_id, user_hash, artikul, `count`, box_count, lavanda_count, `from`) select " . $order_id . ", db_basket.user_hash, db_basket.artikul, db_basket.`count`, db_basket.box_count, db_basket.lavanda_count, db_basket.`from` from db_basket where db_basket.user_hash='" . $_POST['key'] . "'";
 		mysql_query($query);
 
 		$query = "delete from db_basket where user_hash='" . $_POST['key'] . "'";
 		mysql_query($query);
 	}
 
-	return array($order_id+171300, $data);
+	return $data;
 }
 
 function get_order_query()
@@ -150,13 +171,14 @@ function get_order_message($filename, $order = array())
 	$body = fread($f_body, filesize($filename));
 	fclose($f_body);
 
-	$body = str_replace('[*order_number*]', $order[0], $body);
+	$body = str_replace('[*order_number*]', $order['order_id'], $body);
 	$body = str_replace('[*order_date*]', date('d.m.Y'), $body);
 
     $product_list = '';
     $order_list = '';
     $product_sum = 0;
-	foreach ($order[1] as $product) {
+
+    foreach ($order['products'] as $product) {
 
         $product_list .= '<tr>
             <td style="padding: 15px 30px;">
@@ -164,24 +186,49 @@ function get_order_message($filename, $order = array())
                 <tr>
                 <td><a href="https://myfiora.com/product.php?art=' . $product[2] . '"><img src="https://myfiora.com/art_70/' . $product[2] . '.jpg" alt="" width="70px" /></a></td>
                 <td style="padding-left: 10px; font-size: 12px;">
-                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">' . $product[33] . '</div>
-                    ' . $product[44] . '
+                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">' . $product[34] . '</div>
+                    ' . $product[45] . '
                     <div style="padding-top: 5px; color: #aeaeae;">Артикул: ' . $product[2] . '</div>
                 </td>
                 </tr>
                 </table>
             </td>
-            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[20] . ' Р</td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[21] . ' Р</td>
             <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center;">' . $product[3] . '</td>
-            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[20] * $product[3]  . ' Р</td>
+            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[21] * $product[3]  . ' Р</td>
         </tr>';
 
-        $product_sum += $product[20] * $product[3];
+        $product_sum += $product[21] * $product[3];
 
-		$order_list .= $product[2] . ' - ' . $product[3] . '<br />';
-	}
+        $order_list .= $product[2] . ' - ' . $product[3] . '<br />';
+    }
 
-	$body = str_replace('[*order_products*]', $product_list, $body);
+    foreach ($order['cards'] as $product) {
+
+        $product_list .= '<tr>
+            <td style="padding: 15px 30px;">
+                <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                <tr>
+                <td><img src="https://myfiora.com/art_cards/' . $product[10] . '.jpg" alt="" width="70px" /></td>
+                <td style="padding-left: 10px; font-size: 12px;">
+                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">Фирменная открытка с подставкой в конверте</div>
+                    ' . $product[11] . '
+                    <div style="padding-top: 5px; color: #aeaeae;">Артикул: ' . $product[10] . '</div>
+                </td>
+                </tr>
+                </table>
+            </td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[12] . ' Р</td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center;">' . $product[3] . '</td>
+            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[12] * $product[3]  . ' Р</td>
+        </tr>';
+
+        $product_sum += $product[12] * $product[3];
+
+        $order_list .= $product[10] . ' - ' . $product[3] . '<br />';
+    }
+
+    $body = str_replace('[*order_products*]', $product_list, $body);
     $body = str_replace('[*order_list*]', $order_list, $body);
 
     $pay[1] = 'Оплата курьеру наличными';
