@@ -103,7 +103,7 @@ foreach ($basket as $item) {
 			<div class="media-left media-left-lg media-middle"><img src="images/examples/img028.png" alt="" /></div>
 			<div class="media-body media-bottom">
 				<div class="fs_12 color_gray">
-                    Доставка заказов осуществляется бесплатно в городах Москва, Екатеринбург, Новосибирск, Томск, Кемерово при сумме заказа от 8000 рублей. Доставка в другие города России осуществляется транспортными компаниями по выгодной цене за счет выбора ближайшего пункта отгрузки Fi’ora к Вам.<br>
+                    Доставка заказов осуществляется бесплатно при сумме заказа от 8000 рублей. Платная доставка в города России осуществляется транспортными компаниями по выгодной цене за счет выбора ближайшего пункта отгрузки Fi’ora к Вам.
                     Логистический центр Fi’ora определяет ближайший пункт отгрузки в зависимости от вашего населённого пункта (более 30 мест отгрузки по России).
 
                     <!-- <b>Заказы к «8 Марта» в указанных городах доставляются в определенные дни:</b>
@@ -693,11 +693,11 @@ function view_product($item, $geo_country_id, $geo_city_id, $temp)
     echo "
 			</div>
 
-			<div class='cart-line-bottom'>
+			<!-- div class='cart-line-bottom'>
 				<ul class='list-inline'>
 					<li style='".$product_upak."'>
 						<div class='tooltips top right' style=''>
-							<!-- <div class='icon ico_24' onclick='add_box(".$product[0].");'> -->
+							<div class='icon ico_24' onclick='add_box(".$product[0].");'>
 							<div class='icon ico_24'>
 								<div class='ico'><img src='images/icons/add_24.png' alt=''></div>
 								Добавить подарочную коробку
@@ -717,7 +717,6 @@ function view_product($item, $geo_country_id, $geo_city_id, $temp)
 //						&nbsp;
 //						<a href='#' class='infomodal-button' data-target='#loccitane'><img src='images/icons/qwes.png' alt=''></a>
     echo "
-						<!-- Временно убирается отображение коробки -->
 						<div class='tooltips top right' style=''>
 							<div class='icon ico_24'>
 
@@ -731,11 +730,9 @@ function view_product($item, $geo_country_id, $geo_city_id, $temp)
 								</div>
 							</div>
 						</div>
-						<!-- // -->
-
 					</li>
 				</ul>
-			</div>
+			</div -->
 </div>";
 }
 

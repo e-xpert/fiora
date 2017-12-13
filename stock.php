@@ -50,7 +50,7 @@ require_once ( "html_head.php");
             <div class="m-b-2 fs_18">Композиция Lyra за 890 рублей – при покупке товара на сумму от 3 000 руб. Малютка Lyra может преобразить любое офисное пространство, стать чудесным украшением праздничного стола и порадовать близких своей красотой. Качество стекла – Extra Glass.</div>
             <a href="/catalog.php">Перейти в каталог</a>
         </div>
-        <div class="m-b-5 hr"></div>
+        <div class="m-b-5 hr" id="stock"></div>
 
         <div class="stock m-b-5">
             <div class="m-b-2 disimg"><img src="images/stock/delivery_02.png" alt="" /></div>

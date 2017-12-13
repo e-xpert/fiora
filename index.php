@@ -60,16 +60,35 @@ require_once ( "html_header.php");
 				</div>
 			</div>
 			<div class="owl-carousel-item">
+                <a href="/stock.php#stock">
 				<div class="mps-item">
 					<div class="img">
-						<span><img src="images/banner/banner_2.jpg" alt="" /></span>
+						<span><img src="images/banner/banner_3.jpg" alt="" /></span>
 					</div>
+                    <div class="txt half">
+                        <div class="container">
+                            <div class="title">
+                                Бесплатная доставка<br />по России
+                            </div>
+                            <div class="description">
+                                подробнее в разделе «Акции»
+                            </div>
+                        </div>
+                    </div>
 				</div>
+                </a>
 			</div>
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_3.png" alt="" /></span>
+                        <span><img src="images/banner/banner_2.jpg" alt="" /></span>
+                    </div>
+                    <div class="txt half">
+                        <div class="container">
+                            <div class="title">
+                                <font color='white'>В Новый год<br />вместе с Fi’ora</font>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -543,16 +562,16 @@ require_once ( "html_header.php");
 						</div> -->
 						<div class="owl-carousel-item">
 							<div class="main-news-item">
-								<a href="#" class="overlink"></a>
+								<a class="overlink"></a>
 								<div class="txt">
-									<div class="date"><span>26</span> ноября</div>
+									<div class="date"><span>31</span> декабря</div>
 									<div class="sepline"></div>
 									<div class="m-b-1">
-                                        День матери  — это радостное и очень торжественное событие. Скажите об вашем бережном отношение своей Маме. А в знак благодарности и бесконечной любви можете подарить ей одну из композиций Fi’ora.
+                                        Новый Год – пожалуй самый душевный из праздников. В канун нового года возникает естественное ожидание чего-то большого, нового и замечательного…
 									</div>
 									<!-- <a href="#">Купить</a> -->
 								</div>
-								<div class="img"><img src="images/index/mom.png" alt="" /></div>
+								<div class="img"><img src="images/index/new_year.png" alt="" /></div>
 							</div>
 						</div>
 					</div>
@@ -608,12 +627,11 @@ require_once ( "html_header.php");
 					<div class="pos" style='background-color:#ecf1f6;'>
 						<div class="img" align='left'><img src="images/box/box.png" alt="" /></div>
 						<div class="txt">
-							<div class="title fs_24" style='margin-top:-30px;'>УЛУЧШИТЕ ВПЕЧАТЛЕНИЕ<br>ФИРМЕННЫМИ УПАКОВКАМИ. <br>ВКУС И СТИЛЬ ПРОЯВЛЯЮТСЯ В ДЕТАЛЯХ.</div>
-							<div style='margin-top:-40px;'>(добавляется в корзине с товаром)</div><br>
+							<div class="title fs_24" style='margin-top:-30px;'>УЛУЧШИТЕ ВПЕЧАТЛЕНИЕ<br>ФИРМЕННЫМИ ОТКРЫТКАМИ. <br>ВКУС И СТИЛЬ ПРОЯВЛЯЮТСЯ В ДЕТАЛЯХ.</div>
 							<div class="text-right">
 								<span class="inline-block">
 									<a href="#" class="goto block m-b-1" data-target="slide-2"><img src="images/index/llc.png" alt="" /></a>
-									<span class="block text-center"><a href="#" class="goto" data-target="slide-2">Подробнее</a></span>
+									<span class="block text-center"><a href="#" class="goto color_blue" data-target="slide-2">Подробнее</a></span>
 								</span>
 							</div>
 						</div>
@@ -629,13 +647,13 @@ require_once ( "html_header.php");
 					<div class="pos" style='background-color:#e2ecf2;'>
 						<div class="img" align='left'><img src="images/box/llc.png" alt="" /></div>
 						<div class="txt">
-							<div class="title fs_24" style='margin-top:-10px;'>ВТОРОЙ ВАРИАНТ УПАКОВКИ FI'ORA<br>С ПОДАРОЧНЫМ НАБОРОМ</div>
+							<div class="title fs_24" style='margin-top:-10px;'>ВАРИАНТ УПАКОВКИ FI'ORA<br>С ПОДАРОЧНЫМ НАБОРОМ</div>
 							<div style='margin-top:-40px;'>
 								(добавляется в корзине с товаром, подходит к определенным формам ваз)
 								<br><br>
 									F'ORA совместно со всемирно известной парфюмерной компанией L`OCCITANE разработала лимитированную подарочную коллекцию в фирменной упаковке, которая по достоинству дополнит ваш подарок атмосферой долгоиграющей свежести.
 								<br><br>
-								<a href="#" class="infomodal-button" data-target="#loccitane">Содержимое набора</a>
+								<a href="#" class="infomodal-button color_blue" data-target="#loccitane">Содержимое набора</a>
 								<br><br>
 							</div>
 							<!-- <a href="#" class="goto" data-target="slide-3">Узнать какие композиции подойдут к набру</a> -->
@@ -759,7 +777,7 @@ require_once ( "html_header.php");
 					Кликните на фото
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="m-b-2 visible-xs"></div>
-					<a href="after-before.php" class="hidden-xs">Попробовать ещё варианты</a>
+					<a href="after-before.php" class="hidden-xs color_blue">Попробовать ещё варианты</a>
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<div class="imghov">
@@ -779,7 +797,7 @@ require_once ( "html_header.php");
 				<div class="media-body media-middle">
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="padd20">
-						<div class="m-b-2 fs_24" style="text-transform: uppercase">Коллекция в трендах уходящего года,<br>последние остатки коллекции которой больше не будет</div>
+						<div class="m-b-2 fs_24" style="text-transform: uppercase">Коллекция в трендах уходящего года,<br>последние остатки коллекции, которой больше не будет</div>
 						<div class="m-b-2 color_dark_gray">
                             В 2017 году ТМ Fi`ora разработала цветочную коллекцию Granity 591,
                             которая учитывает все модные тенденции уходящего года. Насыщенная во всех смыслах композиция не требует никаких дополнений.
@@ -839,9 +857,9 @@ require_once ( "html_header.php");
 					});
 				</script>
 			</div>
-			<div class="bottom">
-				<a href="gallery.php" class="btn btn-default"><span class="type-link">Фото в интерьере</span></a>
-			</div>
+<!--			<div class="bottom">-->
+<!--				<a href="gallery.php" class="btn btn-default"><span class="type-link">Фото в интерьере</span></a>-->
+<!--			</div>-->
 		</div>
 
 	</div>

@@ -436,7 +436,7 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
 		<div class="marb_30"></div>
 
 		<div class="marb_30">
-			<div class="dashtitle"><span>Другие формы ваз</span></div>
+			<div class="dashtitle"><span>Другие формы ваз в этой коллекции</span></div>
 			<div class="scrollbar">
 				<div class="shd_left"></div>
 				<div class="shd_right"></div>
