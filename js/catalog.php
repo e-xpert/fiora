@@ -34,6 +34,8 @@
     }
 
     function filter_clear() {
+        return window.location.reload();
+
         //$("label").removeClass('active');
         // show all ---------------------
 
