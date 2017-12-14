@@ -234,7 +234,7 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 								if ($rest[$rest_i][20]) {
                                     echo "
                                         <div class='mark_top_left'>
-                                            <span class='mark_price'>".$rest[$rest_i][20]."</span>
+                                            <span class='mark_price_".$rest[$rest_i][21]."'>".$rest[$rest_i][20]."</span>
                                         </div>";
                                 }
 

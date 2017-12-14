@@ -112,6 +112,8 @@ foreach ($collection as $item) {
 			</div>
 			<div class="col-sm-8 col-md-9">
 
+                <img src="images/cards/catalog.jpg" width="100%"><br><br>
+
 <?
 foreach ($collection as $cnt => $item) {
 

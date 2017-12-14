@@ -550,30 +550,18 @@ echo "<div class='disimg'><img onclick='show_img_full(\"$photo\")' id='img_full'
 		<div class="dashtitle"><span>Улучшить впечатление легко</span></div>
 		<div class="ofl">
 			<div class="m-b-5 row row_30">
-				<div class="col-sm-6">
+				<div class="col-sm-12">
 					<div class="m-b-2">
-						<div class="pull-left">Оригинальная брендовая коробка Fi’ora</div>
-						<div class="pull-right">1350 р.</div>
+						<div class="pull-left">Коллекции фирменных открыток Fi’ora</div>
+						<div class="pull-right"></div>
 						<div class="clearfix"></div>					
 					</div>
 					<div class="addprodbox">
-						<div class="disimg"><img src="images/product/box.png" alt="" /></div>
-						<!--
-						<div class="mark_bottom_left">
-							<a href="#" class="btn btn-default"><span class="type-link">Добавить</span></a>
-						</div>
-						-->
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="m-b-5 visible-xs"></div>
-					<div class="m-b-2">
-						<div class="pull-left">Лимитированная упаковка с подарочным комплектом <span class="color_orange">L'Occitane</span></div>
-						<div class="pull-right">1540 р.</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="addprodbox">
-						<div class="disimg"><img src="images/product/llc.png" alt="" /></div>
+						<div class="disimg">
+                            <a href="cards.php">
+                                <img src="images/cards/product.jpg" alt="" />
+                            </a>
+                        </div>
 						<!--
 						<div class="mark_bottom_left">
 							<a href="#" class="btn btn-default"><span class="type-link">Добавить</span></a>

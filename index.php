@@ -35,7 +35,7 @@ require_once ( "html_header.php");
 	<div class="mainpage-slider">
         <div class="main-uniq container">
             <button type="button" class="open-uniq button" style="display: none">
-                Видео о ценностях Fi’ora
+                О ценностях Fi'ora в видео
             </button>
         </div>
 
@@ -65,7 +65,7 @@ require_once ( "html_header.php");
 					<div class="img">
 						<span><img src="images/banner/banner_3.jpg" alt="" /></span>
 					</div>
-                    <div class="txt half">
+                    <div class="txt half" style="margin-top: -180px;">
                         <div class="container">
                             <div class="title">
                                 Бесплатная доставка<br />по России
