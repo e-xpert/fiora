@@ -87,8 +87,6 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 			echo "</li>";
 		}
 }
-
-
 ?>
 
 
@@ -327,13 +325,14 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 						} // for rest
 						echo "</div>";
 						$collection_3_i=0;
+
+
+                        if ($collection_size - 1 != $collection_y)
+                            echo "
+                                <div class='m-b-4 hr is_filter' style='margin-top:10px;' id='collection_hr_uid_".$collection[$collection_y][0]."'></div>
+                                <!-- END Sub Collection Root#  ".$collection[$collection_i][0]." -->";
 					}
 
-				if ($collection_size - 1 != $collection_y)
-                    echo "
-                        <div class='m-b-4 hr is_filter' style='margin-top:10px;' id='collection_hr_uid_".$collection[$collection_y][0]."'></div>
-                        <!-- END Sub Collection Root#  ".$collection[$collection_i][0]." -->
-                    ";
 			}
 
 		}
