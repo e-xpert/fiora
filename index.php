@@ -356,14 +356,16 @@ require_once ( "html_header.php");
 			<div class="m-b-2 col-xs-12 col-sm-6 col-md-3">
 				<div class="s1x1 fix pos">
 					<a href="catalog.php" class="overlink"></a>
-					<div class="half text-center">
-						<div class="padd10">
-							<div class="m-b-2 disimg"><img src="images/index/catalog.png" alt="" /></div>
-							<div class="m-b-2 fs_18">КАТАЛОГ</div>
-							47 форм ваз в 9 коллекциях
-							<!--<a href="#" class="btn btn-default"><span class="type-link">Каталог</span></a>-->
-						</div>
-					</div>
+                    <div class="border">
+                        <div class="half text-center">
+                            <div class="padd10">
+                                <div class="m-b-2 fs_18">КАТАЛОГ</div>
+                                <hr>
+                                47 форм ваз<br>
+                                в 9 коллекциях
+                            </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
 			<div class="m-b-2 col-xs-12 col-sm-6 col-md-3">
@@ -588,15 +590,14 @@ require_once ( "html_header.php");
 			</div>
 			<div class="visible-xs clearfix"></div>
 
-
 			<div class="m-b-2 col-xxs-12 col-xs-6 col-sm-6 col-md-3">
 				<div class="s1x1 main-trend main-box-bg">
-					<a href="trands.php" class="overlink"></a>
-					<div class="bg visible-xs"><img src="images/index/trands_mobile.png" alt="" /></div>
+					<a href="gallery.php" class="overlink"></a>
+					<div class="bg visible-xs"><img src="images/index/photo_mobile.png" alt="" /></div>
 					<div class="half text-center">
-						<div class="padd40">
-							<div class="m-b-1 hidden-xs"><img src="images/index/trands_web.png" alt="" /></div>
-							<div class="fs_18 text-uppercase">Тренд 2017</div>
+						<div class="padd40" style="padding: 28px;">
+							<div class="m-b-1 hidden-xs"><img src="images/index/photo_web.png" alt="" /></div>
+							<div class="fs_18 text-uppercase">Перейти<br>в фотогалерею</div>
 						</div>
 					</div>
 				</div>
