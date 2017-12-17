@@ -817,28 +817,78 @@ require_once ( "html_header.php");
 			<div class="bg">
 				<div class="owl-carousel">
 
-					<?php for ($i=1; $i<10; $i++): ?>
-					<div class="owl-carousel-item">
-						<div class="padd0x10">
-							<div class="title">
-								Розовая роза<br />
-								в средней круглой вазе
-							</div>
-							<div class="disimg">
-								<a class="fancybox" href="/images/gallery/main/<?=$i?>.jpg" rel="gallery">
-									<img src="/images/gallery/main/<?=$i?>.jpg">
-								</a>
-							</div>
-						</div>
-					</div>
-					<?php endfor; ?>
+                    <?
+                    $rest=get_rest($geo_country_id,0);
+
+                    foreach ($rest as $item) {
+
+                        if ($item[22] && file_exists("art_500/".$item[0].".jpg")) {
+
+                            echo '
+                            <div class="owl-carousel-item">
+                                <div class="padd0x10">
+                                    <div class="catalog_item">
+                                        <div class="box">';
+
+                                    //===================================================================
+                                    // подгружаем остатки по городам
+                                    //===================================================================
+                                    $city_price=get_city_price($geo_city_id,$item[0]);
+
+                                    if ($city_price[0]>0)  {
+                                        if ($city_price[2]>0) {
+                                            $item[2]=$city_price[1];
+                                            $item[1]=$city_price[2];
+                                            $item[3]=$city_price[0];
+                                        } else {
+                                            $item[2]=0;
+                                            if ($city_price[1]>0) {
+                                                $item[1]=$city_price[1];
+                                            }
+                                        }
+                                    }
+                                    //-------------------------------------------------------------------
+                                    // подгружаем остатки по городам
+                                    //===================================================================
+
+                                    if ($item[20])
+                                        echo "<div class='mark_top_left'><span class='mark_price_".$item[21]."'>".$item[20]."</span></div>";
+
+                                    if ($item[14]==1)
+                                        echo "<div class='mark_top_right'><span class='mark_bg_red'>новинка</span></div>";
+
+                                    echo "<div class='link'><a href='#'><span>".$item[6]."</span><span style='color: gray;'>".$item[11]."</span></a></div>";
+
+                                    echo "<div class='fs_20'>";
+                                    if ($item[2]>0) {
+                                        echo "<s>".number_format($item[2],0,'',' ')." ₽</s>";
+                                        echo "<span class='fs_18 color_red'>".number_format($item[1],0,'',' ')." ₽</span>";
+                                    } else {
+                                        echo "<span>".number_format($item[1],0,'',' ')." ₽</span>";
+                                    }
+                                    echo "</div>";
+
+                                    $photo = file_exists("art_500/".$item[0].".jpg") ?
+                                        "art_500/".$item[0].".jpg" : "art_500/none.jpg";
+
+                                    echo "<div class='disimg'><a href='product.php?art=".$item[0]."'><img src='".$photo."' alt='' /></a></div>";
+
+                                    echo '
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="basket_gallery"><a href="product.php?art=' .$item[0]. '" class="color_blue">купить</a></div>
+                            </div>';
+                        }
+                    }
+                    ?>
 
 				</div>
 				<script type="text/javascript">
 					$(function(){
 						$(".main_gallery .owl-carousel").owlCarousel({
 							smartSpeed : 500,
-							items : 3,
+							items : 4,
 							loop : true,
 							nav : true,
 							navText : ['',''],
@@ -847,11 +897,14 @@ require_once ( "html_header.php");
 								0 : {
 									items : 1,
                                 },
-								600 : {
+								500 : {
 									items : 2,
                                 },
-								800 : {
-									items : 3,
+                                800 : {
+                                    items : 3,
+                                },
+                                1000 : {
+                                    items : 4,
                                 },
 							}
 						});

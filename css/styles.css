@@ -1662,3 +1662,34 @@ div.btn { display: block; }
     background: url(../images/youtube_.png);
   }
 }
+
+.main_gallery {
+    margin-top: 80px;
+}
+.main_gallery .bg {
+    padding-bottom: 80px;
+}
+.main_gallery .disimg:before {
+    height: 0;
+}
+.main_gallery .link span,
+.main_gallery .link p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main_gallery .catalog_item .disimg {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.main_gallery .catalog_item s {
+    margin-right: 7px;
+}
+.main_gallery .mark_top_left,
+.main_gallery .mark_top_right {
+    top: 82px;
+}
+.basket_gallery {
+    text-align: center;
+    padding-top: 45px;
+}

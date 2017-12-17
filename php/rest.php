@@ -32,7 +32,8 @@ function get_rest($country_uid,$col_uid) {
 			r.box,
 			r.lavanda,
 			a.name,
-			a.uid
+			a.uid,
+			r.main
 		FROM db_rest as r
 		LEFT JOIN db_action as a
 			ON r.art_action=a.uid
