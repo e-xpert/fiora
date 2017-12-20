@@ -119,8 +119,9 @@
 
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'From: ТМ Fi’ora<order@myfiora.com>' . "\r\n";
 
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers, '-forder@myfiora.com');
 
 // Уведомление магазину
     $to  = 'myfiora@yandex.ru ';
@@ -137,5 +138,5 @@
         </html>
     ";
 
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers, '-forder@myfiora.com');
 ?>

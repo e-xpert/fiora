@@ -11,18 +11,18 @@ $order = do_order($db);
 $subject = 'Заказ на myfiora.com #'.$order[0].' от '.date('d.m.Y');
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-//$headers .= 'From: ТМ Fi’ora<order@myfiora.com>' . "\r\n";
+$headers .= 'From: ТМ Fi’ora<order@myfiora.com>' . "\r\n";
 
 $filename = "../email/order/saller.html";
 $body = get_order_message($filename, $order);
-mail('myfiora@yandex.ru', $subject, $body, $headers);
+mail('myfiora@yandex.ru', $subject, $body, $headers, '-forder@myfiora.com');
 //mail('e.xpert@mail.ru', $subject, $body, $headers);
 //mail('order@myfiora.com', $subject, $body, $headers);
 
 $email = empty($_POST['email_1']) ? $_POST['email_2'] : $_POST['email_1'];
 $filename = "../email/order/customer.html";
 $body = get_order_message($filename, $order);
-mail($email, $subject, $body, $headers);
+mail($email, $subject, $body, $headers, '-forder@myfiora.com');
 
 mysql_error($db);
 
