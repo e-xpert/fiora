@@ -1693,3 +1693,9 @@ div.btn { display: block; }
     text-align: center;
     padding-top: 45px;
 }
+
+@media (min-width: 768px) {
+    .thai {
+        margin-top: 20px !important;
+    }
+}

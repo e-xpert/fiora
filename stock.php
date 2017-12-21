@@ -45,6 +45,29 @@ require_once ( "html_head.php");
 		</div>
 
         <div class="stock m-b-5">
+            <div class="m-b-2 disimg"><img src="images/stock/thai.jpg" alt="" /></div>
+            <div class="m-b-1 fs_30">Розыгрыш 2-х путёвок в Таиланд на сумму в 100 000 рублей</div>
+            <div class="m-b-2 fs_18">Совершите покупку композиции Fi'ora на сумму от 4790 рублей в период до 31 декабря 2017 года или до 8 марта 2018 года и станьте участником одного или двух розыгрышей в зависимости от даты приобретения. Главный приз в каждом розыгрыше – путевка в Таиланд номиналом в 50 000 рублей в 2018 году. Розыгрыш будет проходить в прямом эфире на выделенном интернет-канале 18 января 2018 года (даты приобретения композиции – с 22 декабря 2017 г. по 31 декабря 2017 г.) и 15 марта 2018 года (даты приобретения композиции – с 22 декабря 2017 г. по 08 марта 2018 г.). Правила участия в розыгрыше <a href="#" class="color_blue" data-toggle="modal" data-target="#modal_oferta">здесь</a>.</div>
+            <a class="btn btn-default"><span class="#type-link">Зарегистрироваться можно будет с 26 декабря</span></a>
+        </div>
+        <div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="display: block;">
+                        <a href="#" class="cross" style="top: 30%;" data-dismiss="modal" aria-label="Close"></a><br><br>
+                        <div class="modal-title" style="width: 100%;">Условия акции «Подари себе путешествие в Тайланд»</div>
+                    </div>
+                    <div class="modal-body">
+
+                        <?@include 'inc/oferta-thai.php';?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-b-5 hr" id="stock"></div>
+
+        <div class="stock m-b-5">
             <div class="m-b-2 disimg"><img src="images/stock/Lyra_830.png" alt="" /></div>
             <div class="m-b-1 fs_30">Композиция в стеклянном стакане Lyra за 890 рублей</div>
             <div class="m-b-2 fs_18">Композиция Lyra за 890 рублей – при покупке товара на сумму от 3 000 руб. Малютка Lyra может преобразить любое офисное пространство, стать чудесным украшением праздничного стола и порадовать близких своей красотой. Качество стекла – Extra Glass.</div>

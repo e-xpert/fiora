@@ -369,19 +369,35 @@ require_once ( "html_header.php");
 				</div>
 			</div>
 			<div class="m-b-2 col-xs-12 col-sm-6 col-md-3">
-				<div class="s1x1 fix main-fiora-ideas main-box-bg">
-					<a href="idea.php" class="overlink"></a>
-					<div class="bg">
-						<img class="hidden-xs" src="images/index/idea.png" alt="" />
-						<img class="visible-xs" src="images/examples/img099.jpg" alt="" />
-					</div>
-					<div class="half text-center">
-						<div class="padd20">
-							<div class="m-b-5 hidden-xs"></div>
-							<div class="fs_18 text-uppercase">идеи <br />для fi’ora</div>
-						</div>
-					</div>
-				</div>
+<!--				<div class="s1x1 fix main-fiora-ideas main-box-bg">-->
+<!--					<a href="idea.php" class="overlink"></a>-->
+<!--					<div class="bg">-->
+<!--						<img class="hidden-xs" src="images/index/idea.png" alt="" />-->
+<!--						<img class="visible-xs" src="images/examples/img099.jpg" alt="" />-->
+<!--					</div>-->
+<!--					<div class="half text-center">-->
+<!--						<div class="padd20">-->
+<!--							<div class="m-b-5 hidden-xs"></div>-->
+<!--							<div class="fs_18 text-uppercase">идеи <br />для fi’ora</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+                <div class="s1x1 fix main-fiora-ideas main-box-bg">
+                    <a href="stock.php" class="overlink"></a>
+                    <div class="bg" style="background-color: #01c4c8">
+                        <img class="hidden-xs" src="images/index/thai.png" alt="" />
+                        <img class="visible-xs" src="images/index/thai-mob.png" alt="" />
+                    </div>
+                    <div class="half text-center">
+                        <div class="padd20">
+                            <div class="thai fs_18 text-uppercase" style="color: #fff">
+                                Розыгрыш<br />
+                                2-х путевок<br />
+                                в Таиланд
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 			<div class="m-b-2 col-xs-12 col-md-6">
 				<div class="s2x1 fix main-video">
