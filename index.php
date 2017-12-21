@@ -63,9 +63,9 @@ require_once ( "html_header.php");
                 <a href="/stock.php#stock">
 				<div class="mps-item">
 					<div class="img">
-						<span><img src="images/banner/banner_3.jpg" alt="" /></span>
+						<span><img src="images/banner/banner_3_2.jpg" alt="" /></span>
 					</div>
-                    <div class="txt half" style="margin-top: -180px;">
+                    <div class="txt half txt-top">
                         <div class="container">
                             <div class="title">
                                 Бесплатная доставка<br />по России
@@ -762,10 +762,10 @@ require_once ( "html_header.php");
 	<div class="clearfix"></div>
 
 	<div class="m-b-2 main-pack">
-		<div class="title">Фирменные упаковки Fi’ora для большего впечатления</div>
+		<div class="title">Фирменные атрибуты Fi’ora для большего впечатления</div>
 		<div class="owl-carousel">
 			<div class="owl-carousel-item">
-				<div class="disimg"><img src="images/index/mobile_box.png" alt="" /></div>
+				<div class="disimg"><img src="images/index/mobile_box.jpg" alt="" /></div>
 			</div>
 			<div class="owl-carousel-item">
 				<div class="disimg"><img src="images/index/mobile_lls.png" alt="" /></div>

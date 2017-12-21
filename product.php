@@ -74,7 +74,7 @@ $product=get_product($_GET['art'],$geo_country_id);
 
                     <? if ($product[26]): ?>
 					<div class="tmark"  >
-						<span class="mark_price"><? echo $product[26] ?></span>
+						<span class="mark_price_<?=$product[27]?>"><? echo $product[26] ?></span>
 					</div>
                     <? endif; ?>
 

@@ -33,7 +33,8 @@ function get_product($artikul,$country_uid) {
 			r.art_flowers,
 			r.art_flowers_add,
 			r.art_desc,
-			a.name
+			a.name,
+			a.uid
 		FROM db_rest as r
 		LEFT JOIN db_action as a
 			ON r.art_action=a.uid

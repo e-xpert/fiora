@@ -112,7 +112,7 @@ foreach ($collection as $item) {
 			</div>
 			<div class="col-sm-8 col-md-9">
 
-                <img src="images/cards/catalog.jpg" width="100%"><br><br>
+                <img src="images/cards/catalog.jpg?123" width="100%"><br><br>
 
 <?
 foreach ($collection as $cnt => $item) {
@@ -150,7 +150,9 @@ foreach ($collection as $cnt => $item) {
                                         <img src='".$photo."' alt='' />
                                     </a>
                                 </div>
-                                <div class='link'><span>Фирменная открытка с подставкой в конверте</span>".$card[3]."</div>
+                                <div class='link'>
+                                    <a><span>Фирменная открытка с подставкой в конверте</span>".$card[3]."</a>
+                                </div>
                                 <div class='size'>размеры: 9 х 9 см.</div>
                                 <div class='price'><span>".number_format($card[4],0,'',' ')." ₽</span></div>
                                 <div class='add'>

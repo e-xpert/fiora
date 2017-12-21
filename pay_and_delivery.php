@@ -42,7 +42,7 @@ require_once ( "html_header.php"     );
 				</span>
 			</div>
 		</div> -->
-		<div class="m-b-3 disimg"><img src="images/stock/delivery.png" alt="" /></div>
+		<div class="m-b-3 disimg"><img src="images/stock/dostavka.jpg" alt="" /></div>
 		<div class="m-b-3 fs_32">Информация о доставке и оплате</div>
 		<div class="m-b-5 text-justify fs_18">
 
