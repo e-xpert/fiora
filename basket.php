@@ -120,8 +120,9 @@ foreach ($basket as $item) {
 				<div id='promo_good' style='display:none;' data-promo='0'></div>
 				<ul class="m-b-0 list-inline list-inline-top" id='promo_div'>
 					<li id='promo_error'>
-						<input id='promo_code' class="form-control" type="text" value="" placeholder="У вас есть промокод?" />
+						<input id='promo_code' class="form-control" type="text" value="" placeholder="У вас есть промокод?" style="width: 235px;" />
 						<div id='promo_error_text' class="help-block text-center" style='display:none;'><small>Промокод не существует</small></div>
+                        <div id='promo_match_error' class="help-block text-center" style='display:none;'><small>Промокод действует при заказе от 5000 р.</small></div>
 					</li>
 					<li><button id='promo_code_button' onclick="get_promo();" type="submit" class="btn btn-default" style="height: 34px"><i class="fa fa-angle-right"></i></button></li>
 				</ul>

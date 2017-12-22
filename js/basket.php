@@ -76,6 +76,7 @@
         var format_all_sum=all_summ.toLocaleString();
         var format_summa=summa.toLocaleString();
         $('#products_summa').text(format_summa+' ₽');
+        $('#products_summa').attr('data-summa', summa);
 
         $('#order_summa').text(format_all_sum+' ₽');
         $('#order_summa').data('order_summa',all_summ);
@@ -109,6 +110,14 @@
 
     function get_promo() {
         var promo=$('#promo_code').val();
+
+        if (promo == 'SYN15YR' && parseInt($('#order_summa').data('order_summa')) < 5000) {
+            $('#promo_match_error').show();
+            $("#promo_error").addClass('has-error');
+
+            return;
+        }
+
         var key=<? echo "'".$session_name."'"; ?>;
         $.post('https://<? echo $_SERVER['HTTP_HOST']; ?>/php/recycled_promo_code.php', {'promo_code': promo,'key':key},
             function(data) {

@@ -411,7 +411,7 @@ require_once ( "html_header.php");
 				<li class="active">
 					<div class="text icori">
 						<div class="ico"><img src="images/main-treasure-arr.gif" alt="" /></div>
-						<strong>Все ценности Fi’ora в Лира за 999 ₽</strong>
+						<strong>Все ценности Fi’ora в Лира за 1059 ₽</strong>
 					</div>
 				</li>
 				<li class="withnum">
@@ -453,7 +453,7 @@ require_once ( "html_header.php");
 					<div class="text">
 						<div class="row">
 							<div class="col-xs-7">
-								<strong>... и всё это от 999 ₽ на долгие годы.</strong>
+								<strong>... и всё это от 1059 ₽ на долгие годы.</strong>
 							</div>
 							<div class="col-xs-5">
 								<div class="doubl">
@@ -491,7 +491,7 @@ require_once ( "html_header.php");
 		<div class="main-treasure-sm">
 			<ul class="list list-unstyled">
 				<li>
-					<div class="text text-uppercase">Все ценности Fi’ora в Лира за 999 Р</div>
+					<div class="text text-uppercase">Все ценности Fi’ora в Лира за 1059 Р</div>
 					<div class="navi">
 						<span>1</span>
 						<span>2</span>
@@ -548,7 +548,7 @@ require_once ( "html_header.php");
 				</li>
 				<li>
 					<div class="text">
-						<strong>... и всё это от 999 ₽ на долгие годы.</strong>
+						<strong>... и всё это от 1059 ₽ на долгие годы.</strong>
 						<br />
 						Вы узнали основные ценности.<br />
 						Дарим вам <a href="#" class="color_blue" data-toggle="modal" data-target="#modal_sale">скидку -10%</a>
