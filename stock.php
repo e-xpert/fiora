@@ -48,7 +48,7 @@ require_once ( "html_head.php");
             <div class="m-b-2 disimg"><img src="images/stock/thai.jpg" alt="" /></div>
             <div class="m-b-1 fs_30">Розыгрыш 2-х путёвок в Таиланд на сумму в 100 000 рублей</div>
             <div class="m-b-2 fs_18">Совершите покупку композиции Fi'ora на сумму от 4790 рублей в период до 31 декабря 2017 года или до 8 марта 2018 года и станьте участником одного или двух розыгрышей в зависимости от даты приобретения. Главный приз в каждом розыгрыше – путевка в Таиланд номиналом в 50 000 рублей в 2018 году. Розыгрыш будет проходить в прямом эфире на выделенном интернет-канале 18 января 2018 года (даты приобретения композиции – с 22 декабря 2017 г. по 31 декабря 2017 г.) и 15 марта 2018 года (даты приобретения композиции – с 22 декабря 2017 г. по 08 марта 2018 г.). Правила участия в розыгрыше <a href="#" class="color_blue" data-toggle="modal" data-target="#modal_oferta">здесь</a>.</div>
-            <a class="btn btn-default"><span class="#type-link">Зарегистрироваться можно будет с 26 декабря</span></a>
+            <a href="http://thai.myfiora.com/" class="btn btn-thai">Зарегистрироваться</a>
         </div>
         <div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
             <div class="modal-dialog modal-lg" role="document">

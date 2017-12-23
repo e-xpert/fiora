@@ -1713,3 +1713,12 @@ div.btn { display: block; }
     margin-top: -180px;
   }
 }
+
+.btn-thai, .btn-thai:hover {
+  background-color: #44c4ff;
+  color: #fff !important;
+  font-size: 18px;
+  height: 40px;
+  width: 225px;
+  padding-top: 9px;
+}

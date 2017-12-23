@@ -218,4 +218,8 @@ echo "</font><hr>";
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/43171214" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <script type="text/javascript">
+        (window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-199780-3n3x5';
+    </script>
 </head>
