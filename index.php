@@ -81,12 +81,12 @@ require_once ( "html_header.php");
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_2.jpg" alt="" /></span>
+                        <span><img src="images/banner/banner_22р.png" alt="" /></span>
                     </div>
                     <div class="txt half">
                         <div class="container">
                             <div class="title">
-                                <font color='white'>В Новый год<br />вместе с Fi’ora</font>
+                                <font color='#000'>Создавайте уютные решения<br />для вашего дома</font>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ require_once ( "html_header.php");
 				<div class="main-uniq-box">
 					<div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
                     <div class="sepline m-c-a"></div>
-                    <div class="text">ОЦЕНИТСЯ<br />С ДОСТОИНСТВОМ<br />КАК ПОДАРОК</div>
+                    <div class="text">Станет<br />достойным<br />подарком</div>
                     <div class="more" style='margin-top:250px;'>
 						<a href="#" class="open-uniq h-a">Узнать об уникальности</a>
 						<a href="#" class="open-uniq h-b">Закрыть</a>
@@ -401,7 +401,7 @@ require_once ( "html_header.php");
 			</div>
 			<div class="m-b-2 col-xs-12 col-md-6">
 				<div class="s2x1 fix main-video">
-                    <iframe width="100%" class="s2x1 fix" src="https://www.youtube.com/embed/X7nKUnART-g?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" class="s2x1 fix" src="https://www.youtube.com/embed/BbsjqU86siw?rel=0" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -582,14 +582,15 @@ require_once ( "html_header.php");
 							<div class="main-news-item">
 								<a class="overlink"></a>
 								<div class="txt">
-									<div class="date"><span>31</span> декабря</div>
+									<div class="date"><span>14</span> февраля</div>
 									<div class="sepline"></div>
 									<div class="m-b-1">
-                                        Новый Год – пожалуй самый душевный из праздников. В канун нового года возникает естественное ожидание чего-то большого, нового и замечательного…
-									</div>
+                                        Считается, что День святого Валентина существует уже более 16 веков. В этот праздник любят устраивать свадьбы, так как полагают, что это станет залогом вечной любви. Также в этот день закрепилась традиция влюбленным баловать друг друга подарками. Дарите другу живые эмоции вместе с Fi`ora!
+
+                                    </div>
 									<!-- <a href="#">Купить</a> -->
 								</div>
-								<div class="img"><img src="images/index/new_year.png" alt="" /></div>
+								<div class="img"><img src="images/index/14_february.png" alt="" /></div>
 							</div>
 						</div>
 					</div>
@@ -807,7 +808,7 @@ require_once ( "html_header.php");
 				<a href="after-before.php" class="color_blue">Попробовать ещё варианты</a>
 			</div>
 		</div>
-
+<!--
 		<div class="m-b-5 bg_gray">
 			<div class="media media-responsive text-xs-center">
 				<div style='background:#f2f2f2;' class="media-left media-bottom hidden-xs"><img src="images/index/granity.png" alt="" /></div>
@@ -828,7 +829,7 @@ require_once ( "html_header.php");
 				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/index/granity.png" alt="" /></div>
 			</div>
 		</div>
-
+-->
 		<div class="main_gallery">
 			<div class="bg">
 				<div class="owl-carousel">
@@ -873,7 +874,7 @@ require_once ( "html_header.php");
                                     if ($item[14]==1)
                                         echo "<div class='mark_top_right'><span class='mark_bg_red'>новинка</span></div>";
 
-                                    echo "<div class='link'><a href='#'><span>".$item[6]."</span><span style='color: gray;'>".$item[11]."</span></a></div>";
+                                    echo "<div class='link'><a href='product.php?art=".$item[0]."'><span>".$item[6]."</span><span style='color: gray;'>".$item[11]."</span></a></div>";
 
                                     echo "<div class='fs_20'>";
                                     if ($item[2]>0) {

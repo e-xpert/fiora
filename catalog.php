@@ -127,14 +127,14 @@ for ($collection_i=0;$collection_i<$collection_size;$collection_i++) {
 						});
 					});
 				</script>
-				<div class="m-b-2 disimg hidden-xs">
-					<a href='#' onclick="banner_filter();"><img src="images/catalog/banner_left.png" alt="" /></a>
-					<div style='margin-top:-35px;'>
-					<center>
-						<a href="trands.php" class="color_blue" style='font-size:12px;'>Узнать о трендах 2017</a>
-					</center>
-					</div>
-				</div>
+<!--				<div class="m-b-2 disimg hidden-xs">-->
+<!--					<a href='#' onclick="banner_filter();"><img src="images/catalog/banner_left.png" alt="" /></a>-->
+<!--					<div style='margin-top:-35px;'>-->
+<!--					<center>-->
+<!--						<a href="trands.php" class="color_blue" style='font-size:12px;'>Узнать о трендах 2017</a>-->
+<!--					</center>-->
+<!--					</div>-->
+<!--				</div>-->
 			</div>
 			<div class="col-sm-8 col-md-9">
 

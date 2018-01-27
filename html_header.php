@@ -211,7 +211,7 @@
 									</dl>
 									<dl class="list-unstyled">
 										<dt>Мода</dt>
-										<dd><a href="trands.php">Тренды 2017</a></dd>
+<!--										<dd><a href="trands.php">Тренды 2017</a></dd>-->
 										<dd><a href="idea.php">Идеи для Fi’ora</a></dd>
 									</dl>
 								</div>
