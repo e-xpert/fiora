@@ -8,7 +8,7 @@ $db=db_connect();
 
 $order = do_order($db);
 
-$subject = 'Заказ на myfiora.com #'.$order[0].' от '.date('d.m.Y');
+$subject = 'Заказ на myfiora.com #'.$order['order_id'].' от '.date('d.m.Y');
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 $headers .= 'From: ТМ Fi’ora<order@myfiora.com>' . "\r\n";

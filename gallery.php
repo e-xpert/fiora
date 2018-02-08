@@ -51,94 +51,96 @@ require_once ( "html_header.php"     );
 			</div>
 		</div>
 
+        <ul id="gallery">
+            <li>
+                <div class="img"><span><img src="images/gallery/1.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Яркий акцент вашего интерьера</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/2.png" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Ненавязчивое тепло домашнего уюта</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/3.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Когда слова излишни.<br>И всё избыточно. Кроме Fi'ora.</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/5.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Бокал красного вина и жизненная энергия красных роз. </div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/6.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Изысканный вкус с нотками аристократизма</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/9.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Гармония внешнего и внутреннего.<br>Такая редкость для современного мира.</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+            <li>
+                <div class="img"><span><img src="images/gallery/10.jpg" alt=""/></span></div>
+                <div class="txt">
+                    <div class="arr"></div>
+                    <div class="title">Прекрасное должно быть рядом.<br>Особенно за утренним кофе.</div>
+                    <!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
+                    <!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
+                    <!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
+                    <!--					<li><a href="#" class="color_blue">Купить</a></li>-->
+                    <!--				</ul>-->
+                </div>
+            </li>
+        </ul>
+
 	</div>
 
-	<ul id="gallery">
-		<li>
-			<div class="img"><span><img src="images/gallery/1.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Яркий акцент вашего интерьера</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/2.png" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Ненавязчивое тепло домашнего уюта</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/3.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Когда слова излишни.<br>И всё избыточно. Кроме Fi'ora.</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/5.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Бокал красного вина и жизненная энергия красных роз. </div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/6.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Изысканный вкус с нотками аристократизма</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/9.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Гармония внешнего и внутреннего.<br>Такая редкость для современного мира.</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-		<li>
-			<div class="img"><span><img src="images/gallery/10.jpg" alt=""/></span></div>
-			<div class="txt">
-				<div class="arr"></div>
-				<div class="title">Прекрасное должно быть рядом.<br>Особенно за утренним кофе.</div>
-				<!-- <div class="description">Красная роза в вазе формы ангела с сердцем</div> -->
-<!--				<ul class="list-inline list-inline-padd-2 m-b-0">-->
-<!--					<li><a href="#" class="color_blue">Подробнее</a></li>-->
-<!--					<li><a href="#" class="color_blue">Купить</a></li>-->
-<!--				</ul>-->
-			</div>
-		</li>
-	</ul>
+
 
 </div><!--bg_white-->
 

@@ -81,12 +81,12 @@ require_once ( "html_header.php");
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_22р.png" alt="" /></span>
+                        <span><img src="images/banner/banner_21.jpg" alt="" /></span>
                     </div>
-                    <div class="txt half">
+                    <div class="txt half txt-top">
                         <div class="container">
                             <div class="title">
-                                <font color='#000'>Создавайте уютные решения<br />для вашего дома</font>
+                                <font color='#000'>Создавайте<br /> уютные решения<br />для вашего дома</font>
                             </div>
                         </div>
                     </div>
@@ -808,20 +808,20 @@ require_once ( "html_header.php");
 				<a href="after-before.php" class="color_blue">Попробовать ещё варианты</a>
 			</div>
 		</div>
-<!--
+
 		<div class="m-b-5 bg_gray">
 			<div class="media media-responsive text-xs-center">
 				<div style='background:#f2f2f2;' class="media-left media-bottom hidden-xs"><img src="images/index/granity.png" alt="" /></div>
 				<div class="media-body media-middle">
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="padd20">
-						<div class="m-b-2 fs_24" style="text-transform: uppercase">Коллекция в трендах уходящего года,<br>последние остатки коллекции, которой больше не будет</div>
+						<div class="m-b-2 fs_24" style="text-transform: uppercase">Весенний характер в коллекции Granity 591</div>
 						<div class="m-b-2 color_dark_gray">
-                            В 2017 году ТМ Fi`ora разработала цветочную коллекцию Granity 591,
-                            которая учитывает все модные тенденции уходящего года. Насыщенная во всех смыслах композиция не требует никаких дополнений.
-                            Обеспечьте ей небольшую цветовую поддержку в интерьере – и он заиграет новыми красками.
-                            А главное – обретет собственный, неповторимый стиль.
-						</div>
+                            Коллекция Granity 591 – это дерзкий вызов обыденности!
+                            Насыщенная во всех смыслах композиция не требует никаких дополнений.
+                            Обеспечьте ей небольшую цветовую поддержку в интерьере, и ваш дом заиграет новыми красками и обретет собственный, неповторимый стиль.
+                            Вносите весенние изменения в свой интерьер уже сейчас.
+                        </div>
 						<a href="/catalog.php#Granity591" class="btn btn-default"><span class="type-link">Купить</span></a>
 					</div>
 					<div class="m-b-5 hidden-xs"></div>
@@ -829,7 +829,7 @@ require_once ( "html_header.php");
 				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/index/granity.png" alt="" /></div>
 			</div>
 		</div>
--->
+
 		<div class="main_gallery">
 			<div class="bg">
 				<div class="owl-carousel">

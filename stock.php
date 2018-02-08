@@ -66,7 +66,7 @@ require_once ( "html_head.php");
             </div>
         </div>
         <div class="m-b-5 hr" id="stock"></div>
-
+<!--
         <div class="stock m-b-5">
             <div class="m-b-2 disimg"><img src="images/stock/Lyra_830.png" alt="" /></div>
             <div class="m-b-1 fs_30">Композиция в стеклянном стакане Lyra за 890 рублей</div>
@@ -82,7 +82,7 @@ require_once ( "html_head.php");
             Логистический центр Fi’ora определяет ближайший пункт отгрузки в зависимости от вашего населённого пункта (более 30 мест отгрузки по России).
         </div>
         <div class="m-b-5 hr"></div>
-
+-->
         <!--
         <div class="stock m-b-5">
             <div class="m-b-2 disimg"><img src="images/stock/action_2.png" alt="" /></div>
