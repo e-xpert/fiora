@@ -1496,6 +1496,24 @@ div.btn { display: block; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+h1.quest {
+  color: #fff;
+  font-style: italic;
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+@media (min-width: 992px) {
+  h1.quest {
+    margin-top: 66px;
+    margin-left: 0;
+  }
+  .col-0 {
+    display: none;
+  }
+}
+
 .mark_price_1 { border: 1px solid #0b00fa; display: inline-block; width: 100px; padding: 5px 9px 5px; font-size: 12px; color: #0b00fa; }
 .mark_price_2 { background: url(../images/product/hny.png) no-repeat; display: inline-block; width: 110px; height: 46px; padding: 6px 10px 5px; font-size: 12px; color: #00b767; }
 .mark_price_3 { border: 1px solid #b63434; display: inline-block; width: 100px; padding: 5px 9px 5px; font-size: 12px; color: #b63434; }
@@ -1721,4 +1739,95 @@ div.btn { display: block; }
   height: 40px;
   width: 225px;
   padding-top: 9px;
+}
+
+.brand-page .bp-collection .coll-item:hover .title:before {
+  background: url(../images/col-bot-arr-w.png) no-repeat 0 0;
+}
+
+.row-с {
+  display: inline-block;
+}
+.row-с .prepost {
+  display: inline-block;
+  margin: 15px 30px;
+}
+.row-с H1 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 16px;
+  margin-top: 26px;
+}
+
+.mapbox {
+  background: #e9e9e9;
+  margin-bottom: 0px;
+}
+
+.bubble {
+  position: relative;
+  color: #fff;
+  font-size: 13px;
+  font-style: italic;
+  margin: 15px 5px;
+  padding: 23px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #fff solid 1px;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 10px 8px 0;
+  border-color: transparent #d30200;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  top: 55px;
+}
+.bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 10px 8px 0;
+  border-color: transparent #fff;
+  display: block;
+  width: 0;
+  z-index: 0;
+  left: -11px;
+  top: 55px;
+}
+
+hr.brand {
+  width: 168px;
+  border-top: 1px solid #d30200;
+  margin: 0 auto;
+}
+div.brand > div.text {
+  font-size: 16px;
+  font-style: italic;
+  width: 422px;
+}
+div.brand > div:first-child {
+  text-align: right;
+}
+div.brand > div:last-child {
+  text-align: left;
+}
+div.brand > div:first-child,
+div.brand > div:last-child {
+  width: calc(50% - 211px);
+  color: #ff0000;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.brand-page .coll-item .img {
+  padding: 20px;
+}
+.brand-page .coll-item img {
+  border-radius: 50%;
 }
