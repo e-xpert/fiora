@@ -337,20 +337,26 @@
     </script>
 
     <div class="modal fade" id="modal_hook" tabindex="-1" role="dialog" aria-labelledby="modal_hook">
-    	<div class="modal-dialog modal-md" role="document">
+    	<div class="modal-dialog md-100 modal-md" role="document">
     		<div class="modal-content">
     			<a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
-    			<div class="disimg"><img src="images/modal__banner.png" alt="" /></div>
+    			<div class="disimg"><img src="images/main/20marchtrening.png" alt="" /></div>
     			<div class="modal-body">
 
     				<ul class="display-toggle">
     					<li class="dt-1">
     						<div class="modal-hook text-center">
+                                <br />
+                                <font class="fs_20">
+                                    Эксперт-декоратор поделится опытом<br />
+                                    как подготовить свой дом после зимы и как правильно применять<br />
+                                    существующие предметы в интерьере.
+                                </font>
     							<br /><br /><br />
-    							Зарегиструйтесь на сайте и участвуйте в розыгрыше,<br />
-    							который будет проведен на сайте 31 марта 2017 года.<br />
+                                Оставьте заявку на участие и получите советы от эксперта<br />
+                                на тему «Как обустроить прихожую?» прямо сейчас.
     							<br /><br />
-    							<a href="#" class="display-toggle-link btn btn-lg btn-danger padd" data-target="dt-2">Участвовать</a>
+    							<a href="#" class="display-toggle-link btn btn-blue padd" data-target="dt-2">оставить заявку</a>
     							<br /><br /><br />
     						</div>
     					</li>
@@ -361,56 +367,66 @@
     								Зарегиструйтесь на сайте и участвуйте в розыгрыше,<br />
     								который будет проведен 31 марта 2017 года.
     							</div>
-                                <form id="reg" class="" action="php/auth.php" method="post">
+                                <form id="reg" class="" action="php/send_trening.php" method="post">
 									<input type="hidden" name="form" value="reg">
         							<div class="row">
         								<div class="m-b-2 col-sm-6">
         									<input class="form-control input-lg" type="text" name="name" value="" placeholder="Имя" required="" pattern="^[А-Яа-яЁё\s]+$" />
         								</div><!--col-->
         								<div class="m-b-2 col-sm-6">
-        									<input class="form-control input-lg" type="email" name="email" value="" placeholder="Электронная почта" required="" />
+        									<input class="form-control input-lg" type="text" name="email" value="" placeholder="Электронная почта" required="" />
         								</div><!--col-->
         							</div><!--row-->
         							<div class="row">
         								<div class="m-b-2 col-sm-6">
         									<input class="form-control input-lg phone-mask" type="text" name="phone" value="" placeholder="+7(___)___-__-__" required="" />
-        								</div><!--col-->
+        								</div>
         								<div class="col-sm-6">
-        									<div class="row">
-        										<div class="m-b-2 col-xxs-12 col-xs-6">
-        											<a href="./php/auth.php" class="btn btn-block btn-lg btn-default send-sms">Выслать код</a>
-        											<div class="m-t-05 text-center">
-        												<a href="./php/auth.php" class="fs_12 color_blue send-sms">отправить код повторно</a>
-        											</div>
-        										</div>
-        										<div class="m-b-2 col-xxs-12 col-xs-6">
-        											<input class="form-control input-lg" type="text" name="code" value="" placeholder="Код из SMS" required="" pattern="[0-9]" maxlength="5" />
-        										</div>
-        									</div><!--row-->
-        								</div><!--col-->
-        							</div><!--row-->
+<!--        									<div class="row">-->
+<!--        										<div class="m-b-2 col-xxs-12 col-xs-6">-->
+<!--        											<a href="./php/auth.php" class="btn btn-block btn-lg btn-default send-sms">Выслать код</a>-->
+<!--        											<div class="m-t-05 text-center">-->
+<!--        												<a href="./php/auth.php" class="fs_12 color_blue send-sms">отправить код повторно</a>-->
+<!--        											</div>-->
+<!--        										</div>-->
+<!--        										<div class="m-b-2 col-xxs-12 col-xs-6">-->
+<!--        											<input class="form-control input-lg" type="text" name="code" value="" placeholder="Код из SMS" required="" pattern="[0-9]" maxlength="5" />-->
+<!--        										</div>-->
+<!--        									</div>-->
+                                            <div class="checkbox gray">
+                                                <label><input type="checkbox" name="spam" checked="true" value="1" />
+                                                    Я согласен с правилами обработки <a href="#" data-toggle="modal" data-target="#modal_oferta" style="color: #929292;">персональных данных</a>
+                                                </label>
+                                            </div>
+        								</div>
+        							</div>
         							<div class="row">
-        								<div class="col-sm-9">
-        									<div class="checkbox">
-        										<label><input type="checkbox" name="spam" value="1" checked="true" /> Подпистаться на новости и выгодные предложения</label>
-        									</div>
-        								</div><!--col-->
-        								<div class="col-sm-3">
-        									<!-- <input type="submit" name="submit" class="btn btn-block btn-lg btn-danger send-reg-form" data-target="dt-3">Отправить</button> -->
-        									<input type="submit" name="submit" class="btn btn-block btn-lg btn-danger send-reg-form" data-target="dt-3" value="Отправить" />
-        								</div><!--col-->
-        							</div><!--row-->
+<!--        								<div class="col-sm-9">-->
+<!--        									<div class="checkbox gray">-->
+<!--                                                <label><input type="checkbox" name="spam" checked="true" value="1" />-->
+<!--                                                    Я согласен с правилами обработки <a href="#" data-toggle="modal" data-target="#modal_oferta" style="color: #929292;">персональных данных</a>-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--        								</div>-->
+                                        <div class="col-sm-6"></div>
+        								<div class="col-sm-6">
+        									<input type="submit" name="submit" class="btn btn-block btn-lg btn-blue send-reg-form" data-target="dt-3" value="Отправить" style="color: #fff !important;" />
+        								</div>
+        							</div>
                                 </form>
     						</div>
     					</li>
     					<li class="dt-3">
     						<div class="modal-hook text-center">
-    							<br /><br /><br /><br /><br />
-    							Поздравляем! Вы стали участником розыгрыша 30 композиций от Fi’ora.<br />
-    							Розыгрыш будет проведен на сайте 31 марта 2017 года.<br />
-    							Ссылка на страницу будет отправлена на указанный электоронный адрес.<br />
-    							Благодарим Вас за регистрацию.
-    							<br /><br /><br /><br /><br />
+                                <br /><br />
+                                <font class="fs_20">Ваша заявка отправлена.</font>
+    							<br /><br />
+                                На указаный электронный адрес вы получите письмо об онлайн-тренинге.<br />
+                                Искрене рады приветствовать Вас в нашем кругу, кто считает важным<br />
+                                заботиться о комфорте и красоте своего дома.
+    							<br /><br /><br />
+                                <a href="files/prihozhaya.pdf" target="_blank" class="btn btn-blue" data-target="dt-2" onclick="$('#modal_hook').modal('hide');">скачать подарочную статью</a>
+                                <br />
     						</div>
     					</li>
     				</ul>
@@ -422,12 +438,10 @@
     <script type="text/javascript">
     	$(function(){
 
-            <?php// if (!empty($action_show)): ?>
-                // setTimeout(function() {
-                //     $('#modal_hook').modal('show');
-                // }, 10000);
-            <?php //endif; ?>
-
+            if (document.cookie.search('training') < 0) {
+                document.cookie = "training=1";
+                $('#modal_hook').modal('show');
+            }
 
     		$('.display-toggle').each(function() {
     			var $p = $(this);
@@ -440,44 +454,47 @@
     			return false;
     		});
 
-            $('#registration input[type="text"]').on('change', function() {
-                if ($(this).val() === '') {
-                    $(this).parent().addClass('has-error');
-                } else {
-                    $(this).parent().removeClass('has-error');
-                }
-            });
-
     		$('.send-reg-form').click(function(event) {
                 event.preventDefault();
-    			var $p = $(this).closest('.display-toggle');
-				var $this = $(this);
-    			// AJAX HERE
-                var form = $(this).closest('form');
-                var method = form.attr('method');
-                var url = form.attr('action');
-                var data = form.serialize();
-				$.ajax({
-		            method: method,
-		            url: url,
-		            data: data
-		        }).done(function(response) {
-		            var result = JSON.parse(response);
 
-		            $('#reg input[type="text"]').parent().removeClass('has-error');
+                err = 0;
 
-		            if (result.status == 'success') {
-		                displayToggle($p, $this.data('target'));
-						setTimeout(function() {
-							location.href = '/';
-						}, 2000);
-		            } else {
-		                result.fields.forEach(function(field) {
-		                    $('#reg input[name="' + field + '"]').parent().addClass('has-error');
-		                });
-		            }
-		        });
-    			// IF AJAX DONE
+                $('#reg input').each(function(){
+                    if ($(this).val() === '') {
+                        $(this).addClass('has-error');
+                        err = 1;
+                    }  else $(this).removeClass('has-error');
+                });
+
+                $('#reg .inpsty').each(function(){
+                    console.log($(this))
+                    if (!$(this).hasClass('active')) {
+                        $(this).addClass('has-error');
+                        err = 1;
+                    } else $(this).removeClass('has-error');
+                });
+
+                if (!err) {
+                    var $p = $(this).closest('.display-toggle');
+                    var $this = $(this);
+
+                    var form = $(this).closest('form');
+                    var method = form.attr('method');
+                    var url = form.attr('action');
+                    var data = form.serialize();
+
+                    $.ajax({
+                        method: method,
+                        url: url,
+                        data: data,
+                        success: function (response) {
+                            displayToggle($p, $this.data('target'));
+                        },
+                        error: function () {
+                            alert('Ошибка');
+                        }
+                    });
+                }
     		});
 
 			$('.send-sms').on('click', function(event) {

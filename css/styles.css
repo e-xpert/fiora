@@ -1881,7 +1881,8 @@ div.brand > div:last-child {
   margin: -20px 0px 0px -20px;
 }
 
-a.btn.btn-blue {
+a.btn.btn-blue, .btn.btn-blue:active,
+input[type=submit].btn.btn-blue {
   background: url(/images/button_bg.png) center;
   border-radius: 4px;
   color: #fff;
@@ -1889,6 +1890,9 @@ a.btn.btn-blue {
   text-transform: uppercase;
   padding: 11px 40px 10px;
   font-size: 15px;
+}
+input[type=submit].btn.btn-blue {
+    padding: 0;
 }
 
 #page_index #callback {
@@ -2019,7 +2023,7 @@ a.btn.btn-blue {
 .checkbox.gray label { font-size: 12px; color: #929292 }
 .checkbox.gray label .inpsty.has-error { background-position: 0 -36px; }
 .checkbox.gray label .inpsty.active { background-position: 0 -15px; }
-.checkbox.gray label .inpsty { background: url(../images/icons/checkbox-gray.png) no-repeat 0 6px; margin-top: -24px; height: 21px; }
+.checkbox.gray label .inpsty { background: url(../images/icons/checkbox-gray.png) no-repeat 0 6px; top: 0; margin-top: -7px; height: 21px; }
 
 @media (min-width: 992px) {
   .mainpage-slider .mps-item .txt .title2 {
@@ -2038,3 +2042,5 @@ a.btn.btn-blue {
     font-size: 18px;
   }
 }
+
+@media (min-width: 576px) {.modal-dialog.md-100 {max-width: 100%;}}

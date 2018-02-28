@@ -323,7 +323,7 @@ require_once ( "html_header.php");
                                         <span>&nbsp;</span>
                                     </div>
                                     <div class='disimg'>
-                                        <a href='stock.php'><img src='images/main/thai.png' alt='' /></a>
+                                        <a href='stock.php'><img src='images/main/thai1.png' alt='' /></a>
                                     </div>
                                 </div>
                             </div>
@@ -493,8 +493,6 @@ require_once ( "html_header.php");
                                                 err = 1;
                                             }
                                         });
-
-                                        console.log(err);
 
                                         if (!err) {
 
@@ -824,22 +822,6 @@ require_once ( "html_header.php");
 	</div>
 </div>
 
-
-    <div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
-                    <div class="modal-title">Публичная оферта</div>
-                </div>
-                <div class="modal-body">
-
-                    <?@include 'inc/oferta.php';?>
-
-                </div>
-            </div>
-        </div>
-    </div>
 <?
 // ----------   FOOTER   ---------------------
 	require_once ( "html_footer.php"     );
