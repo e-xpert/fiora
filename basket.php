@@ -17,6 +17,10 @@ require_once ( "php/require_files.php");
 require_once ( "php/product.php");
 //=============================================
 
+if (is_null(get_basket($_COOKIE['SESSION_NAME']))) {
+    header('Location: empty.php');
+}
+
 $HEAD_inject = '
 	<meta http-equiv="cache-control" content="max-age=0" />
 	<meta http-equiv="cache-control" content="no-cache" />
