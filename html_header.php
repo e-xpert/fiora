@@ -12,15 +12,15 @@
 						<div class="disimg"><img src="images/modal-auth-img002.png" alt="" /></div>
                         <?php if (!isset($_COOKIE['login']) || !$_COOKIE['login']): ?>
                             <div class="padd20">
-    							<!-- <div class="m-b-2">
+    							<div class="m-b-2">
     								Зарегистрируйтесь на сайте, чтобы стать участником розыгрыша 30 бесплатных композиций
     								Fi’ora, который будет проведен 31 марта 2017 г.
-    							</div> -->
+    							</div>
                                 <div class="m-b-2">
                                     Регистрация на акцию завершена. Итоги для зарегистрированных участников будут проведены 31 марта 2017 года в прямой онлине трансляции (уведомление о времени посредством sms).
     							</div>
-    							<!-- <a href="#" class="btn btn-block btn-lg btn-danger" data-toggle="modal" data-target="#modal_hook">Регистрация</a>
-    							<div class="m-b-2"></div> -->
+    							<a href="#" class="btn btn-block btn-lg btn-danger" data-toggle="modal" data-target="#modal_hook">Регистрация</a>
+    							<div class="m-b-2"></div>
     							<a href="#" class="btn btn-block btn-lg btn-default" data-toggle="modal" data-target="#modal_login">Войти</a>
     						</div>
                         <?php else: ?>
@@ -130,6 +130,14 @@
 							</div>
 						</li>
 						-->
+                        <li class="visible-sm visible-md visible-lg">
+                            <div class="pull-right">
+                                8 800 550-83-88
+                            </div>
+                            <div class="fs_10">
+                                звоните — это бесплатно
+                            </div>
+                        </li>
                         <li class="visible-sm visible-md visible-lg sep nomarg"></li>
 						<li class="visible-sm visible-md visible-lg">
 

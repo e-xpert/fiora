@@ -102,7 +102,8 @@ echo "</font><hr>";
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?= $VAR_title; ?> | myfiora.com</title>
+    <title>Отлично к 8 марта! - композиции из живых цветов Fiora</title>
+<!--    <title>--><?//= $VAR_title; ?><!-- | myfiora.com</title>-->
     <meta property="og:title" content="<?= $VAR_title; ?> | myfiora.com" />
     <meta property="og:image" content="https://myfiora.com/images/banner/image__post.jpg" />
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
@@ -110,7 +111,7 @@ echo "</font><hr>";
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all" />
     <!--project files-->
     <link rel="stylesheet" href="css/form.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/styles.css?123" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/styles.css?3543" type="text/css" media="all" />
     <link rel="stylesheet" href="css/lex.style.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -191,11 +192,11 @@ echo "</font><hr>";
     </noscript>
     <!-- End Facebook Pixel Code -->
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+    <script type="text/javascript" >
         (function (d, w, c) {
             (w[c] = w[c] || []).push(function() {
                 try {
-                    w.yaCounter43171214 = new Ya.Metrika2({
+                    w.yaCounter43171214 = new Ya.Metrika({
                         id:43171214,
                         clickmap:true,
                         trackLinks:true,
@@ -212,12 +213,12 @@ echo "</font><hr>";
                 f = function () { n.parentNode.insertBefore(s, n); };
             s.type = "text/javascript";
             s.async = true;
-            s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js";
+            s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js";
 
             if (w.opera == "[object Opera]") {
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
-        })(document, window, "yandex_metrika_callbacks2");
+        })(document, window, "yandex_metrika_callbacks");
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/43171214" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
