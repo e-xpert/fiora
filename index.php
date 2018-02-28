@@ -59,25 +59,25 @@ require_once ( "html_header.php");
 					</div>
 				</div>
 			</div>
-			<div class="owl-carousel-item">
-                <a href="/stock.php#stock">
-				<div class="mps-item">
-					<div class="img">
-						<span><img src="images/banner/banner_3_2.jpg" alt="" /></span>
-					</div>
-                    <div class="txt half txt-top">
-                        <div class="container">
-                            <div class="title">
-                                Бесплатная доставка<br />по России
-                            </div>
-                            <div class="description">
-                                подробнее в разделе «Акции»
-                            </div>
-                        </div>
-                    </div>
-				</div>
-                </a>
-			</div>
+<!--			<div class="owl-carousel-item">-->
+<!--                <a href="/stock.php#stock">-->
+<!--				<div class="mps-item">-->
+<!--					<div class="img">-->
+<!--						<span><img src="images/banner/banner_3_2.jpg" alt="" /></span>-->
+<!--					</div>-->
+<!--                    <div class="txt half txt-top">-->
+<!--                        <div class="container">-->
+<!--                            <div class="title">-->
+<!--                                Бесплатная доставка<br />по России-->
+<!--                            </div>-->
+<!--                            <div class="description">-->
+<!--                                подробнее в разделе «Акции»-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--				</div>-->
+<!--                </a>-->
+<!--			</div>-->
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
@@ -113,9 +113,9 @@ require_once ( "html_header.php");
 			<div class="main-uniq">
                 <button type="button" class="close open-uniq" title="Закрыть"></button>
 				<div class="main-uniq-box">
-					<div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
+					<div class="text">ОСВЕЖИТ ЕЁ<br />ИНТЕРЬЕР</div>
                     <div class="sepline m-c-a"></div>
-                    <div class="text">Станет<br />достойным<br />подарком</div>
+                    <div class="text">практичное<br />решение<br />для подарка</div>
                     <div class="more" style='margin-top:250px;'>
 						<a href="#" class="open-uniq h-a">Узнать об уникальности</a>
 						<a href="#" class="open-uniq h-b">Закрыть</a>
@@ -169,9 +169,9 @@ require_once ( "html_header.php");
             <div class="body">
                 <div class="media">
                     <div class="media-body media-middle">
-                        <div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
+                        <div class="text">ОСВЕЖИТ ЕЁ<br />ИНТЕРЬЕР</div>
                         <div class="sepline m-c-a"></div>
-                        <div class="text">ОЦЕНИТСЯ<br />С ДОСТОИНСТВОМ<br />КАК ПОДАРОК</div>
+                        <div class="text">практичное<br />решение<br />для подарка</div>
                     </div>
                     <div class="media-right media-bottom">
                         <img src="images/index/rose.png" alt="" />
@@ -358,14 +358,15 @@ require_once ( "html_header.php");
                 </script>
             </div s>
             <div class="bottom">
-                <a href="gallery.php" class="btn btn-blue" style="padding: 12px 80px 9px;">Перейти в каталог</a>
+                <a href="catalog.php" class="btn btn-blue" style="padding: 12px 80px 9px;">Перейти в каталог</a>
                 <br><br>
                 <span class="tooltips bottom right">
-                    Доставка завтра, <font style="color: #00c721">бесплатно</font>
+                    Доставка завтра, <font style="color: #00c721; text-decoration: underline">бесплатно</font>
                     <div class="tooltips_box">
                         <div class="tooltips_box_arr"></div>
                         <div class="tooltips_box_body fs_12">
-                            Действует при покупке от 3500
+                            Действует в Москве при покупке <br>
+                            от 3500 рублей в рабочие дни
                         </div>
                     </div>
                 </span>
@@ -460,7 +461,7 @@ require_once ( "html_header.php");
 
                             <div class="m-b-3 fright bottom prm book">
                                 <a id="book_button" href="#" class="m-t-1 btn btn-blue book-order" style="width: 100%; padding: 11px 0 10px;">
-                                    Получить промокод
+                                    Заказать
                                 </a>
                             </div>
 

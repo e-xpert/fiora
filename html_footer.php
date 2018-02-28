@@ -128,7 +128,7 @@
 						<li><a href="mailto:welcome@fiora-rf.ru" class="color_blue">Написать письмо</a></li>
 						<li></li>
 						<li><img src="images/footer-logo.jpg" alt="" /></li>
-						<li>&copy; 2016 «Fi'ora». Все права защищены</li>
+						<li>&copy; 2009 «Fi'ora». Все права защищены</li>
 					</ul>
 				</div>
 			</div>
