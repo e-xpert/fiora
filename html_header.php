@@ -222,7 +222,7 @@
 <!--										<dd><a href="trands.php">Тренды 2017</a></dd>-->
 										<dd><a href="idea.php">Идеи для Fi’ora</a></dd>
                                         <dd>
-                                            <a id="modal_hook_open" href="javascript:void(0)" data-toggle="modal" data-target="#modal_hook" rel="nofollow" style="color: #00c721 !important;">Онлайн-тренинг 20марта</a>
+                                            <a id="modal_hook_open" href="javascript:void(0)" data-toggle="modal" data-target="#modal_hook" rel="nofollow" style="color: #00c721 !important;">Онлайн-тренинг 20 марта</a>
                                         </dd>
 									</dl>
 								</div>
