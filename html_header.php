@@ -221,6 +221,9 @@
 										<dt>Мода</dt>
 <!--										<dd><a href="trands.php">Тренды 2017</a></dd>-->
 										<dd><a href="idea.php">Идеи для Fi’ora</a></dd>
+                                        <dd>
+                                            <a id="modal_hook_open" href="javascript:void(0)" data-toggle="modal" data-target="#modal_hook" rel="nofollow" style="color: #00c721 !important;">Онлайн-тренинг 20марта</a>
+                                        </dd>
 									</dl>
 								</div>
 								<div class="col-xxs-12 col-xs-6 col-sm-3">
@@ -365,7 +368,7 @@
     							<div class="m-b-3 text-center">
     								<br />
     								Зарегиструйтесь на сайте и участвуйте в розыгрыше,<br />
-    								который будет проведен 31 марта 2017 года.
+    								который будет проведен 20 марта 2018 года.
     							</div>
                                 <form id="reg" class="" action="php/send_trening.php" method="post">
 									<input type="hidden" name="form" value="reg">
@@ -422,7 +425,7 @@
                                 <font class="fs_20">Ваша заявка отправлена.</font>
     							<br /><br />
                                 На указаный электронный адрес вы получите письмо об онлайн-тренинге.<br />
-                                Искрене рады приветствовать Вас в нашем кругу, кто считает важным<br />
+                                Искренне рады приветствовать Вас в нашем кругу, кто считает важным<br />
                                 заботиться о комфорте и красоте своего дома.
     							<br /><br /><br />
                                 <a href="files/prihozhaya.pdf" target="_blank" class="btn btn-blue" data-target="dt-2" onclick="$('#modal_hook').modal('hide');">скачать подарочную статью</a>
