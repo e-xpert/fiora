@@ -343,7 +343,7 @@
     	<div class="modal-dialog md-100 modal-md" role="document">
     		<div class="modal-content">
     			<a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
-    			<div class="disimg"><img src="images/main/20marchtrening.png" alt="" /></div>
+    			<div class="disimg"><img src="images/main/20marchtrening.jpg" alt="" /></div>
     			<div class="modal-body">
 
     				<ul class="display-toggle">
