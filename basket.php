@@ -324,11 +324,21 @@ foreach ($basket as $item) {
 
 		<div class="m-b-2 fs_16"><strong>Способ оплаты</strong></div>
 
-				<div class='m-b-1' id='pay_type' data-pay_type='1'>
-					<div class='radio'>
-						<label><input id='pay_type_1' type='radio' name='pay' value='1' checked /> Оплата курьеру наличными</label>
-					</div>
-				</div>
+        <div class='m-b-1' id='pay_type' data-pay_type='1'>
+            <div class='radio'>
+                <label><input id='pay_type_1' type='radio' name='pay' value='1' checked /> Оплата курьеру наличными</label>
+            </div>
+        </div>
+        <div class='m-b-1'>
+            <div class='radio'>
+                <label><input id='pay_type_2' type='radio' name='pay' value='2' /> Онлайн оплата</label>
+            </div>
+        </div>
+        <div class='m-b-1'>
+            <div class='radio'>
+                <label><input id='pay_type_3' type='radio' name='pay' value='3' /> Оплата другим способом по согласованию с менеджером</label>
+            </div>
+        </div>
 <?
 /*
 

@@ -584,7 +584,7 @@
                             if (data=='1') {
                                 var robo_pay=$('#pay_type').data('pay_type');
                                 // оплата наличными
-                                if (robo_pay==1) {
+                                if (robo_pay==1 || robo_pay==3) {
                                     window.location="https://<? echo $_SERVER['HTTP_HOST']; ?>/confirm.php";
                                 }
                                 // robokassa
@@ -649,7 +649,7 @@
                             if (data=='1') {
                                 var robo_pay=$('#pay_type').data('pay_type');
                                 // оплата наличными
-                                if (robo_pay==1) {
+                                if (robo_pay==1 || robo_pay==3) {
                                     window.location="https://<? echo $_SERVER['HTTP_HOST']; ?>/confirm.php";
                                 }
                                 // robokassa

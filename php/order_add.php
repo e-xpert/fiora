@@ -233,6 +233,7 @@ function get_order_message($filename, $order = array())
 
     $pay[1] = 'Оплата курьеру наличными';
     $pay[2] = 'Онлайн оплата';
+    $pay[3] = 'Оплата другим способом по согласованию с менеджером';
 
     $product_sum += $_POST['delivery'];
     $discount_sum = $_POST['promo_discount'] / 100 * $product_sum;

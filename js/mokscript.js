@@ -447,16 +447,27 @@ $(function(){
 			$('#pay_type_1').attr('checked',true);
 			$('#pay_type').data('pay_type',1);
 			$('#pay_type_2').attr('checked',false);
+            $('#pay_type_3').attr('checked',false);
 		}
 	});
 
-	$('#pay_type_2').click(function(){
-		if (!$('#pay_type_2').attr('checked')) {
-			$('#pay_type_2').attr('checked',true);
-			$('#pay_type').data('pay_type',2);
-			$('#pay_type_1').attr('checked',false);
-		}
-	});
+    $('#pay_type_2').click(function(){
+        if (!$('#pay_type_2').attr('checked')) {
+            $('#pay_type_2').attr('checked',true);
+            $('#pay_type').data('pay_type',2);
+            $('#pay_type_1').attr('checked',false);
+            $('#pay_type_3').attr('checked',false);
+        }
+    });
+
+    $('#pay_type_3').click(function(){
+        if (!$('#pay_type_3').attr('checked')) {
+            $('#pay_type_3').attr('checked',true);
+            $('#pay_type').data('pay_type',3);
+            $('#pay_type_1').attr('checked',false);
+            $('#pay_type_2').attr('checked',false);
+        }
+    });
 
 
 
