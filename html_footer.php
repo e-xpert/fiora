@@ -242,7 +242,7 @@
 
 <a class="call" data-toggle="modal" data-target="#modal_callform">
     <div style="position: relative; height: 56px;">
-        <div class="text hidden-xs">Помощь эксперта<br>по декорированию</div>
+        <div class="text hidden-xs">Заказать звонок или<br>позвонить оператору</div>
         <div class="img"><img src="images/phone.png" /></div>
     </div>
 </a>
@@ -251,10 +251,8 @@
     <div class="call-form">
         <div class="call-head"></div>
         <div class="call-body" id="callform">
-            Наш эксперт в декорировании
-            поможет с выбором.<br>
-            Закажите звонок, чтобы получить
-            консультацию.<br>
+            Наш консультант из службы заказов поможет с выбором.<br>
+            Закажите звонок, чтобы получить консультацию.<br>
             <div class="m-b-2"></div>
             <input type="text" name="name" id="call_name" placeholder="Имя" class="call-input" />
             <div class="m-b-2"></div>
@@ -269,13 +267,18 @@
             <a id="call-submit" href="#" class="m-t-1 btn btn-blue" style="width: 100%; padding: 11px 0 10px;">
                 Заказать звонок
             </a>
+            <a href="tel:88005508399" class="m-t-1 btn btn-green" style="width: 100%; padding: 11px 0 10px;">
+                Позвонить
+            </a>
         </div>
         <div class="call-body" style="text-align: center; display: none" id="callresult">
             <div class="fs_18" style="padding: 90px 0px 20px 0px">
                 Благодарим за проявленый интерес!
             </div>
-            В ближайшие минуты<br>
-            Вам перезвонят.
+            Мы перезвоним Вам<br>
+            в рабочее время<br>
+            с 9:00 до 17:00<br>
+            (время московское).
         </div>
     </div>
 </div>
