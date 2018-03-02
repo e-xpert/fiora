@@ -147,8 +147,13 @@ foreach ($basket as $item) {
                         $main_city_ids = array(1503901, 1489425, 1496747, 524901, 1486209);
 
                         if (in_array($geo_city_id, $main_city_ids)) {
-                            $delivery_default_summa = $geo_city_id == 524901 ? 450 : 350;
-							$delivery_summa = $total > 8000 ? 0 : $delivery_default_summa;
+
+                            if ($geo_city_id == 524901) {
+                                $delivery_summa = $total > 3500 ? 0 : 450;
+                            } else {
+                                $delivery_summa = $total > 8000 ? 0 : 350;
+                            }
+
                             echo '<span id="delivery_summa" data-delivery_default_summa="' . $delivery_default_summa . '" data-delivery_summa="' . $delivery_summa . '">' . $delivery_summa . ' ₽</span>';
                         } else {
                             echo 'расчету ТК';
