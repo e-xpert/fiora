@@ -441,10 +441,10 @@
     <script type="text/javascript">
     	$(function(){
 
-            if (document.cookie.search('training') < 0) {
-                document.cookie = "training=1";
-                $('#modal_hook').modal('show');
-            }
+            // if (document.cookie.search('training') < 0) {
+            //     document.cookie = "training=1";
+            //     $('#modal_hook').modal('show');
+            // }
 
     		$('.display-toggle').each(function() {
     			var $p = $(this);

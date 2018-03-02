@@ -331,7 +331,7 @@ foreach ($basket as $item) {
         </div>
         <div class='m-b-1'>
             <div class='radio'>
-                <label><input id='pay_type_2' type='radio' name='pay' value='2' /> Онлайн оплата</label>
+                <label><input id='pay_type_2' type='radio' name='pay' value='2' /> Онлайн оплата через платежный сервис Robokassa</label>
             </div>
         </div>
         <div class='m-b-1'>

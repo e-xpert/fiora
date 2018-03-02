@@ -240,8 +240,98 @@
 	</div>
 </div>
 
-<a href="#" class="gototop"></a>
+<a class="call" data-toggle="modal" data-target="#modal_callform">
+    <div style="position: relative; height: 56px;">
+        <div class="text hidden-xs">Помощь эксперта<br>по декорированию</div>
+        <div class="img"><img src="images/phone.png" /></div>
+    </div>
+</a>
 
+<div class="modal fade" id="modal_callform" tabindex="-1" role="dialog" aria-labelledby="modal_callform">
+    <div class="call-form">
+        <div class="call-head"></div>
+        <div class="call-body" id="callform">
+            Наш эксперт в декорировании
+            поможет с выбором.<br>
+            Закажите звонок, чтобы получить
+            консультацию.<br>
+            <div class="m-b-2"></div>
+            <input type="text" name="name" id="call_name" placeholder="Имя" class="call-input" />
+            <div class="m-b-2"></div>
+            <input class="call-input phone-mask" type="text" name="phone" id="call_phone" placeholder="+7(___)___-__-__" />
+            <div class="m-b-2"></div>
+            <div class="checkbox gray">
+                <label><input type="checkbox" name="spam" checked="true" value="1" class="call-input" />
+                    Я согласен с правилами обработки
+                    <a href="#" data-toggle="modal" data-target="#modal_oferta" style="color: #929292;">персональных данных</a>
+                </label>
+            </div>
+            <a id="call-submit" href="#" class="m-t-1 btn btn-blue" style="width: 100%; padding: 11px 0 10px;">
+                Заказать звонок
+            </a>
+        </div>
+        <div class="call-body" style="text-align: center; display: none" id="callresult">
+            <div class="fs_18" style="padding: 90px 0px 20px 0px">
+                Благодарим за проявленый интерес!
+            </div>
+            В ближайшие минуты<br>
+            Вам перезвонят.
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(function(){
+
+        $('.call-input').on('change', function() {
+            if ($(this).val() === '') {
+                $(this).addClass('has-error');
+            } else {
+                $(this).removeClass('has-error');
+            }
+        });
+
+        $('#call-submit').click(function(event) {
+            event.preventDefault();
+
+            err = 0;
+
+            $(this).closest('#modal_callform').find('.call-input').each(function(){
+                if ($(this).val() === '') {
+                    $(this).addClass('has-error');
+                    err = 1;
+                }
+            });
+
+            $(this).closest('#modal_callform').find('.inpsty').each(function(){
+                if (!$(this).hasClass('active')) {
+                    $(this).addClass('has-error');
+                    err = 1;
+                }
+            });
+
+            if (!err) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/php/send_callback.php',
+                    data: 'name='+$('#call_name').val()+'&'+'phone='+$('#call_phone').val(),
+                    success: function(response) {
+                        $('#callform').hide();
+                        $('#callresult').show();
+                    },
+                    error: function() {
+                        alert('Ошибка');
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+
+<a href="#" class="gototop"></a>
 
 <div style='display:none;'>
 	<input id='filtered' value='0'>
