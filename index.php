@@ -333,6 +333,8 @@ require_once ( "html_header.php");
                 <script type="text/javascript">
                     $(function(){
                         $(".main_gallery .owl-carousel").owlCarousel({
+                            startPosition: 1,
+                            autoplay: true,
                             smartSpeed : 500,
                             items : 4,
                             loop : true,
@@ -406,7 +408,7 @@ require_once ( "html_header.php");
                         <div class="after"><img src="images/main/b1.png" alt="" /></div>
                     </div>
                 </div>
-            </div>
+            </div><a name="discount20"></a>
             <div class="m-t-2 text-center visible-xs">
                 <a href="after-before.php" class="color_blue">Попробовать ещё варианты</a>
             </div>
@@ -415,6 +417,7 @@ require_once ( "html_header.php");
         <div class="visible-sm m-b-2"></div>
 
 	</div>
+
 
 	<div class="m-b-2 main-negin-slider z-index-1">
 		<ul>
@@ -586,13 +589,11 @@ require_once ( "html_header.php");
 	<div class="clearfix"></div>
 
 	<div class="m-b-2 main-pack">
-		<div class="title">Фирменные атрибуты Fi’ora для большего впечатления</div>
 		<div class="owl-carousel">
 			<div class="owl-carousel-item">
-				<div class="disimg"><img src="images/index/mobile_box.jpg" alt="" /></div>
-			</div>
-			<div class="owl-carousel-item">
-				<div class="disimg"><img src="images/index/mobile_lls.png" alt="" /></div>
+				<div class="disimg">
+                    <a href="#discount20"><img src="images/main/discount20.png" alt="" /></a>
+                </div>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -600,7 +601,7 @@ require_once ( "html_header.php");
 				$(".main-pack .owl-carousel").owlCarousel({
 					smartSpeed : 500,
 					items : 1,
-					loop : true,
+					loop : false,
 				});
 			});
 		</script>
