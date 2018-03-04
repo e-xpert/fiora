@@ -1,21 +1,37 @@
 
-    <div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
-                    <div class="modal-title">Публичная оферта</div>
-                </div>
-                <div class="modal-body">
+<div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
+                <div class="modal-title">Публичная оферта</div>
+            </div>
+            <div class="modal-body">
 
-                    <?@include 'inc/oferta.php';?>
+                <?@include 'inc/oferta.php';?>
 
-                </div>
             </div>
         </div>
     </div>
+</div>
 
-	<div id="callback">
+<div class="modal fade" id="modal_public" tabindex="-1" role="dialog" aria-labelledby="modal_public">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
+                <div class="modal-title">Согласие на использование персональных данных</div>
+            </div>
+            <div class="modal-body">
+
+                <?@include 'inc/public.php';?>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="callback">
 		<div class="container">
 			<div class="row row_10">
 				<div class="col-md-5">

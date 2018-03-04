@@ -421,22 +421,21 @@ require_once ( "html_header.php");
 			<li class="slide-1 active">
 				<div class="container">
 					<div class="pos">
-                        <div class="img" align='left'><img src="images/index/books.png" alt="" /></div>
+                        <div class="img" align='left'><img src="images/main/discount20.png" alt="" /></div>
 						<div class="txt">
 
                             <div class="title-1">
-                                <strong>Полезное решение с книгой «Стиль» с быстрым заказом</strong>
+                                <strong>Уникальный шанс в Fi’ora получить -20% на весь год</strong>
                             </div>
 
                             <div class="m-b-1 fs_16">
-                                <strong>для подарка той, кто заботится о своё доме</strong>
+                                <strong>сейчас до 8 марта скидка 10%, далее до 31 декабря - 20%</strong>
                             </div>
                             <div>
-                                Укажите свой номер телефон и профессиональный консультант поможет подобрать вазу по двум вопросам об интерьере, чтобы Вы были уверенны,
-                                что она правильно впишется в него. Книга-бестселлер на ozon.ru о секретах оформления дома «Стиль» в подарок!
+                                Мы хотим, чтобы довольных людей от покупок становилось больше. Укажите свой номер телефона и ваш промокод придёт в смс, который всегда будет доступен под рукой весь год. Это уникальный шанс покупать нашу продукцию с выгодой до 2000 рублей с одной вазы.
                             </div>
                             <div style="color: #8f8f8f">
-                                (подробности предложения у консультантов Fi’ora)
+                                Предложение действует до 6 марта 2018 года.
                             </div>
 
                             <div class="m-b-2"></div>
@@ -454,14 +453,14 @@ require_once ( "html_header.php");
                                 <div class="checkbox gray">
                                     <label><input type="checkbox" name="spam" checked="true" value="1" class="book-input" />
                                         Я согласен с правилами обработки
-                                        <a href="#" data-toggle="modal" data-target="#modal_oferta" style="color: #929292;">персональных данных</a>
+                                        <a href="#" data-toggle="modal" data-target="#modal_public" style="color: #929292;">персональных данных</a>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="m-b-3 fright bottom prm book">
                                 <a id="book_button" href="#" class="m-t-1 btn btn-blue book-order" style="width: 100%; padding: 11px 0 10px;">
-                                    Заказать
+                                    Получить промокод
                                 </a>
                             </div>
 
@@ -501,6 +500,13 @@ require_once ( "html_header.php");
                                             $phone = $('#book_name');
                                             $button = $('#book_button');
 
+                                            $.post('/php/auth.php', {
+                                                'form': 'sms20',
+                                                'phone': $phone.val()
+                                            }).done(function() {
+                                                console.log('done');
+                                            });
+
                                             $.ajax({
                                                 type: 'POST',
                                                 url: '/php/send_book.php',
@@ -509,7 +515,7 @@ require_once ( "html_header.php");
 
                                                     $name.val('');
                                                     $phone.val('');
-                                                    $button.text('Заказ отправлен');
+                                                    $button.text('Промокод отправлен');
 
                                                     setTimeout(function() {
                                                         $button.text('Получить промокод')

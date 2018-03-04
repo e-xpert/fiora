@@ -51,7 +51,7 @@
 						</li>
 						<li class="visible-lg">
 							<span class="tooltips bottom right">
-								Будьте внимательны к качеству <img src="images/icons/info.png" alt="" />
+								Оригинальное качество Fi’ora <img src="images/icons/info.png" alt="" />
 								<div class="tooltips_box">
 									<div class="tooltips_box_arr"></div>
 									<div class="tooltips_box_body fs_12">
@@ -360,7 +360,9 @@
                                 на тему «Как обустроить прихожую?» прямо сейчас.
     							<br /><br />
     							<a href="#" class="display-toggle-link btn btn-blue padd" data-target="dt-2">оставить заявку</a>
-    							<br /><br /><br />
+    							<br /><br />
+                                <a href="javascript:void(0)" onclick="$('#modal_hook').modal('hide')";>закрыть</a>
+                                <br />
     						</div>
     					</li>
     					<li class="dt-2">
@@ -398,7 +400,7 @@
 <!--        									</div>-->
                                             <div class="checkbox gray">
                                                 <label><input type="checkbox" name="spam" checked="true" value="1" />
-                                                    Я согласен с правилами обработки <a href="#" data-toggle="modal" data-target="#modal_oferta" style="color: #929292;">персональных данных</a>
+                                                    Я согласен с правилами обработки <a href="#" data-toggle="modal" data-target="#modal_public" style="color: #929292;">персональных данных</a>
                                                 </label>
                                             </div>
         								</div>

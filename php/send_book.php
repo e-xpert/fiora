@@ -1,5 +1,5 @@
 <?
-$subject = 'Заявка на "Полезное решение" на myfiora.com';
+$subject = 'Получен промокод «Скидка на год» на myfiora.com';
 
 $message="
 	<html><head><meta charset='utf-8'></head>

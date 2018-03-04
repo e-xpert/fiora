@@ -186,16 +186,16 @@ function get_order_message($filename, $order = array())
                 <tr>
                 <td><a href="https://myfiora.com/product.php?art=' . $product[2] . '"><img src="https://myfiora.com/art_70/' . $product[2] . '.jpg" alt="" width="70px" /></a></td>
                 <td style="padding-left: 10px; font-size: 12px;">
-                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">' . $product[34] . '</div>
-                    ' . $product[45] . '
+                    <div style="padding-bottom: 5px; font-size: 15px; font-weight: bold;">' . $product[35] . '</div>
+                    ' . $product[46] . '
                     <div style="padding-top: 5px; color: #aeaeae;">Артикул: ' . $product[2] . '</div>
                 </td>
                 </tr>
                 </table>
             </td>
-            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[21] . ' Р</td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . number_format($product[21], 2, ',', ' ') . ' Р</td>
             <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center;">' . $product[3] . '</td>
-            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[21] * $product[3]  . ' Р</td>
+            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . number_format($product[21] * $product[3], 2, ',', ' ')  . ' Р</td>
         </tr>';
 
         $product_sum += $product[21] * $product[3];
@@ -218,9 +218,9 @@ function get_order_message($filename, $order = array())
                 </tr>
                 </table>
             </td>
-            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . $product[12] . ' Р</td>
+            <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center; white-space: nowrap;">' . number_format($product[12], 2, ',', ' ') . ' Р</td>
             <td style="border-right: 1px solid #dcdcdc; padding: 15px 30px; text-align: center;">' . $product[3] . '</td>
-            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . $product[12] * $product[3]  . ' Р</td>
+            <td style="padding: 15px 30px; text-align: right; white-space: nowrap;">' . number_format($product[12] * $product[3], 2, ',', ' ')  . ' Р</td>
         </tr>';
 
         $product_sum += $product[12] * $product[3];
@@ -236,8 +236,8 @@ function get_order_message($filename, $order = array())
     $pay[3] = 'Оплата другим способом по согласованию с менеджером';
 
     $product_sum += $_POST['delivery'];
-    $discount_sum = $_POST['promo_discount'] / 100 * $product_sum;
-    $total_sum = $product_sum - $discount_sum;
+    $discount_sum = number_format($_POST['promo_discount'] / 100 * $product_sum, 2, ',', ' ');
+    $total_sum = number_format($product_sum - $discount_sum, 2, ',', ' ');
 
     $body = str_replace('[*order_summa*]', $total_sum, $body);
     $body = str_replace('[*order_delivery*]', $_POST['delivery'] ? $_POST['delivery'] . ' Р' : '-', $body);

@@ -86,6 +86,36 @@
             echo json_encode($response);
         }
 
+
+        public function sms20()
+        {
+            $response = array();
+
+            if ($this->ValidPhone() == false) {
+                $response['fields'][] = 'phone';
+            }
+            if ($this->ValidPhone()) {
+                $response['status'] = 'success';
+
+                // mail('39df7538-f730-f064-8173-417d4f19c183+'.$this->phone.'@sms.ru', 'from:Fi`ora', $code);
+                $ch = curl_init("https://sms.ru/sms/send");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+                    "api_id" => "39df7538-f730-f064-8173-417d4f19c183",
+                    "to" => "'.$this->phone.'",
+                    "from" => "Fiora",
+                    "text" => 'Ваш промокод: MA8RET. Скидка 10% - до 8 марта. Скидка 20% - до 31 декабря’18.'
+                ));
+                $body = curl_exec($ch);
+                curl_close($ch);
+                var_dump($body);
+            } else {
+                $response['status'] = 'error';
+            }
+            echo json_encode($response);
+        }
+
         public function CheckSms()
         {
             $result = mysql_query('
@@ -160,6 +190,9 @@
             break;
         case 'sms':
             $Auth->sms();
+            break;
+        case 'sms20':
+            $Auth->sms20();
             break;
         case 'login':
             $Auth->login();
