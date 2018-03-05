@@ -47,7 +47,7 @@ require_once ( "html_head.php");
         <div class="stock m-b-5">
             <div class="m-b-2 disimg"><img src="images/stock/thai.jpg" alt="" /></div>
             <div class="m-b-1 fs_30">Розыгрыш путёвки в Таиланд на сумму в 50 000 рублей</div>
-            <div class="m-b-2 fs_18">Шанс выиграть путёвку в Таиланд теперь ближе! Совершите покупку композиции Fi'ora на сумму от 3399 рублей в период до 8 марта 2018 года и станьте участником второго розыгрыша. Главный приз – путевка в Таиланд номиналом в 50 000 рублей в 2018 году. Розыгрыш будет проходить в прямом эфире на выделенном интернет-канале 15 марта 2018. Правила участия в розыгрыше здесь.</div>
+            <div class="m-b-2 fs_18">Шанс выиграть путёвку в Таиланд теперь ближе! Совершите покупку композиции Fi'ora на сумму от 3399 рублей в период до 8 марта 2018 года и станьте участником второго розыгрыша. Главный приз – путевка в Таиланд номиналом в 50 000 рублей в 2018 году. Розыгрыш будет проходить в прямом эфире на выделенном интернет-канале 15 марта 2018. Правила участия в розыгрыше <a href="#" class="color_blue" data-toggle="modal" data-target="#modal_oferta">здесь</a>.</div>
             <a href="http://thai.myfiora.com/" class="btn btn-thai">Зарегистрироваться</a>
         </div>
         <div class="modal fade" id="modal_oferta" tabindex="-1" role="dialog" aria-labelledby="modal_oferta">
@@ -59,7 +59,7 @@ require_once ( "html_head.php");
                     </div>
                     <div class="modal-body">
 
-                        <?@include 'inc/oferta-thai.php';?>
+                        <?@include 'inc/oferta-thai2.php';?>
 
                     </div>
                 </div>

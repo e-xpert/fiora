@@ -218,7 +218,7 @@
 										 <dd><a href="cards.php">Фирменные открытки</a></dd>
 									</dl>
 									<dl class="list-unstyled">
-										<dt>Мода</dt>
+										<dt>Блог</dt>
 <!--										<dd><a href="trands.php">Тренды 2017</a></dd>-->
 										<dd><a href="idea.php">Идеи для Fi’ora</a></dd>
                                         <dd>
@@ -230,9 +230,9 @@
 									<dl class="list-unstyled">
 										<dt>Fi’ora (Фиора)</dt>
 										<dd><a href="about.php">О бренде</a></dd>
-										<dd><a href="energy.php">Вечная энергия живых цветов</a></dd>
-										<dd><a href="legend.php">Легенда</a></dd>
-										<dd><a href="allday.php">Fiora каждый день</a></dd>
+										<dd><a href="energy.php">О долговечности</a></dd>
+										<dd><a href="legend.php">Легенда появления</a></dd>
+										<dd><a href="allday.php">Возможности выбора</a></dd>
 									</dl>
 								</div>
 								<div class="clearfix visible-xs"></div>
@@ -241,7 +241,7 @@
 										<dt>Галерея</dt>
 										<dd><a target='_blank' href="https://www.youtube.com/channel/UCl8eKE-eSL8LkGRuoyF4B_w/videos">Видео</a></dd>
 										<dd><a href="gallery.php">Фото в интерьере</a></dd>
-										<dd><a href="after-before.php">Фото «до и после»</a></dd>
+										<dd><a href="after-before.php">Ценность в примерах</a></dd>
 									</dl>
 								</div>
 								<div class="col-xxs-12 col-xs-6 col-sm-3">

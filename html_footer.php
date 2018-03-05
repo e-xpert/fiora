@@ -18,11 +18,11 @@
 <div class="modal fade" id="modal_public" tabindex="-1" role="dialog" aria-labelledby="modal_public">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <a href="#" class="cross" data-dismiss="modal" aria-label="Close"></a>
-                <div class="modal-title">Согласие на использование персональных данных</div>
+            <div class="modal-header" style="display: block;">
+                <a href="#" class="cross" style="top: 30%;" data-dismiss="modal" aria-label="Close"></a><br><br>
+                <div class="modal-title" style="width: 100%;">Согласие на использование персональных данных</div>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="    padding: 35px 25px 15px;">
 
                 <?@include 'inc/public.php';?>
 

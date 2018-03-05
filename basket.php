@@ -149,14 +149,22 @@ foreach ($basket as $item) {
                         if (in_array($geo_city_id, $main_city_ids)) {
 
                             if ($geo_city_id == 524901) {
-                                $delivery_summa = $total > 3500 ? 0 : 450;
+                                $free_delivery_summa = 3500;
+                                $delivery_default_summa = 450;
                             } else {
-                                $delivery_summa = $total > 8000 ? 0 : 350;
+                                $free_delivery_summa = 8000;
+                                $delivery_default_summa = 350;
                             }
 
-                            echo '<span id="delivery_summa" data-delivery_default_summa="' . $delivery_default_summa . '" data-delivery_summa="' . $delivery_summa . '">' . $delivery_summa . ' ₽</span>';
+                            $delivery_summa = $total > $free_delivery_summa ? 0 : $delivery_default_summa;
+
+                            echo '<span id="delivery_summa" 
+                                    data-delivery_default_summa="' . $delivery_default_summa . '" 
+                                    data-delivery_summa="' . $delivery_summa . '" 
+                                    data-free_delivery_summa="' . $free_delivery_summa . '"
+                                    >' . $delivery_summa . ' ₽</span>';
                         } else {
-                            echo 'расчету ТК';
+                            echo 'согласно расчету';
                         }
                         ?>
 

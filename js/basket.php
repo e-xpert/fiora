@@ -47,18 +47,17 @@
             }
         );
 
-        if (summa<8000) {
-            //box_delivery_summa=box_delivery_summa+350;
-            box_delivery_summa=0;
-            var format_box_delivery_summa=box_delivery_summa.toLocaleString();
-            $('#delivery_summa').text(format_box_delivery_summa+' ₽');
-        } else {
-            var format_box_delivery_summa=box_delivery_summa.toLocaleString();
-            $('#delivery_summa').text(format_box_delivery_summa+' ₽');
-        }
+        // if (summa<8000) {
+        //     //box_delivery_summa=box_delivery_summa+350;
+        //     box_delivery_summa=0;
+        //     var format_box_delivery_summa=box_delivery_summa.toLocaleString();
+        //     $('#delivery_summa').text(format_box_delivery_summa+' ₽');
+        // } else {
+        //     var format_box_delivery_summa=box_delivery_summa.toLocaleString();
+        //     $('#delivery_summa').text(format_box_delivery_summa+' ₽');
+        // }
 
-
-        if (summa>8000) {
+        if (summa>$('#delivery_summa').data('free_delivery_summa')) {
             $('#delivery_summa').text('0 ₽');
             $('#delivery_summa').data('delivery_summa', 0);
             $('#delivery_summa').data('delivery_summa')
