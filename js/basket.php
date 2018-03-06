@@ -47,6 +47,9 @@
             }
         );
 
+        var promo_discount=$('#promo_good').data('promo');
+        summa=summa-((summa/100)*promo_discount);
+
         // if (summa<8000) {
         //     //box_delivery_summa=box_delivery_summa+350;
         //     box_delivery_summa=0;
@@ -67,10 +70,8 @@
         }
 
         var box_delivery_summa=$('#delivery_summa').data('delivery_summa');
-
-        var promo_discount=$('#promo_good').data('promo');
         var all_summ=summa+(isNaN(box_delivery_summa) ? 0 : box_delivery_summa);
-        all_summ=all_summ-((all_summ/100)*promo_discount);
+
         $('#order_summa').data('order_summa');
         var format_all_sum=all_summ.toLocaleString();
         var format_summa=summa.toLocaleString();
