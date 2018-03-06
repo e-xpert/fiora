@@ -211,19 +211,37 @@ require_once ( "html_header.php");
                     </div>
                 </div>
             </div>
-
-            <div class="m-b-2 col-xxs-12 col-xs-6 col-sm-6 col-md-3">
-                <div class="ns1x1 main-box-bg">
-                    <div class="text-center">
-                        <a class="overlink" style="cursor: pointer"></a>
-                            <div class="fs_14">
-                                Для квартир и офисов,<br>
-                                домов и дач, ресторанов...
-                            </div>
+<?php
+    if (time() < 1520420540) {
+        ?>
+        <div class="m-b-2 col-xxs-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="ns1x1 main-box-bg" style="color: red; border-color: red">
+                <div class="text-center">
+                    <a class="overlink" style="cursor: pointer"></a>
+                    <div class="fs_14">
+                        Успеем доставить,<br>
+                        к 8 марта, по Москве
                     </div>
                 </div>
             </div>
-
+        </div>
+        <?
+    } else {
+        ?>
+        <div class="m-b-2 col-xxs-12 col-xs-6 col-sm-6 col-md-3">
+            <div class="ns1x1 main-box-bg">
+                <div class="text-center">
+                    <a class="overlink" style="cursor: pointer"></a>
+                    <div class="fs_14">
+                        Для квартир и офисов,<br>
+                        домов и дач, ресторанов...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?
+    }
+?>
             <div class="m-b-2 col-xxs-12 col-xs-6 col-sm-6 col-md-3">
                 <div class="ns1x1 march main-box-bg" style="padding: 19px 0;">
                     <div class="text-center">

@@ -117,7 +117,7 @@
 						</dd>
 					</dl>
 					<br />
-					Вы можете оплатить покупки также <br>
+					Оплата курьеру наличными или <br>
                     <a class="color_blue" href="pay_and_delivery.php">другими способами оплаты</a>
 					<div class="m-b-3 visible-xs"></div>
 				</div>
