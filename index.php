@@ -219,8 +219,8 @@ require_once ( "html_header.php");
                 <div class="text-center">
                     <a class="overlink" style="cursor: pointer"></a>
                     <div class="fs_14">
-                        Успеем доставить,<br>
-                        к 8 марта, по Москве
+                        Успеем доставить<br>
+                        к 8 марта по Москве
                     </div>
                 </div>
             </div>
