@@ -130,19 +130,21 @@
     //     }
     // });
 
-    var surl = 'https://myfiora.com/?share=123';
+    var surl = 'https://myfiora.com/?share=new';
     var title = 'Цветы в вазах | Fi`ora';
-    var description = 'Долговечность живых цветов в герметичных вазах на долгие годы (от 5 лет). Сотни тысяч людей применили Fi’ora в своих интерьерах.';
-    var image = 'https://myfiora.com/images/banner/image__post.jpg';
+    var description = 'Отличный предмет интерьера по мнению женщин и он из живых цветов и растений, которые сохраняются > 5 лет. По итогам опроса среди обладателей композиций Fi\'ora – 93% женщин довольны приобретением.';
+    var image_fb = 'https://myfiora.com/images/confirm/banner_fb.jpg';
+    var image_vk = 'https://myfiora.com/images/confirm/banner_vk.jpg';
+    var image_ok = 'https://myfiora.com/images/confirm/banner_ok.jpg';
 
     Share = {
         vkontakte: function() {
             url = 'http://vkontakte.ru/share.php?';
             url += 'url=' + encodeURIComponent(surl);
             url += '&title=' + encodeURIComponent(description);
-            // url += '&description=' + encodeURIComponent(description);
-            // url += '&image=' + encodeURIComponent(image);
-            // url += '&noparse=true';
+            url += '&description=' + encodeURIComponent(description);
+            url += '&image=' + encodeURIComponent(image_vk);
+            url += '&noparse=true';
             Share.popup(url);
         },
         odnoklassniki: function() {
@@ -152,11 +154,11 @@
             Share.popup(url);
         },
         facebook: function() {
-            url = 'https://www.facebook.com/sharer.php?s=100';
+            url = 'https://www.facebook.com/sharer.php?s=200';
             url += '&title=' + encodeURIComponent(title);
             url += '&description=' + encodeURIComponent(description);
             url += '&u=' + encodeURIComponent(surl);
-            url += '&picture=' + encodeURIComponent(image);
+            url += '&picture=' + encodeURIComponent(image_fb);
             Share.popup(url);
         },
 

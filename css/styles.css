@@ -2082,3 +2082,17 @@ input[type=submit].btn.btn-green {
 .call-form label {
   padding-left: 22px !important;
 }
+
+.promo { background: url(../images/confirm/promo_bg.png) no-repeat 0 0/auto 100% ;}
+.promo .title { color: #000 }
+.promo .desc { max-width: 585px; margin: 0 auto; }
+.promo .num {
+  color: #fff;
+  font-size: 18px;
+  margin: 0px auto 15px;
+  width: 27px;
+  height: 27px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+}
