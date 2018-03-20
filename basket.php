@@ -107,7 +107,7 @@ foreach ($basket as $item) {
 			<div class="media-left media-left-lg media-middle"><img src="images/examples/img028.png" alt="" /></div>
 			<div class="media-body media-bottom">
 				<div class="fs_12 color_gray">
-                    Доставка заказов осуществляется бесплатно при сумме заказа от 8000 рублей. Платная доставка в города России осуществляется транспортными компаниями по выгодной цене за счет выбора ближайшего пункта отгрузки Fi’ora к Вам.
+                    Доставка заказов осуществляется бесплатно при сумме заказа от 10000 рублей. Платная доставка в города России осуществляется транспортными компаниями по выгодной цене за счет выбора ближайшего пункта отгрузки Fi’ora к Вам.
                     Логистический центр Fi’ora определяет ближайший пункт отгрузки в зависимости от вашего населённого пункта (более 30 мест отгрузки по России).
 
                     <!-- <b>Заказы к «8 Марта» в указанных городах доставляются в определенные дни:</b>
@@ -131,10 +131,11 @@ foreach ($basket as $item) {
 					<li><button id='promo_code_button' onclick="get_promo();" type="submit" class="btn btn-default" style="height: 34px"><i class="fa fa-angle-right"></i></button></li>
 				</ul>
 			</div>
-			<div class="pull-right">
+			<div class="pull-right basketpad">
 				<ul class="m-b-0 list-unstyled text-right">
-					<li class="color_gray">Сумма за товар: <span id='products_summa'>0</span></li>
-					<li class="color_gray">Сумма доставки:
+                    <li class="color_gray">Сумма за товар: <span id='products_summa'>0</span></li>
+                    <li class="color_red">Сумма скидки: <span id='products_discount'>0</span></li>
+                    <li class="color_gray">Сумма доставки:
 
                         <?
                         // 1503901 - кемерово
@@ -152,7 +153,7 @@ foreach ($basket as $item) {
                                 $free_delivery_summa = 3500;
                                 $delivery_default_summa = 450;
                             } else {
-                                $free_delivery_summa = 8000;
+                                $free_delivery_summa = 10000;
                                 $delivery_default_summa = 350;
                             }
 
@@ -575,10 +576,10 @@ function view_product($item, $geo_country_id, $geo_city_id, $temp)
     // специальная цена
     if ($product[2]>0) {
         $product_price=$product[1];
-        $product_price_special='';
+        $product_price_special='<br><span class=\'mark_price\'>специальная цена</span>';
     } else {
         $product_price=$product[1];
-        $product_price_special='display:none;';
+        $product_price_special='';
     }
     // упаковка
     if ($product[18]==1) {
@@ -623,8 +624,7 @@ function view_product($item, $geo_country_id, $geo_city_id, $temp)
 							<tr>
 								<td width='30%'>
 									<div class='fs_20 nowrap' id='product_price_".$product[0]."' data-price='".$product_price."'>".$product_price." ₽</div>
-									<br>
-									<span style='".$product_price_special."' class='mark_price'>специальная цена</span>
+									".$product_price_special."
 								</td>
 								<td width='30%'>
 									<div class='counter counter_v1 img-center'>

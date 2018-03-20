@@ -249,7 +249,7 @@
 										<dt>Почти ваша Fi’ora</dt>
 										<dd><a href="pay_and_delivery.php">Оплата и доставка</a></dd>
 										<dd><a href="clients.php">Корпоративным клиентам</a></dd>
-										<dd><a href="stock.php">Акции</a></dd>
+<!--										<dd><a href="stock.php">Акции</a></dd>-->
 										<dd>
 											<span class="with-fiora">
                                                 <a id="formfeedbackopen" href="javascript:void(0)" data-toggle="modal" data-target="#formfeedback" rel="nofollow" class="type-link">Бизнес с Fi’ora</a>

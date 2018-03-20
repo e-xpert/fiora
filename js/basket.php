@@ -48,7 +48,8 @@
         );
 
         var promo_discount=$('#promo_good').data('promo');
-        summa=summa-((summa/100)*promo_discount);
+        var discount_summa = summa/100*promo_discount;
+        summa=summa-discount_summa;
 
         // if (summa<8000) {
         //     //box_delivery_summa=box_delivery_summa+350;
@@ -77,6 +78,10 @@
         var format_summa=summa.toLocaleString();
         $('#products_summa').text(format_summa+' ₽');
         $('#products_summa').attr('data-summa', summa);
+
+        $('#products_discount').text(discount_summa.toLocaleString()+' ₽');
+        $('#products_discount').attr('data-discount_summa', discount_summa);
+
 
         $('#order_summa').text(format_all_sum+' ₽');
         $('#order_summa').data('order_summa',all_summ);

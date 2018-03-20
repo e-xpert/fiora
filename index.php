@@ -113,7 +113,7 @@ require_once ( "html_header.php");
 			<div class="main-uniq">
                 <button type="button" class="close open-uniq" title="Закрыть"></button>
 				<div class="main-uniq-box">
-					<div class="text">ОСВЕЖИТ ЕЁ<br />ИНТЕРЬЕР</div>
+					<div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
                     <div class="sepline m-c-a"></div>
                     <div class="text">практичное<br />решение<br />для подарка</div>
                     <div class="more" style='margin-top:250px;'>
@@ -248,8 +248,8 @@ require_once ( "html_header.php");
                         <a class="overlink" style="cursor: pointer"></a>
 
                             <div class="fs_14">
-                                Отлично к 8 марта<br>
-                                по мнению женщин
+                                По-весеннему <br>
+                                приятное дополнение
                             </div>
 
                     </div>
@@ -327,26 +327,26 @@ require_once ( "html_header.php");
                     }
                     ?>
 
-                    <div class="owl-carousel-item">
-                        <div class="padd0x10">
-                            <div class="catalog_item">
-                                <div class="box">
-                                    <div class='link'>
-                                        <a href='/stock.php'>
-                                            <span style="font-weight: bold">Примите участие в розыгрыше</span>
-                                            <span style='color: gray;'>подробности внутри</span>
-                                        </a>
-                                    </div>
-                                    <div class='fs_20'>
-                                        <span>&nbsp;</span>
-                                    </div>
-                                    <div class='disimg'>
-                                        <a href='stock.php'><img src='images/main/thai1.png' alt='' /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="owl-carousel-item">-->
+<!--                        <div class="padd0x10">-->
+<!--                            <div class="catalog_item">-->
+<!--                                <div class="box">-->
+<!--                                    <div class='link'>-->
+<!--                                        <a href='/stock.php'>-->
+<!--                                            <span style="font-weight: bold">Примите участие в розыгрыше</span>-->
+<!--                                            <span style='color: gray;'>подробности внутри</span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class='fs_20'>-->
+<!--                                        <span>&nbsp;</span>-->
+<!--                                    </div>-->
+<!--                                    <div class='disimg'>-->
+<!--                                        <a href='stock.php'><img src='images/main/thai1.png' alt='' /></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
                 <script type="text/javascript">
                     $(function(){
@@ -379,17 +379,6 @@ require_once ( "html_header.php");
             </div s>
             <div class="bottom">
                 <a href="catalog.php" class="btn btn-blue" style="padding: 12px 80px 9px;">Перейти в каталог</a>
-                <br><br>
-                <span class="tooltips bottom right">
-                    Доставка завтра, <font style="color: #00c721; text-decoration: underline">бесплатно</font>
-                    <div class="tooltips_box">
-                        <div class="tooltips_box_arr"></div>
-                        <div class="tooltips_box_body fs_12">
-                            Действует в Москве при покупке <br>
-                            от 3500 рублей в рабочие дни
-                        </div>
-                    </div>
-                </span>
             </div>
         </div>
 
