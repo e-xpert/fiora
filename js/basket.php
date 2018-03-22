@@ -117,7 +117,24 @@
         var promo=$('#promo_code').val();
 
         if (promo == 'SYN15YR' && parseInt($('#order_summa').data('order_summa')) < 5000) {
+            $('#promo_match_error').show(); //
+            $('#promo_match_error').text('Промокод действует при заказе от 5000 р.');
+            $("#promo_error").addClass('has-error');
+
+            return;
+        }
+
+        if (promo == 'VRT68DD' && parseInt($('#order_summa').data('order_summa')) < 6000) {
             $('#promo_match_error').show();
+            $('#promo_match_error').text('Промокод действует при заказе от 6000 р.');
+            $("#promo_error").addClass('has-error');
+
+            return;
+        }
+
+        if (promo == 'VKR23TY' && parseInt($('#order_summa').data('order_summa')) < 12000) {
+            $('#promo_match_error').show();
+            $('#promo_match_error').text('Промокод действует при заказе от 12000 р.');
             $("#promo_error").addClass('has-error');
 
             return;

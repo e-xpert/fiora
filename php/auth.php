@@ -105,11 +105,11 @@
                     "api_id" => "39df7538-f730-f064-8173-417d4f19c183",
                     "to" => "'.$this->phone.'",
                     "from" => "Fiora",
-                    "text" => 'Ваш промокод: MA8RET. Скидка 10% - до 8 марта. Скидка 20% - до 31 декабря’18.'
+                    "text" => 'Ваши промокоды: 10% на любую покупку — PRO45RT, 15% (от 6000 р.) — VRT68DD, 20% (от 12000 р.) — VKR23TY'
                 ));
                 $body = curl_exec($ch);
                 curl_close($ch);
-                var_dump($body);
+//                var_dump($body);
             } else {
                 $response['status'] = 'error';
             }

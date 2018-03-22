@@ -15,6 +15,8 @@ $HEAD_inject = '
 	</script>
 ';
 
+$HEAD_require =	array("js/index.php");
+
 // ----------   HEAD  ----------------------
 require_once ( "html_head.php");
 // ===========================================
@@ -321,7 +323,7 @@ require_once ( "html_header.php");
                                         </div>
                                     </div>
                                 </div>
-                                <div class="basket_gallery"><a href="product.php?art=' .$item[0]. '" class="color_blue">купить</a></div>
+                                <div class="basket_gallery"><a href="javascript:recycled_add(' .$item[0]. ');"  class="color_blue">купить</a></div>
                             </div>';
                         }
                     }
@@ -431,21 +433,21 @@ require_once ( "html_header.php");
 			<li class="slide-1 active">
 				<div class="container">
 					<div class="pos">
-                        <div class="img" align='left'><img src="images/main/discount20.png" alt="" /></div>
+                        <div class="img" align='left'><img src="images/main/discount101520.png" alt="" /></div>
 						<div class="txt">
 
                             <div class="title-1">
-                                <strong>Уникальный шанс в Fi’ora получить -20% на весь год</strong>
+                                <strong>Весна приходит — <nobr>скидка Fi’ora растёт</nobr></strong>
                             </div>
 
                             <div class="m-b-1 fs_16">
-                                <strong>сейчас до 8 марта скидка 10%, далее до 31 декабря - 20%</strong>
+                                <strong>прямо сейчас и до 15 апреля получите скидку до 20% на ваш заказ</strong>
                             </div>
                             <div>
-                                Мы хотим, чтобы довольных людей от покупок становилось больше. Укажите свой номер телефона и ваш промокод придёт в смс, который всегда будет доступен под рукой весь год. Это уникальный шанс покупать нашу продукцию с выгодой до 2000 рублей с одной вазы.
+                                Мы хотим, чтобы солнце дарило нам всё больше теплых дней, и довольных людей от покупок становилось больше. Укажите свой номер телефона и ваш промокод придёт в смс. Воспользовавшись промокодом вы получите скидку 10% на любую покупку, 15% — на покупку от 6 000 рублей и 20% — на заказ свыше 12 000 рублей.
                             </div>
                             <div style="color: #8f8f8f">
-                                Предложение действует до 6 марта 2018 года.
+                                Срок действия промокода — до 31 декабря 2018 года.
                             </div>
 
                             <div class="m-b-2"></div>
