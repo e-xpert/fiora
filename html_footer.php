@@ -93,7 +93,6 @@
 					<dl class="list-unstyled">
 						<dt>Это интересно:</dt>
 						<dd><a target='_blank' href="https://www.youtube.com/watch?v=X7nKUnART-g">Видео «С Fi’ora в Новый год!»</a></dd>
-						<dd><a target='_blank' href="http://www.gifts-expo.com/rus/smi/index.php?divid=3&id=1454">Выставка «Подарки. Осень 2016»</a></dd>
 						<!-- <dd><a href="faq.php">FAQ</a></dd> -->
 					</dl>
 					<div class="m-b-3 visible-xs"></div>

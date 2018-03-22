@@ -114,9 +114,9 @@
     }
 
     function get_promo() {
-        var promo=$('#promo_code').val();
+        var promo=$.trim($('#promo_code').val());
 
-        if (promo == 'SYN15YR' && parseInt($('#order_summa').data('order_summa')) < 5000) {
+        if (promo == 'SYN15YR' && parseInt($('#products_summa').data('summa')) < 5000) {
             $('#promo_match_error').show(); //
             $('#promo_match_error').text('Промокод действует при заказе от 5000 р.');
             $("#promo_error").addClass('has-error');
@@ -124,7 +124,7 @@
             return;
         }
 
-        if (promo == 'VRT68DD' && parseInt($('#order_summa').data('order_summa')) < 6000) {
+        if (promo == 'VRT68DD' && parseInt($('#products_summa').data('summa')) < 6000) {
             $('#promo_match_error').show();
             $('#promo_match_error').text('Промокод действует при заказе от 6000 р.');
             $("#promo_error").addClass('has-error');
@@ -132,7 +132,7 @@
             return;
         }
 
-        if (promo == 'VKR23TY' && parseInt($('#order_summa').data('order_summa')) < 12000) {
+        if (promo == 'VKR23TY' && parseInt($('#products_summa').data('summa')) < 12000) {
             $('#promo_match_error').show();
             $('#promo_match_error').text('Промокод действует при заказе от 12000 р.');
             $("#promo_error").addClass('has-error');
@@ -152,6 +152,7 @@
                     $('#promo_good').html('Скидка по промокоду: '+data+'%');
                     $('#promo_good').show();
                     $('#promo_good').data('promo',data);
+                    $('#discount_field').show();
                     get_summ();
                 } else {
                     $('#promo_error_text').show();

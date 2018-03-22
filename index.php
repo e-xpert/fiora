@@ -171,7 +171,7 @@ require_once ( "html_header.php");
             <div class="body">
                 <div class="media">
                     <div class="media-body media-middle">
-                        <div class="text">ОСВЕЖИТ ЕЁ<br />ИНТЕРЬЕР</div>
+                        <div class="text">ОСВЕЖИТ ВАШ<br />ИНТЕРЬЕР</div>
                         <div class="sepline m-c-a"></div>
                         <div class="text">практичное<br />решение<br />для подарка</div>
                     </div>
@@ -620,7 +620,7 @@ require_once ( "html_header.php");
 
 		<div class="m-b-2 bg_gray">
 			<div class="media media-responsive text-xs-center">
-				<div style='background:#f2f2f2;' class="media-left media-bottom hidden-xs"><img src="images/index/granity.png" alt="" /></div>
+				<div style='background:#f2f2f2;' class="media-left media-middle hidden-xs"><img src="images/index/granity.png" alt="" /></div>
 				<div class="media-body media-middle">
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="padd20">
@@ -633,6 +633,7 @@ require_once ( "html_header.php");
                             Обеспечьте ей небольшую цветовую поддержку в интерьере, и ваш дом заиграет новыми красками и обретет собственный, неповторимый стиль.
                             Вносите весенние изменения в свой интерьер уже сейчас.
                         </div>
+                        <div class="m-b-3"><i>Количество композиций ограничено</i></div>
 						<div class="bottom">
                             <a href="/catalog.php#Granity591" class="btn btn-blue">Купить</a>
                         </div>
