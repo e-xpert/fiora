@@ -94,6 +94,13 @@ require_once ( "html_header.php");
                     </div>
                 </div>
             </div>
+            <div class="owl-carousel-item">
+                <div class="mps-item">
+                    <div class="img">
+                        <span><img src="images/banner/banner_23_03.jpg" alt="" /></span>
+                    </div>
+                </div>
+            </div>
 		</div>
 		<script type="text/javascript">
 			$(function(){
@@ -601,7 +608,7 @@ require_once ( "html_header.php");
 		<div class="owl-carousel">
 			<div class="owl-carousel-item">
 				<div class="disimg">
-                    <a href="#discount20"><img src="images/main/discount20.png" alt="" /></a>
+                    <a href="#discount20"><img src="images/main/discount101520.png" alt="" /></a>
                 </div>
 			</div>
 		</div>

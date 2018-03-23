@@ -302,7 +302,7 @@
                             <div class="form-group form-error-msg" style="display: none;"><span>Заполните выделенные поля</span></div>
                         </div>
                         <div class="form-group text-center form-submit">
-                            <input type="submit" name="submit" value="Отправить заявку" class="btn btn-danger">
+                            <input id="opt" type="submit" name="submit" value="Отправить заявку" class="btn btn-danger">
                         </div>
                     </form>
                     <div id="success_order" style="display: none">
@@ -321,6 +321,11 @@
             $('#success_order').hide();
         });
 
+        $('#opt').click(function () {
+            openNewTab()
+            return false;
+        });
+
         $("#send_order").submit(function() {
             $.ajax({
                 type: 'POST',
@@ -337,6 +342,12 @@
             });
             return false;
         });
+
+        function openNewTab() {
+            var frm = $('<form   method="get" action="http://opt.myfiora.com" target="_blank"></form>')
+            $("body").append(frm);
+            frm.submit().remove();
+        }
     </script>
 
     <div class="modal fade" id="modal_hook" tabindex="-1" role="dialog" aria-labelledby="modal_hook">
