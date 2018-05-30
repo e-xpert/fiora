@@ -42,6 +42,27 @@ require_once ( "html_header.php");
         </div>
 
 		<div class="owl-carousel">
+            <div class="owl-carousel-item">
+                <div class="mps-item">
+                    <div class="img">
+                        <a href="#spring"><span><img src="images/banner/banner_22_05.jpg" alt="" /></span></a>
+                    </div>
+                    <div class="txt" style="top: 200px;">
+                        <div class="container" style="color: #fff">
+                            <a href="#spring" style="text-decoration: none;">
+                            <div class="title3">
+                                ОТЛИЧНЫЙ ПОДАРОК<br />
+                                ПРЕПОДАВАТЕЛЮ
+                            </div>
+                            <div class="description3">
+                                узнать об акции
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 			<div class="owl-carousel-item">
 				<div class="mps-item">
 					<div class="img">
@@ -83,12 +104,16 @@ require_once ( "html_header.php");
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_21.jpg" alt="" /></span>
+                        <span><img src="images/banner/banner_22_05-2.jpg" alt="" /></span>
                     </div>
-                    <div class="txt half txt-top">
+                    <div class="txt" style="top: 280px;">
                         <div class="container">
-                            <div class="title">
-                                <font color='#000'>Создавайте<br /> уютные решения<br />для вашего дома</font>
+                            <div class="title2" style="margin-bottom: 5px">
+                                ПОЧТИ НА ВСЁ — 30%
+                            </div>
+                            <div class="description">
+                                Промокод до 20%<br>
+                                Скидки до 10%
                             </div>
                         </div>
                     </div>
@@ -97,7 +122,14 @@ require_once ( "html_header.php");
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_23_03.jpg" alt="" /></span>
+                        <span><img src="images/banner/banner_21.jpg" alt="" /></span>
+                    </div>
+                    <div class="txt half txt-top">
+                        <div class="container">
+                            <div class="title">
+                                <font color='#000'>Создавайте<br /> уютные решения<br />для вашего дома</font>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,8 +289,8 @@ require_once ( "html_header.php");
                         <a class="overlink" style="cursor: pointer"></a>
 
                             <div class="fs_14">
-                                По-весеннему <br>
-                                приятное дополнение
+                                В подарок учителю  <br>
+                                на долгую память
                             </div>
 
                     </div>
@@ -420,8 +452,8 @@ require_once ( "html_header.php");
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="blindbox">
-                        <div class="before"><img src="images/main/a1.png" alt="" /></div>
-                        <div class="after"><img src="images/main/b1.png" alt="" /></div>
+                        <div class="before"><img src="images/main/b2.jpg" alt="" /></div>
+                        <div class="after"><img src="images/main/a2.jpg" alt="" /></div>
                     </div>
                 </div>
             </div><a name="discount20"></a>
@@ -441,14 +473,15 @@ require_once ( "html_header.php");
 				<div class="container">
 					<div class="pos">
                         <div class="img" align='left'><img src="images/main/discount101520.png" alt="" /></div>
-						<div class="txt">
+                        <a name="spring"></a>
+                        <div class="txt">
 
                             <div class="title-1">
                                 <strong>Весна приходит — <nobr>скидка Fi’ora растёт</nobr></strong>
                             </div>
 
                             <div class="m-b-1 fs_16">
-                                <strong>прямо сейчас и до 15 апреля получите скидку до 20% на ваш заказ</strong>
+                                <strong>прямо сейчас и получите скидку до 20% на ваш заказ</strong>
                             </div>
                             <div>
                                 Мы хотим, чтобы солнце дарило нам всё больше теплых дней, и довольных людей от покупок становилось больше. Укажите свой номер телефона и ваш промокод придёт в смс. Воспользовавшись промокодом вы получите скидку 10% на любую покупку, 15% — на покупку от 6 000 рублей и 20% — на заказ свыше 12 000 рублей.

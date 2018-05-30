@@ -1519,6 +1519,8 @@ h1.quest {
 .mark_price_1 { border: 1px solid #ffa998; display: inline-block; width: 100px; padding: 5px 9px 5px; font-size: 12px; color: #ffa998; }
 .mark_price_2 { background: url(../images/product/hny.png) no-repeat; display: inline-block; width: 110px; height: 46px; padding: 15px 10px 5px; font-size: 12px; color: #00b767; }
 .mark_price_3 { border: 1px solid #b63434; display: inline-block; width: 100px; padding: 5px 9px 5px; font-size: 12px; color: #b63434; }
+.mark_price_5, .mark_price_6 { border: 1px solid #ff7900; display: inline-block; width: 100px; padding: 5px 9px 5px; font-size: 12px; color: #ff7900; }
+
 
 .s1x1.fix {
   background-color: #e30413;
@@ -2005,6 +2007,49 @@ input[type=submit].btn.btn-green {
     margin-top: 0;
   }
 }
+
+
+.mainpage-slider .mps-item .txt .title3 {
+  text-transform: none;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.mainpage-slider .mps-item .txt .description3 {
+  text-decoration: underline;
+  color: #fff
+}
+
+@media (max-width: 767px) {
+  .mainpage-slider .mps-item .txt .title3 {
+    margin-top: -15px; font-size: 20px; line-height: 28px;
+  }
+  .mainpage-slider .mps-item .txt .description3 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainpage-slider .mps-item .txt .title3 {
+    padding-top: 35px; font-size: 24px; line-height: 32px;
+  }
+  .mainpage-slider .mps-item .txt .description3 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mainpage-slider .mps-item .txt .title3 {
+    padding-top: 140px; font-size: 32px; line-height: 40px;
+  }
+  .mainpage-slider .mps-item .txt .description3 {
+    font-size: 16px;
+  }
+}
+
+
+
 
 .ns1x1 {
   position: relative;

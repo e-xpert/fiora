@@ -72,13 +72,13 @@ if (in_array($type = key($_FILES), array('products', 'items'))) {
                 ++$str;
 
                 $values = mb_convert_encoding($values, "utf-8", $charset);
-                list($artikul, $price, $price_old, $art_new, $art_action, $rest) = explode(';', $values);
+                list($artikul, $price, $price_old, $art_new, $art_action, $rest, $main) = explode(';', $values);
 
                 //$values = htmlspecialchars($values, ENT_COMPAT);
                 $values = str_replace('"', '', $values);
                 $values = str_replace(';', '","', $values);
 
-                $mysqli->exec('UPDATE db_rest SET price='.(int)$price.', price_old='.(int)$price_old.', art_new='.(int)$art_new.', art_action='.(int)$art_action.', rest='.(int)$rest.' WHERE artikul='.(int)$artikul);
+                $mysqli->exec('UPDATE db_rest SET price='.(int)$price.', price_old='.(int)$price_old.', art_new='.(int)$art_new.', art_action='.(int)$art_action.', rest='.(int)$rest.', main='.(int)$main.' WHERE artikul='.(int)$artikul);
             }
 
             $mysqli->commit();

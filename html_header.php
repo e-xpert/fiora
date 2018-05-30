@@ -321,10 +321,10 @@
             $('#success_order').hide();
         });
 
-        $('#opt').click(function () {
-            openNewTab()
-            return false;
-        });
+        // $('#opt').click(function () {
+        //     openNewTab()
+        //     return false;
+        // });
 
         $("#send_order").submit(function() {
             $.ajax({
@@ -343,11 +343,11 @@
             return false;
         });
 
-        function openNewTab() {
-            var frm = $('<form   method="get" action="http://opt.myfiora.com" target="_blank"></form>')
-            $("body").append(frm);
-            frm.submit().remove();
-        }
+        // function openNewTab() {
+        //     var frm = $('<form   method="get" action="http://opt.myfiora.com" target="_blank"></form>')
+        //     $("body").append(frm);
+        //     frm.submit().remove();
+        // }
     </script>
 
     <div class="modal fade" id="modal_hook" tabindex="-1" role="dialog" aria-labelledby="modal_hook">
