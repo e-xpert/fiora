@@ -111,7 +111,7 @@ echo "</font><hr>";
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all" />
     <!--project files-->
     <link rel="stylesheet" href="css/form.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/styles.css?3543" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/styles.css?354553" type="text/css" media="all" />
     <link rel="stylesheet" href="css/lex.style.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -191,6 +191,7 @@ echo "</font><hr>";
         <img height="1" width="1" src="https://www.facebook.com/tr?id=661676284015784&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function (d, w, c) {
@@ -222,6 +223,16 @@ echo "</font><hr>";
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/43171214" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119699456-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119699456-1');
+    </script>
 
     <script type="text/javascript">
         (window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-199780-3n3x5';
