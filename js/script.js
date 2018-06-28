@@ -41,6 +41,10 @@
                 filter_subcol(51);
                 filter = 51;
                 break;
+            case '#Oriety538':
+                filter_subcol(125);
+                filter = 125;
+                break;
             case '#OneRose502':
                 filter_subcol(25);
                 filter = 25;

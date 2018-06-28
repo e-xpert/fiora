@@ -102,7 +102,7 @@ echo "</font><hr>";
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Яркая весна с Fi’ora - композиции из живых цветов</title>
+    <title>Летнее настроение с Fi’ora – композиции из живых цветов</title>
 <!--    <title>--><?//= $VAR_title; ?><!-- | myfiora.com</title>-->
     <meta property="og:title" content="<?= $VAR_title; ?> | myfiora.com" />
     <meta property="og:image" content="https://myfiora.com/images/banner/image__post.jpg" />

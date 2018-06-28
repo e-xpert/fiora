@@ -43,33 +43,13 @@ require_once ( "html_header.php");
 
 		<div class="owl-carousel">
             <div class="owl-carousel-item">
-                <div class="mps-item">
-                    <div class="img">
-                        <a href="#spring"><span><img src="images/banner/banner_22_05.jpg" alt="" /></span></a>
-                    </div>
-                    <div class="txt" style="top: 200px;">
-                        <div class="container" style="color: #fff">
-                            <a href="#spring" style="text-decoration: none;">
-                            <div class="title3">
-                                ОТЛИЧНЫЙ ПОДАРОК<br />
-                                ПРЕПОДАВАТЕЛЮ
-                            </div>
-                            <div class="description3">
-                                узнать об акции
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-			<div class="owl-carousel-item">
 				<div class="mps-item">
 					<div class="img">
-						<span><img src="images/banner/banner_3.png" alt="" /></span>
+                        <a href="/about.php"><span><img src="images/banner/banner_3.png" alt="" /></span></a>
 					</div>
                     <div class="txt" style="top: 200px;">
 						<div class="container">
+                            <a href="/about.php" style="text-decoration: none;">
 							<div class="title2">
                                 Вазы с натуральными цветами<br />
                                 для освежения интерьера<br />
@@ -78,6 +58,7 @@ require_once ( "html_header.php");
 							<div class="description">
                                 Сохраняются без ухода > 5 лет
 							</div>
+                            </a>
 						</div>
 					</div>
 				</div>
@@ -122,13 +103,15 @@ require_once ( "html_header.php");
             <div class="owl-carousel-item">
                 <div class="mps-item">
                     <div class="img">
-                        <span><img src="images/banner/banner_21.jpg" alt="" /></span>
+                        <a href="/gallery.php"><span><img src="images/banner/banner_21.jpg" alt="" /></span></a>
                     </div>
                     <div class="txt half txt-top">
                         <div class="container">
+                            <a href="/gallery.php" style="text-decoration: none;">
                             <div class="title">
                                 <font color='#000'>Создавайте<br /> уютные решения<br />для вашего дома</font>
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -452,8 +435,8 @@ require_once ( "html_header.php");
                 </div>
                 <div class="col-xs-12 col-sm-6">
                     <div class="blindbox">
-                        <div class="before"><img src="images/main/b2.jpg" alt="" /></div>
-                        <div class="after"><img src="images/main/a2.jpg" alt="" /></div>
+                        <div class="before"><img src="images/main/b3.jpg" alt="" /></div>
+                        <div class="after"><img src="images/main/a3.jpg" alt="" /></div>
                     </div>
                 </div>
             </div><a name="discount20"></a>
@@ -477,14 +460,14 @@ require_once ( "html_header.php");
                         <div class="txt">
 
                             <div class="title-1">
-                                <strong>Весна приходит — <nobr>скидка Fi’ora растёт</nobr></strong>
+                                <strong>Лови лето и <nobr> скидки от Fi’ora!</nobr></strong>
                             </div>
 
                             <div class="m-b-1 fs_16">
                                 <strong>прямо сейчас получите скидку до 20% на ваш заказ</strong>
                             </div>
                             <div>
-                                Мы хотим, чтобы солнце дарило нам всё больше теплых дней, и довольных людей от покупок становилось больше. Укажите свой номер телефона и ваш промокод придёт в смс. Воспользовавшись промокодом вы получите скидку 10% на любую покупку, 15% — на покупку от 6 000 рублей и 20% — на заказ свыше 12 000 рублей.
+                                Мы хотим, чтобы солнце дарило нам всё больше теплых дней, и число довольных людей от покупок увеличивалось с геометрической прогрессией. Укажите свой номер телефона и ваш промокод придёт в смс. Воспользовавшись промокодом вы получите скидку 10% на любую покупку, 15% — на покупку от 6 000 рублей и 20% — на заказ свыше 12 000 рублей.
                             </div>
                             <div style="color: #8f8f8f">
                                 Срок действия промокода — до 31 декабря 2018 года.
@@ -660,27 +643,24 @@ require_once ( "html_header.php");
 
 		<div class="m-b-2 bg_gray">
 			<div class="media media-responsive text-xs-center">
-				<div style='background:#f2f2f2;' class="media-left media-middle hidden-xs"><img src="images/index/granity.png" alt="" /></div>
+				<div style='background:#f2f2f2;' class="media-left media-middle hidden-xs"><img src="images/index/538.jpg" alt="" /></div>
 				<div class="media-body media-middle">
 					<div class="m-b-5 hidden-xs"></div>
 					<div class="padd20">
 						<div class="m-b-2 fs_35 granity591" style="line-height: 40px; font-weight: bold;">
-                            Весенний характер в&nbsp;коллекции Granity&nbsp;591
+                            Летнее настроение в коллекции Oriety 538
                         </div>
 						<div class="m-b-2 color_dark_gray">
-                            Коллекция Granity 591 – это дерзкий вызов обыденности!
-                            Насыщенная во всех смыслах композиция не требует никаких дополнений.
-                            Обеспечьте ей небольшую цветовую поддержку в интерьере, и ваш дом заиграет новыми красками и обретет собственный, неповторимый стиль.
-                            Вносите весенние изменения в свой интерьер уже сейчас.
+                            В коллекции Oriety 538 уникальное сочетании нежных и насыщенных оттенков одновременно. Данная композиция придаст динамики вашему интерьеру и впишется в любое пространство!, Вы сможете периодически сменять её локацию и придавать летний вид остальным помещениям. Добавьте в свой дом одну ключевую деталь, чтобы подчеркнуть достоинства или придать интерьеру неповторимый стиль и характер.
                         </div>
                         <div class="m-b-3"><i>Количество композиций ограничено</i></div>
 						<div class="bottom">
-                            <a href="/catalog.php#Granity591" class="btn btn-blue">Купить</a>
+                            <a href="/catalog.php#Oriety538" class="btn btn-blue">Купить</a>
                         </div>
 					</div>
 					<div class="m-b-5 hidden-xs"></div>
 				</div>
-				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/index/granity.png" alt="" /></div>
+				<div class="media-right visible-xs"><img class="img-responsive img-center" src="images/index/538.jpg" alt="" /></div>
 			</div>
 		</div>
 
