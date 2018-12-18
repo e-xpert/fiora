@@ -272,8 +272,8 @@ require_once ( "html_header.php");
                         <a class="overlink" style="cursor: pointer"></a>
 
                             <div class="fs_14">
-                                В подарок учителю  <br>
-                                на долгую память
+                                Атмосфера лета  <br>
+                                в вашем доме
                             </div>
 
                     </div>
